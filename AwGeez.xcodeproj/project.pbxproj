@@ -76,12 +76,8 @@
 		DACC46B3295D073700FFAE56 /* AwGeez */ = {
 			isa = PBXGroup;
 			children = (
-				DACC46B4295D073700FFAE56 /* AppDelegate.swift */,
-				DACC46B6295D073700FFAE56 /* SceneDelegate.swift */,
+				DACC46E6295D0DB700FFAE56 /* Main */,
 				DACC46B8295D073700FFAE56 /* ViewController.swift */,
-				DACC46BD295D073900FFAE56 /* Assets.xcassets */,
-				DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */,
-				DACC46C2295D073900FFAE56 /* Info.plist */,
 			);
 			path = AwGeez;
 			sourceTree = "<group>";
@@ -92,6 +88,18 @@
 				DACC46CB295D073900FFAE56 /* AwGeezTests.swift */,
 			);
 			path = AwGeezTests;
+			sourceTree = "<group>";
+		};
+		DACC46E6295D0DB700FFAE56 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DACC46B4295D073700FFAE56 /* AppDelegate.swift */,
+				DACC46B6295D073700FFAE56 /* SceneDelegate.swift */,
+				DACC46BD295D073900FFAE56 /* Assets.xcassets */,
+				DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */,
+				DACC46C2295D073900FFAE56 /* Info.plist */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,12 +361,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q2ZXF3TT52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AwGeez/Info.plist;
+				INFOPLIST_FILE = AwGeez/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,9 +374,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.AwGeez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,12 +392,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q2ZXF3TT52;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AwGeez/Info.plist;
+				INFOPLIST_FILE = AwGeez/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,9 +405,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.AwGeez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
