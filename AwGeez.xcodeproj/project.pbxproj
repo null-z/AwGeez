@@ -14,19 +14,10 @@
 		DACC46BE295D073900FFAE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACC46BD295D073900FFAE56 /* Assets.xcassets */; };
 		DACC46C1295D073900FFAE56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */; };
 		DACC46CC295D073900FFAE56 /* AwGeezTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46CB295D073900FFAE56 /* AwGeezTests.swift */; };
-		DACC46D6295D073900FFAE56 /* AwGeezUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46D5295D073900FFAE56 /* AwGeezUITests.swift */; };
-		DACC46D8295D073900FFAE56 /* AwGeezUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46D7295D073900FFAE56 /* AwGeezUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DACC46C8295D073900FFAE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DACC46B0295D073700FFAE56;
-			remoteInfo = AwGeez;
-		};
-		DACC46D2295D073900FFAE56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,6 @@
 		DACC46C2295D073900FFAE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwGeezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46CB295D073900FFAE56 /* AwGeezTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwGeezTests.swift; sourceTree = "<group>"; };
-		DACC46D1295D073900FFAE56 /* AwGeezUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwGeezUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DACC46D5295D073900FFAE56 /* AwGeezUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwGeezUITests.swift; sourceTree = "<group>"; };
-		DACC46D7295D073900FFAE56 /* AwGeezUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwGeezUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DACC46CE295D073900FFAE56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +62,6 @@
 			children = (
 				DACC46B3295D073700FFAE56 /* AwGeez */,
 				DACC46CA295D073900FFAE56 /* AwGeezTests */,
-				DACC46D4295D073900FFAE56 /* AwGeezUITests */,
 				DACC46B2295D073700FFAE56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +71,6 @@
 			children = (
 				DACC46B1295D073700FFAE56 /* AwGeez.app */,
 				DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */,
-				DACC46D1295D073900FFAE56 /* AwGeezUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				DACC46CB295D073900FFAE56 /* AwGeezTests.swift */,
 			);
 			path = AwGeezTests;
-			sourceTree = "<group>";
-		};
-		DACC46D4295D073900FFAE56 /* AwGeezUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DACC46D5295D073900FFAE56 /* AwGeezUITests.swift */,
-				DACC46D7295D073900FFAE56 /* AwGeezUITestsLaunchTests.swift */,
-			);
-			path = AwGeezUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DACC46D0295D073900FFAE56 /* AwGeezUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DACC46E1295D073900FFAE56 /* Build configuration list for PBXNativeTarget "AwGeezUITests" */;
-			buildPhases = (
-				DACC46CD295D073900FFAE56 /* Sources */,
-				DACC46CE295D073900FFAE56 /* Frameworks */,
-				DACC46CF295D073900FFAE56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DACC46D3295D073900FFAE56 /* PBXTargetDependency */,
-			);
-			name = AwGeezUITests;
-			productName = AwGeezUITests;
-			productReference = DACC46D1295D073900FFAE56 /* AwGeezUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +149,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					DACC46C6295D073900FFAE56 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = DACC46B0295D073700FFAE56;
-					};
-					DACC46D0295D073900FFAE56 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = DACC46B0295D073700FFAE56;
 					};
@@ -221,7 +169,6 @@
 			targets = (
 				DACC46B0295D073700FFAE56 /* AwGeez */,
 				DACC46C6295D073900FFAE56 /* AwGeezTests */,
-				DACC46D0295D073900FFAE56 /* AwGeezUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DACC46C5295D073900FFAE56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DACC46CF295D073900FFAE56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DACC46CD295D073900FFAE56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DACC46D6295D073900FFAE56 /* AwGeezUITests.swift in Sources */,
-				DACC46D8295D073900FFAE56 /* AwGeezUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = DACC46B0295D073700FFAE56 /* AwGeez */;
 			targetProxy = DACC46C8295D073900FFAE56 /* PBXContainerItemProxy */;
-		};
-		DACC46D3295D073900FFAE56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DACC46B0295D073700FFAE56 /* AwGeez */;
-			targetProxy = DACC46D2295D073900FFAE56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -366,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -445,6 +371,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +400,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,42 +454,6 @@
 			};
 			name = Release;
 		};
-		DACC46E2295D073900FFAE56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q2ZXF3TT52;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.AwGeezUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AwGeez;
-			};
-			name = Debug;
-		};
-		DACC46E3295D073900FFAE56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q2ZXF3TT52;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.AwGeezUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AwGeez;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +480,6 @@
 			buildConfigurations = (
 				DACC46DF295D073900FFAE56 /* Debug */,
 				DACC46E0295D073900FFAE56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DACC46E1295D073900FFAE56 /* Build configuration list for PBXNativeTarget "AwGeezUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DACC46E2295D073900FFAE56 /* Debug */,
-				DACC46E3295D073900FFAE56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
