@@ -13,6 +13,7 @@
 		DA6421C1295D17DD00244DC4 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C0295D17DD00244DC4 /* Entity.swift */; };
 		DA6421C3295D186500244DC4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C2295D186500244DC4 /* Location.swift */; };
 		DA6421C5295D186D00244DC4 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C4295D186D00244DC4 /* Episode.swift */; };
+		DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DA6421D1295D279700244DC4 /* .swiftlint.yml */; };
 		DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B4295D073700FFAE56 /* AppDelegate.swift */; };
 		DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B6295D073700FFAE56 /* SceneDelegate.swift */; };
 		DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B8295D073700FFAE56 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		DA6421C0295D17DD00244DC4 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		DA6421C2295D186500244DC4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DA6421C4295D186D00244DC4 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		DA6421D1295D279700244DC4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DACC46B1295D073700FFAE56 /* AwGeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwGeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46B4295D073700FFAE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACC46B6295D073700FFAE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				DACC46B3295D073700FFAE56 /* AwGeez */,
 				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 				DA6421B0295D121B00244DC4 /* Model */,
+				DA6421D1295D279700244DC4 /* .swiftlint.yml */,
 				DACC46B2295D073700FFAE56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				DACC46AE295D073700FFAE56 /* Frameworks */,
 				DACC46AF295D073700FFAE56 /* Resources */,
 				DA6421BA295D121B00244DC4 /* Embed Frameworks */,
+				DA6421CF295D266800244DC4 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -277,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */,
 				DACC46C1295D073900FFAE56 /* LaunchScreen.storyboard in Resources */,
 				DACC46BE295D073900FFAE56 /* Assets.xcassets in Resources */,
 			);
@@ -290,6 +295,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA6421CF295D266800244DC4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA6421AB295D121B00244DC4 /* Sources */ = {

@@ -10,5 +10,5 @@ import Foundation
 public protocol Entity {}
 
 public extension Entity {
-    typealias ID = UInt
+    typealias ID = UInt // swiftlint:disable:this type_name
 }
