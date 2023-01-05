@@ -20,6 +20,10 @@
 		DACC46BE295D073900FFAE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACC46BD295D073900FFAE56 /* Assets.xcassets */; };
 		DACC46C1295D073900FFAE56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */; };
 		DACC46CC295D073900FFAE56 /* AwGeezTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46CB295D073900FFAE56 /* AwGeezTests.swift */; };
+		DAFACC3229664872001BA118 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
+		DAFACC3329664872001BA118 /* Api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAFACC3829664893001BA118 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3729664893001BA118 /* Api.swift */; };
+		DAFACC3A29664B4D001BA118 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3929664B4D001BA118 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,13 @@
 			remoteGlobalIDString = DACC46B0295D073700FFAE56;
 			remoteInfo = AwGeez;
 		};
+		DAFACC3029664872001BA118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFACC2B29664872001BA118;
+			remoteInfo = Api;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +58,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DA6421B6295D121B00244DC4 /* Model.framework in Embed Frameworks */,
+				DAFACC3329664872001BA118 /* Api.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +81,9 @@
 		DACC46C2295D073900FFAE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwGeezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46CB295D073900FFAE56 /* AwGeezTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwGeezTests.swift; sourceTree = "<group>"; };
+		DAFACC2C29664872001BA118 /* Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFACC3729664893001BA118 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		DAFACC3929664B4D001BA118 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +99,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */,
+				DAFACC3229664872001BA118 /* Api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DACC46C4295D073900FFAE56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFACC2929664872001BA118 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -112,8 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				DACC46B3295D073700FFAE56 /* AwGeez */,
-				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 				DA6421B0295D121B00244DC4 /* Model */,
+				DAFACC2D29664872001BA118 /* Api */,
+				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 				DA6421D1295D279700244DC4 /* .swiftlint.yml */,
 				DACC46B2295D073700FFAE56 /* Products */,
 			);
@@ -125,6 +149,7 @@
 				DACC46B1295D073700FFAE56 /* AwGeez.app */,
 				DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */,
 				DA6421AF295D121B00244DC4 /* Model.framework */,
+				DAFACC2C29664872001BA118 /* Api.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,10 +183,26 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DAFACC2D29664872001BA118 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				DAFACC3729664893001BA118 /* Api.swift */,
+				DAFACC3929664B4D001BA118 /* Error.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		DA6421AA295D121B00244DC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFACC2729664872001BA118 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,6 +244,7 @@
 			);
 			dependencies = (
 				DA6421B4295D121B00244DC4 /* PBXTargetDependency */,
+				DAFACC3129664872001BA118 /* PBXTargetDependency */,
 			);
 			name = AwGeez;
 			productName = AwGeez;
@@ -227,6 +269,24 @@
 			productReference = DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DAFACC2B29664872001BA118 /* Api */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFACC3629664872001BA118 /* Build configuration list for PBXNativeTarget "Api" */;
+			buildPhases = (
+				DAFACC2729664872001BA118 /* Headers */,
+				DAFACC2829664872001BA118 /* Sources */,
+				DAFACC2929664872001BA118 /* Frameworks */,
+				DAFACC2A29664872001BA118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Api;
+			productName = Api;
+			productReference = DAFACC2C29664872001BA118 /* Api.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -247,6 +307,10 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = DACC46B0295D073700FFAE56;
 					};
+					DAFACC2B29664872001BA118 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
 				};
 			};
 			buildConfigurationList = DACC46AC295D073700FFAE56 /* Build configuration list for PBXProject "AwGeez" */;
@@ -265,6 +329,7 @@
 				DACC46B0295D073700FFAE56 /* AwGeez */,
 				DACC46C6295D073900FFAE56 /* AwGeezTests */,
 				DA6421AE295D121B00244DC4 /* Model */,
+				DAFACC2B29664872001BA118 /* Api */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +353,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DACC46C5295D073900FFAE56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFACC2A29664872001BA118 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,6 +420,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAFACC2829664872001BA118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFACC3A29664B4D001BA118 /* Error.swift in Sources */,
+				DAFACC3829664893001BA118 /* Api.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -360,6 +441,11 @@
 			isa = PBXTargetDependency;
 			target = DACC46B0295D073700FFAE56 /* AwGeez */;
 			targetProxy = DACC46C8295D073900FFAE56 /* PBXContainerItemProxy */;
+		};
+		DAFACC3129664872001BA118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFACC2B29664872001BA118 /* Api */;
+			targetProxy = DAFACC3029664872001BA118 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -655,6 +741,71 @@
 			};
 			name = Release;
 		};
+		DAFACC3429664872001BA118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q2ZXF3TT52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.Api;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAFACC3529664872001BA118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q2ZXF3TT52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.Api;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,6 +841,15 @@
 			buildConfigurations = (
 				DACC46DF295D073900FFAE56 /* Debug */,
 				DACC46E0295D073900FFAE56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFACC3629664872001BA118 /* Build configuration list for PBXNativeTarget "Api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFACC3429664872001BA118 /* Debug */,
+				DAFACC3529664872001BA118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

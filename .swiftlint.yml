@@ -1,3 +1,7 @@
 disabled_rules:
  - line_length
  - trailing_whitespace
+
+large_tuple:
+  warning: 3
+  error: 4

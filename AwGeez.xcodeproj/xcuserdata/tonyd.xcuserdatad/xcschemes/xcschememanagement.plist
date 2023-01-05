@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Api.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>AwGeez.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>DACC46C6295D073900FFAE56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAFACC2B29664872001BA118</key>
 		<dict>
 			<key>primary</key>
 			<true/>
