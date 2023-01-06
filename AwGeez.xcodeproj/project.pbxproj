@@ -14,6 +14,23 @@
 		DA6421C3295D186500244DC4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C2295D186500244DC4 /* Location.swift */; };
 		DA6421C5295D186D00244DC4 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C4295D186D00244DC4 /* Episode.swift */; };
 		DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DA6421D1295D279700244DC4 /* .swiftlint.yml */; };
+		DA7794E929679E71005A0302 /* All.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794E829679E71005A0302 /* All.swift */; };
+		DA7794EB29679F0F005A0302 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794EA29679F0F005A0302 /* Requester.swift */; };
+		DA7794F329679F75005A0302 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA7794F229679F75005A0302 /* Alamofire */; };
+		DA7794F52967A47A005A0302 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F42967A47A005A0302 /* RequestHandler.swift */; };
+		DA7794F72967B093005A0302 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F62967B093005A0302 /* ResponseModel.swift */; };
+		DA7794F92967B915005A0302 /* CharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F82967B915005A0302 /* CharacterEndpoint.swift */; };
+		DA7795022967BBAA005A0302 /* RestApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795012967BBAA005A0302 /* RestApiTests.swift */; };
+		DA7795032967BBAA005A0302 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
+		DA77950B2967BC9C005A0302 /* RequestHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77950A2967BC9C005A0302 /* RequestHandlerTests.swift */; };
+		DA77950E2967BF41005A0302 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA77950D2967BF41005A0302 /* Macaroni */; };
+		DA7795102967BF76005A0302 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA77950F2967BF76005A0302 /* Macaroni */; };
+		DA7795132967C050005A0302 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795122967C050005A0302 /* Container.swift */; };
+		DA7795152967C445005A0302 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795142967C445005A0302 /* DependencyContainer.swift */; };
+		DA7795172967CC1C005A0302 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA7795162967CC1C005A0302 /* Macaroni */; };
+		DA7795182967CC57005A0302 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
+		DA7795192967CC57005A0302 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA77951E2967DA91005A0302 /* AlamofireRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77951D2967DA91005A0302 /* AlamofireRequester.swift */; };
 		DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B4295D073700FFAE56 /* AppDelegate.swift */; };
 		DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B6295D073700FFAE56 /* SceneDelegate.swift */; };
 		DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B8295D073700FFAE56 /* ViewController.swift */; };
@@ -24,10 +41,25 @@
 		DAFACC3329664872001BA118 /* Api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAFACC3829664893001BA118 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3729664893001BA118 /* Api.swift */; };
 		DAFACC3A29664B4D001BA118 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3929664B4D001BA118 /* Error.swift */; };
+		DAFACC4229679E01001BA118 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC4129679E01001BA118 /* RestApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DA6421B3295D121B00244DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA6421AE295D121B00244DC4;
+			remoteInfo = Model;
+		};
+		DA7795042967BBAA005A0302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFACC2B29664872001BA118;
+			remoteInfo = Api;
+		};
+		DA77951A2967CC57005A0302 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
 			proxyType = 1;
@@ -63,6 +95,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA77951C2967CC57005A0302 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA7795192967CC57005A0302 /* Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +115,17 @@
 		DA6421C2295D186500244DC4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DA6421C4295D186D00244DC4 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		DA6421D1295D279700244DC4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		DA7794E829679E71005A0302 /* All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All.swift; sourceTree = "<group>"; };
+		DA7794EA29679F0F005A0302 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		DA7794F42967A47A005A0302 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		DA7794F62967B093005A0302 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		DA7794F82967B915005A0302 /* CharacterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpoint.swift; sourceTree = "<group>"; };
+		DA7794FF2967BBAA005A0302 /* RestApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7795012967BBAA005A0302 /* RestApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiTests.swift; sourceTree = "<group>"; };
+		DA77950A2967BC9C005A0302 /* RequestHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlerTests.swift; sourceTree = "<group>"; };
+		DA7795122967C050005A0302 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		DA7795142967C445005A0302 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		DA77951D2967DA91005A0302 /* AlamofireRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequester.swift; sourceTree = "<group>"; };
 		DACC46B1295D073700FFAE56 /* AwGeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwGeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46B4295D073700FFAE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACC46B6295D073700FFAE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +138,7 @@
 		DAFACC2C29664872001BA118 /* Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFACC3729664893001BA118 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		DAFACC3929664B4D001BA118 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DAFACC4129679E01001BA118 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +149,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA7794FC2967BBAA005A0302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA7795172967CC1C005A0302 /* Macaroni in Frameworks */,
+				DA7795032967BBAA005A0302 /* Api.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DACC46AE295D073700FFAE56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */,
 				DAFACC3229664872001BA118 /* Api.framework in Frameworks */,
+				DA77950E2967BF41005A0302 /* Macaroni in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +179,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7795102967BF76005A0302 /* Macaroni in Frameworks */,
+				DA7795182967CC57005A0302 /* Model.framework in Frameworks */,
+				DA7794F329679F75005A0302 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +199,56 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA7794EF29679F6B005A0302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA7794FA2967B91A005A0302 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				DA7794E829679E71005A0302 /* All.swift */,
+				DA7794F82967B915005A0302 /* CharacterEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		DA7795002967BBAA005A0302 /* RestApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA77950A2967BC9C005A0302 /* RequestHandlerTests.swift */,
+				DA7795012967BBAA005A0302 /* RestApiTests.swift */,
+			);
+			path = RestApiTests;
+			sourceTree = "<group>";
+		};
+		DA7795092967BBE3005A0302 /* Requester */ = {
+			isa = PBXGroup;
+			children = (
+				DA7794EA29679F0F005A0302 /* Requester.swift */,
+				DA77951D2967DA91005A0302 /* AlamofireRequester.swift */,
+			);
+			path = Requester;
+			sourceTree = "<group>";
+		};
+		DA7795112967C006005A0302 /* Dependecy injection */ = {
+			isa = PBXGroup;
+			children = (
+				DA7795122967C050005A0302 /* Container.swift */,
+			);
+			path = "Dependecy injection";
+			sourceTree = "<group>";
+		};
+		DA77951F2967DB12005A0302 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				DA7794F62967B093005A0302 /* ResponseModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		DACC46A8295D073700FFAE56 = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +257,9 @@
 				DAFACC2D29664872001BA118 /* Api */,
 				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 				DA6421D1295D279700244DC4 /* .swiftlint.yml */,
+				DA7795002967BBAA005A0302 /* RestApiTests */,
 				DACC46B2295D073700FFAE56 /* Products */,
+				DA7794EF29679F6B005A0302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +270,7 @@
 				DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */,
 				DA6421AF295D121B00244DC4 /* Model.framework */,
 				DAFACC2C29664872001BA118 /* Api.framework */,
+				DA7794FF2967BBAA005A0302 /* RestApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +278,7 @@
 		DACC46B3295D073700FFAE56 /* AwGeez */ = {
 			isa = PBXGroup;
 			children = (
+				DA7795112967C006005A0302 /* Dependecy injection */,
 				DACC46E6295D0DB700FFAE56 /* Main */,
 				DACC46B8295D073700FFAE56 /* ViewController.swift */,
 			);
@@ -188,8 +310,22 @@
 			children = (
 				DAFACC3729664893001BA118 /* Api.swift */,
 				DAFACC3929664B4D001BA118 /* Error.swift */,
+				DAFACC4029679DD9001BA118 /* Rest */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		DAFACC4029679DD9001BA118 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				DAFACC4129679E01001BA118 /* RestApi.swift */,
+				DA7794F42967A47A005A0302 /* RequestHandler.swift */,
+				DA7795142967C445005A0302 /* DependencyContainer.swift */,
+				DA77951F2967DB12005A0302 /* Response */,
+				DA7795092967BBE3005A0302 /* Requester */,
+				DA7794FA2967B91A005A0302 /* Endpoints */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +366,27 @@
 			productReference = DA6421AF295D121B00244DC4 /* Model.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DA7794FE2967BBAA005A0302 /* RestApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA7795062967BBAA005A0302 /* Build configuration list for PBXNativeTarget "RestApiTests" */;
+			buildPhases = (
+				DA7794FB2967BBAA005A0302 /* Sources */,
+				DA7794FC2967BBAA005A0302 /* Frameworks */,
+				DA7794FD2967BBAA005A0302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA7795052967BBAA005A0302 /* PBXTargetDependency */,
+			);
+			name = RestApiTests;
+			packageProductDependencies = (
+				DA7795162967CC1C005A0302 /* Macaroni */,
+			);
+			productName = RestApiTests;
+			productReference = DA7794FF2967BBAA005A0302 /* RestApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DACC46B0295D073700FFAE56 /* AwGeez */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DACC46DB295D073900FFAE56 /* Build configuration list for PBXNativeTarget "AwGeez" */;
@@ -247,6 +404,9 @@
 				DAFACC3129664872001BA118 /* PBXTargetDependency */,
 			);
 			name = AwGeez;
+			packageProductDependencies = (
+				DA77950D2967BF41005A0302 /* Macaroni */,
+			);
 			productName = AwGeez;
 			productReference = DACC46B1295D073700FFAE56 /* AwGeez.app */;
 			productType = "com.apple.product-type.application";
@@ -277,12 +437,18 @@
 				DAFACC2829664872001BA118 /* Sources */,
 				DAFACC2929664872001BA118 /* Frameworks */,
 				DAFACC2A29664872001BA118 /* Resources */,
+				DA77951C2967CC57005A0302 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DA77951B2967CC57005A0302 /* PBXTargetDependency */,
 			);
 			name = Api;
+			packageProductDependencies = (
+				DA7794F229679F75005A0302 /* Alamofire */,
+				DA77950F2967BF76005A0302 /* Macaroni */,
+			);
 			productName = Api;
 			productReference = DAFACC2C29664872001BA118 /* Api.framework */;
 			productType = "com.apple.product-type.framework";
@@ -298,6 +464,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					DA6421AE295D121B00244DC4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					DA7794FE2967BBAA005A0302 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 					DACC46B0295D073700FFAE56 = {
@@ -322,6 +491,10 @@
 				Base,
 			);
 			mainGroup = DACC46A8295D073700FFAE56;
+			packageReferences = (
+				DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */,
+			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,12 +503,20 @@
 				DACC46C6295D073900FFAE56 /* AwGeezTests */,
 				DA6421AE295D121B00244DC4 /* Model */,
 				DAFACC2B29664872001BA118 /* Api */,
+				DA7794FE2967BBAA005A0302 /* RestApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DA6421AD295D121B00244DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA7794FD2967BBAA005A0302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,11 +583,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA7794FB2967BBAA005A0302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA77950B2967BC9C005A0302 /* RequestHandlerTests.swift in Sources */,
+				DA7795022967BBAA005A0302 /* RestApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DACC46AD295D073700FFAE56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */,
+				DA7795132967C050005A0302 /* Container.swift in Sources */,
 				DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
 			);
@@ -425,7 +616,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFACC3A29664B4D001BA118 /* Error.swift in Sources */,
+				DA7794E929679E71005A0302 /* All.swift in Sources */,
 				DAFACC3829664893001BA118 /* Api.swift in Sources */,
+				DA7794EB29679F0F005A0302 /* Requester.swift in Sources */,
+				DA7794F72967B093005A0302 /* ResponseModel.swift in Sources */,
+				DA77951E2967DA91005A0302 /* AlamofireRequester.swift in Sources */,
+				DA7794F52967A47A005A0302 /* RequestHandler.swift in Sources */,
+				DAFACC4229679E01001BA118 /* RestApi.swift in Sources */,
+				DA7795152967C445005A0302 /* DependencyContainer.swift in Sources */,
+				DA7794F92967B915005A0302 /* CharacterEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +635,16 @@
 			isa = PBXTargetDependency;
 			target = DA6421AE295D121B00244DC4 /* Model */;
 			targetProxy = DA6421B3295D121B00244DC4 /* PBXContainerItemProxy */;
+		};
+		DA7795052967BBAA005A0302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFACC2B29664872001BA118 /* Api */;
+			targetProxy = DA7795042967BBAA005A0302 /* PBXContainerItemProxy */;
+		};
+		DA77951B2967CC57005A0302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA6421AE295D121B00244DC4 /* Model */;
+			targetProxy = DA77951A2967CC57005A0302 /* PBXContainerItemProxy */;
 		};
 		DACC46C9295D073900FFAE56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -520,6 +729,40 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA7795072967BBAA005A0302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2ZXF3TT52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.RestApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA7795082967BBAA005A0302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q2ZXF3TT52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TonyDstudio.RestApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -818,6 +1061,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DA7795062967BBAA005A0302 /* Build configuration list for PBXNativeTarget "RestApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA7795072967BBAA005A0302 /* Debug */,
+				DA7795082967BBAA005A0302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DACC46AC295D073700FFAE56 /* Build configuration list for PBXProject "AwGeez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -855,6 +1107,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bealex/Macaroni";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA7794F229679F75005A0302 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DA77950D2967BF41005A0302 /* Macaroni */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
+			productName = Macaroni;
+		};
+		DA77950F2967BF76005A0302 /* Macaroni */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
+			productName = Macaroni;
+		};
+		DA7795162967CC1C005A0302 /* Macaroni */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
+			productName = Macaroni;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DACC46A9295D073700FFAE56 /* Project object */;
 }

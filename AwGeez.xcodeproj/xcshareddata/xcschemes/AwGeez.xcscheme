@@ -39,6 +39,16 @@
                ReferencedContainer = "container:AwGeez.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DA7794FE2967BBAA005A0302"
+               BuildableName = "RestApiTests.xctest"
+               BlueprintName = "RestApiTests"
+               ReferencedContainer = "container:AwGeez.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
