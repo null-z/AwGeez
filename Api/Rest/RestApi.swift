@@ -15,7 +15,8 @@ class RestApi: Api {
     
     private let basePath = "https://rickandmortyapi.com/api"
     
-    @Injected private var requester: Requester
+    @Injected(.capturingContainerOnInit(container))
+    private var requester: Requester
         
 }
 

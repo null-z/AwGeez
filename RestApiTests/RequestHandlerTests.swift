@@ -12,11 +12,11 @@ import Macaroni
 final class RequestHandlerTests: XCTestCase {
     
     var api: RestApi!
-    var mockRequester: MockRequester!
+    var spyRequester: SpyRequester!
 
     override func setUpWithError() throws {
-        self.mockRequester = MockRequester()
-        container.register { () -> Requester in self.mockRequester }
+        self.spyRequester = SpyRequester()
+        container.register { () -> Requester in self.spyRequester }
         
         self.api = RestApi()
     }
@@ -24,22 +24,29 @@ final class RequestHandlerTests: XCTestCase {
     func testBaseUrl() throws {
         api.handleRequest(of: StubResponseModel.self, with: "") { _ in }
         
-        let url = try XCTUnwrap(mockRequester.lastRequestUrl)
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api")!)
     }
     
-    func testCharacterById() throws {
+    func testCharactersByIds() throws {
         api.character.get(by: [1, 2, 3, 4, 5]) { _ in }
         
-        let url = try XCTUnwrap(mockRequester.lastRequestUrl)
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/1,2,3,4,5")!)
+    }
+    
+    func testCharacterCount() throws {
+        api.character.getCount { _ in }
+        
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/")!)
     }
 
 }
 
 struct StubResponseModel: ResponseModel { }
 
-class MockRequester: Requester {
+class SpyRequester: Requester {
     
     var lastRequestUrl: URL?
     

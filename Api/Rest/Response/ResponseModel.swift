@@ -9,6 +9,4 @@ import Foundation
 
 protocol ResponseModel: Decodable { }
 
-struct Example: ResponseModel {
-    let count: Int
-}
+struct Example: ResponseModel { }

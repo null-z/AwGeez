@@ -18,10 +18,6 @@ class CharacterEndpoint {
         self.requestHandler = requestHandler
     }
     
-    func get(by id: Model.Character.ID, completion: @escaping (Result<Model.Character, ApiError>) -> Void) {
-        self.handleRequest(of: Example.self, with: String(id)) { _ in }
-    }
-    
     func get(by ids: [Model.Character.ID], completion: @escaping (Result<Model.Character, ApiError>) -> Void) {
         let idsString = ids.map { id in
             String(id)
@@ -29,6 +25,18 @@ class CharacterEndpoint {
             .joined(separator: ",")
         
         self.handleRequest(of: Example.self, with: idsString) { _ in }
+    }
+    
+    func getCount(completion: @escaping (Result<UInt, ApiError>) -> Void) {
+        self.handleRequest(of: PaginatedResponse.self, with: "") { result in
+            switch result {
+            case .success(let response):
+                let count = response.info.count
+                completion(Result.success(count))
+            case .failure(let error):
+                completion(Result.failure(error))
+            }
+        }
     }
         
 }
