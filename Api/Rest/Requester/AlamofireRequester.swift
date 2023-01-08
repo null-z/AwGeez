@@ -11,22 +11,30 @@ import Alamofire
 class AlamofireRequester: Requester {
     
     private let reachibilityManager = NetworkReachabilityManager()
-        
-    func get<R: ResponseModel>(_ type: R.Type, url: URL, completion: @escaping (_: Result<R, ApiError>) -> Void) {
+    
+    func handle<R>(request: Request<R>) where R: ResponseModel {
         if !(reachibilityManager?.isReachable ?? false) {
-            completion(.failure(.badConnection))
+            print("Network connection failure")
+            request.failure(.badConnection)
+            return
+        }
+        
+        guard let url = URL(string: request.path) else {
+            print("Request path to URL conversion failure")
+            request.failure(.badResponse)
             return
         }
         
         AF.request(url)
             .validate()
-            .responseDecodable(of: type) { response in
+            .responseDecodable(of: request.modelType) { response in
                 switch response.result {
                 case .success(let responseModel):
-                    completion(.success(responseModel))
+                    request.completion(responseModel)
                 case .failure:
-                    completion(.failure(.badResponse))
+                    request.failure(.badResponse)
                 }
             }
+
     }
 }

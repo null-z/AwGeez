@@ -15,7 +15,7 @@ import Macaroni
 //func registerDependecies() {
 //    Macaroni.logger = LoggerStub()
 //    Container.lookupPolicy = .singleton(sharedContainer)
-//    sharedContainer.register { () ->  in Resulter() }
+//    sharedContainer.register { () ->  in  }
 //}
 //
 //class LoggerStub: MacaroniLogger {
@@ -24,17 +24,6 @@ import Macaroni
 //
 //    func die(_ message: String, file: StaticString, function: String, line: UInt) -> Never {
 //        abort()
-//    }
-//}
-//
-//struct Person {
-//    let name: String
-//    let work: Profession
-//}
-//
-//extension Person {
-//    struct Profession {
-//        let exp: Int
 //    }
 //}
 

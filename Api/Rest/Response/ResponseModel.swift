@@ -9,4 +9,6 @@ import Foundation
 
 protocol ResponseModel: Decodable { }
 
+extension UInt: ResponseModel { }
+
 struct Example: ResponseModel { }

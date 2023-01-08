@@ -22,21 +22,25 @@ final class RequestHandlerTests: XCTestCase {
     }
     
     func testBaseUrl() throws {
-        api.handleRequest(of: StubResponseModel.self, with: "") { _ in }
+        let request = Request(of: StubResponseModel.self, by: "") { _ in
+        } failure: { _ in
+        }
+
+        api.handle(request: request)
         
         let url = try XCTUnwrap(spyRequester.lastRequestUrl)
-        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api")!)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/")!)
     }
     
     func testCharactersByIds() throws {
-        api.character.get(by: [1, 2, 3, 4, 5]) { _ in }
+        api.character.get(by: [1, 2, 3, 4, 5]) { _ in } failure: { _ in }
         
         let url = try XCTUnwrap(spyRequester.lastRequestUrl)
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/1,2,3,4,5")!)
     }
     
     func testCharacterCount() throws {
-        api.character.getCount { _ in }
+        api.character.getCount { _ in } failure: { _ in }
         
         let url = try XCTUnwrap(spyRequester.lastRequestUrl)
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/")!)
@@ -50,7 +54,8 @@ class SpyRequester: Requester {
     
     var lastRequestUrl: URL?
     
-    func get<R>(_ type: R.Type, url: URL, completion: @escaping (Result<R, ApiError>) -> Void) where R: ResponseModel {
+    func handle<R>(request: Request<R>) where R: ResponseModel {
+        guard let url = URL(string: request.path) else { return }
         self.lastRequestUrl = url
     }
 }

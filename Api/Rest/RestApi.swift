@@ -13,7 +13,7 @@ class RestApi: Api {
     lazy var all: ApiAll = AllEndpoint()
     lazy var character: CharacterEndpoint = CharacterEndpoint(requestHandler: self)
     
-    private let basePath = "https://rickandmortyapi.com/api"
+    private let basePath = "https://rickandmortyapi.com/api/"
     
     @Injected(.capturingContainerOnInit(container))
     private var requester: Requester
@@ -21,8 +21,8 @@ class RestApi: Api {
 }
 
 extension RestApi: RequestHandler {
-    func handleRequest<R>(of type: R.Type, with pathPart: String, completion: @escaping (Result<R, ApiError>) -> Void) where R: ResponseModel {
-        let url = URL(string: basePath + pathPart)!
-        requester.get(type, url: url, completion: completion)
+    func handle<R>(request: Request<R>) where R: ResponseModel {
+        request.path = basePath + request.path
+        requester.handle(request: request)
     }
 }

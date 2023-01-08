@@ -339,11 +339,11 @@
 			isa = PBXGroup;
 			children = (
 				DAFACC4129679E01001BA118 /* RestApi.swift */,
-				DA7794F42967A47A005A0302 /* RequestHandler.swift */,
-				DA7795142967C445005A0302 /* DependencyContainer.swift */,
-				DA77951F2967DB12005A0302 /* Response */,
-				DA7795092967BBE3005A0302 /* Requester */,
 				DA7794FA2967B91A005A0302 /* Endpoints */,
+				DA7794F42967A47A005A0302 /* RequestHandler.swift */,
+				DA7795092967BBE3005A0302 /* Requester */,
+				DA77951F2967DB12005A0302 /* Response */,
+				DA7795142967C445005A0302 /* DependencyContainer.swift */,
 			);
 			path = Rest;
 			sourceTree = "<group>";

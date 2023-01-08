@@ -8,7 +8,8 @@
 import Foundation
 import Model
 
-class AllEndpoint: ApiAll {    
-    func get(completion: @escaping (Result<([Model.Character], [Model.Location], [Model.Episode]), ApiError>) -> Void) {
+class AllEndpoint: ApiAll {
+    func get(completion: @escaping Completion<([Model.Character], [Model.Location], [Model.Episode])>, failure: @escaping Failure) {
+        
     }
 }

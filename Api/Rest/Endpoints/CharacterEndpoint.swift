@@ -12,39 +12,44 @@ class CharacterEndpoint {
     
     private let requestHandler: RequestHandler
     
-    let path = "/character"
+    let path = "character/"
     
     init(requestHandler: RequestHandler) {
         self.requestHandler = requestHandler
     }
     
-    func get(by ids: [Model.Character.ID], completion: @escaping (Result<Model.Character, ApiError>) -> Void) {
+    func get(by ids: [Model.Character.ID], completion: @escaping (Model.Character) -> Void, failure: @escaping Failure) {
         let idsString = ids.map { id in
             String(id)
         }
             .joined(separator: ",")
         
-        self.handleRequest(of: Example.self, with: idsString) { _ in }
+        let request = Request(of: Example.self, by: idsString, completion: { _ in
+            // map
+        }, failure: failure)
+        
+        self.handle(request: request)
     }
     
-    func getCount(completion: @escaping (Result<UInt, ApiError>) -> Void) {
-        self.handleRequest(of: PaginatedResponse.self, with: "") { result in
-            switch result {
-            case .success(let response):
-                let count = response.info.count
-                completion(Result.success(count))
-            case .failure(let error):
-                completion(Result.failure(error))
-            }
-        }
-    }
+//    func getCount(completion: @escaping (UInt) -> Void, failure: @escaping Api.Failure) {
+//        let request = Request(of: PaginatedResponse.self, completion: { response in
+//            completion(response.info.count)
+//        }, failure: failure)
+//        self.handle(request: request)
+//    }
         
+    func getCount(completion: @escaping Completion<UInt>, failure: @escaping Failure) {
+        let request = Request(of: PaginatedResponse.self, completion: { response in
+            completion(response.info.count)
+        }, failure: failure)
+        self.handle(request: request)
+    }
+
 }
 
 extension CharacterEndpoint: RequestHandler {
-    
-    func handleRequest<R>(of type: R.Type, with pathPart: String, completion: @escaping (Result<R, ApiError>) -> Void) where R: ResponseModel {
-        let path = path + "/" + pathPart
-        requestHandler.handleRequest(of: type, with: path, completion: completion)
+    func handle<R>(request: Request<R>) where R: ResponseModel {
+        request.path = path + request.path
+        requestHandler.handle(request: request)
     }
 }

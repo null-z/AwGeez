@@ -30,13 +30,15 @@ final class CharacterEndpointTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Response expectation")
         
-        api.character.getCount { result in
-            if case Result.success(let response) = result {
-                XCTAssertEqual(825, response)
-            }
+        api.character.getCount { response in
+            XCTAssertEqual(825, response)
+            expectation.fulfill()
+        } failure: { _ in
+            XCTFail("Unexpected failure")
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 15)
+        
+        wait(for: [expectation], timeout: 3)
     }
 
 }
@@ -44,12 +46,12 @@ final class CharacterEndpointTests: XCTestCase {
 class MockRequester: Requester {
     var jsonData: Data!
     
-    func get<R>(_ type: R.Type, url: URL, completion: @escaping (Result<R, ApiError>) -> Void) where R: ResponseModel {
+    func handle<R>(request: Request<R>) where R: ResponseModel {
         let responseModel = try? JSONDecoder().decode(R.self, from: jsonData)
         guard let responseModel = responseModel else {
             XCTFail("Cannot convert to model")
             return
         }
-        completion(.success(responseModel))
+        request.completion(responseModel)
     }
 }

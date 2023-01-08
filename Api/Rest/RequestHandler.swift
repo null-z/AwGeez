@@ -8,5 +8,23 @@
 import Foundation
 
 protocol RequestHandler: AnyObject {
-    func handleRequest<R: ResponseModel>(of type: R.Type, with pathPart: String, completion: @escaping (_: Result<R, ApiError>) -> Void)
+    func handle<R>(request: Request<R>)
+}
+
+class Request<Model: ResponseModel> {
+    
+    let modelType: Model.Type
+    
+    var path: String
+    
+    let completion: (Model) -> Void
+    let failure: (ApiError) -> Void
+    
+    init(of type: Model.Type, by path: String = "", completion: @escaping Completion<Model>, failure: @escaping Failure) {
+        self.modelType = type
+        self.path = path
+        self.completion = completion
+        self.failure = failure
+    }
+
 }
