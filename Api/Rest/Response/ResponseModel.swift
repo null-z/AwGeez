@@ -11,4 +11,4 @@ protocol ResponseModel: Decodable { }
 
 extension UInt: ResponseModel { }
 
-struct Example: ResponseModel { }
+extension Array: ResponseModel where Element: ResponseModel { }

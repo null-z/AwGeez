@@ -9,7 +9,9 @@ import Foundation
 
 final class MockedJsonData {
     
-    static let characters = jsonDataFromFile(withName: "20characters")
+    static let character = jsonDataFromFile(withName: "character")
+    static let characters = jsonDataFromFile(withName: "characters")
+    static let charactersPage = jsonDataFromFile(withName: "charactersPage")
     
     private static func jsonDataFromFile(withName name: String) -> Data {
         let bundle = Bundle(for: MockedJsonData.self)

@@ -20,13 +20,27 @@ final class CharacterEndpointTests: XCTestCase {
         self.mockRequester = MockRequester()
         container.register { () -> Requester in self.mockRequester }
     }
+        
+    func testGetByIds() throws {
+        mockRequester.jsonData = MockedJsonData.characters
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        let expectation = XCTestExpectation(description: "Response expectation")
+
+        api.character.get(by: [1, 2, 3, 4, 5]) { characters in
+            XCTAssertNotNil(characters.first)
+            let rick = characters.first!
+            XCTAssertEqual(rick.name, "Rick Sanchez")
+            expectation.fulfill()
+        } failure: { _ in
+            XCTFail("Unexpected failure")
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 3)
     }
     
     func testGetCount() throws {
-        mockRequester.jsonData = MockedJsonData.characters
+        mockRequester.jsonData = MockedJsonData.charactersPage
         
         let expectation = XCTestExpectation(description: "Response expectation")
         

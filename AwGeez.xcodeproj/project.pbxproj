@@ -16,7 +16,6 @@
 		DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DA6421D1295D279700244DC4 /* .swiftlint.yml */; };
 		DA7794E929679E71005A0302 /* All.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794E829679E71005A0302 /* All.swift */; };
 		DA7794EB29679F0F005A0302 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794EA29679F0F005A0302 /* Requester.swift */; };
-		DA7794F329679F75005A0302 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA7794F229679F75005A0302 /* Alamofire */; };
 		DA7794F52967A47A005A0302 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F42967A47A005A0302 /* RequestHandler.swift */; };
 		DA7794F72967B093005A0302 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F62967B093005A0302 /* ResponseModel.swift */; };
 		DA7794F92967B915005A0302 /* CharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F82967B915005A0302 /* CharacterEndpoint.swift */; };
@@ -32,9 +31,14 @@
 		DA7795192967CC57005A0302 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA77951E2967DA91005A0302 /* AlamofireRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77951D2967DA91005A0302 /* AlamofireRequester.swift */; };
 		DA7795212967E8D3005A0302 /* CharacterEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795202967E8D3005A0302 /* CharacterEndpointTests.swift */; };
-		DA7795262967F3B4005A0302 /* 20characters.json in Resources */ = {isa = PBXBuildFile; fileRef = DA7795252967F3B4005A0302 /* 20characters.json */; };
+		DA7795262967F3B4005A0302 /* charactersPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DA7795252967F3B4005A0302 /* charactersPage.json */; };
 		DA77952829691341005A0302 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77952729691341005A0302 /* MockedData.swift */; };
 		DA77952D296ACBCA005A0302 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77952C296ACBCA005A0302 /* PaginatedResponse.swift */; };
+		DA779533296B819E005A0302 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = DA779532296B819E005A0302 /* characters.json */; };
+		DA779535296B831E005A0302 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779534296B831E005A0302 /* Character.swift */; };
+		DA779542296B9E8A005A0302 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA779541296B9E8A005A0302 /* Alamofire */; };
+		DA77954B296BDB4A005A0302 /* ModelsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77954A296BDB4A005A0302 /* ModelsDecodingTests.swift */; };
+		DA77954D296BDBEC005A0302 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = DA77954C296BDBEC005A0302 /* character.json */; };
 		DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B4295D073700FFAE56 /* AppDelegate.swift */; };
 		DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B6295D073700FFAE56 /* SceneDelegate.swift */; };
 		DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B8295D073700FFAE56 /* ViewController.swift */; };
@@ -131,9 +135,13 @@
 		DA7795142967C445005A0302 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		DA77951D2967DA91005A0302 /* AlamofireRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequester.swift; sourceTree = "<group>"; };
 		DA7795202967E8D3005A0302 /* CharacterEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointTests.swift; sourceTree = "<group>"; };
-		DA7795252967F3B4005A0302 /* 20characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 20characters.json; sourceTree = "<group>"; };
+		DA7795252967F3B4005A0302 /* charactersPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = charactersPage.json; sourceTree = "<group>"; };
 		DA77952729691341005A0302 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		DA77952C296ACBCA005A0302 /* PaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
+		DA779532296B819E005A0302 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		DA779534296B831E005A0302 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DA77954A296BDB4A005A0302 /* ModelsDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsDecodingTests.swift; sourceTree = "<group>"; };
+		DA77954C296BDBEC005A0302 /* character.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = character.json; sourceTree = "<group>"; };
 		DACC46B1295D073700FFAE56 /* AwGeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwGeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46B4295D073700FFAE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACC46B6295D073700FFAE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,9 +195,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA779542296B9E8A005A0302 /* Alamofire in Frameworks */,
 				DA7795102967BF76005A0302 /* Macaroni in Frameworks */,
 				DA7795182967CC57005A0302 /* Model.framework in Frameworks */,
-				DA7794F329679F75005A0302 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7795012967BBAA005A0302 /* RestApiTests.swift */,
+				DA77954A296BDB4A005A0302 /* ModelsDecodingTests.swift */,
 				DA77950A2967BC9C005A0302 /* RequestHandlerTests.swift */,
 				DA7795202967E8D3005A0302 /* CharacterEndpointTests.swift */,
 				DA77952729691341005A0302 /* MockedData.swift */,
@@ -257,6 +266,7 @@
 			children = (
 				DA7794F62967B093005A0302 /* ResponseModel.swift */,
 				DA77952C296ACBCA005A0302 /* PaginatedResponse.swift */,
+				DA779534296B831E005A0302 /* Character.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -264,7 +274,9 @@
 		DA7795222967EFA4005A0302 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				DA7795252967F3B4005A0302 /* 20characters.json */,
+				DA77954C296BDBEC005A0302 /* character.json */,
+				DA779532296B819E005A0302 /* characters.json */,
+				DA7795252967F3B4005A0302 /* charactersPage.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -466,8 +478,8 @@
 			);
 			name = Api;
 			packageProductDependencies = (
-				DA7794F229679F75005A0302 /* Alamofire */,
 				DA77950F2967BF76005A0302 /* Macaroni */,
+				DA779541296B9E8A005A0302 /* Alamofire */,
 			);
 			productName = Api;
 			productReference = DAFACC2C29664872001BA118 /* Api.framework */;
@@ -512,8 +524,8 @@
 			);
 			mainGroup = DACC46A8295D073700FFAE56;
 			packageReferences = (
-				DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */,
+				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
@@ -540,7 +552,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7795262967F3B4005A0302 /* 20characters.json in Resources */,
+				DA779533296B819E005A0302 /* characters.json in Resources */,
+				DA7795262967F3B4005A0302 /* charactersPage.json in Resources */,
+				DA77954D296BDBEC005A0302 /* character.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA77954B296BDB4A005A0302 /* ModelsDecodingTests.swift in Sources */,
 				DA77952829691341005A0302 /* MockedData.swift in Sources */,
 				DA7795212967E8D3005A0302 /* CharacterEndpointTests.swift in Sources */,
 				DA77950B2967BC9C005A0302 /* RequestHandlerTests.swift in Sources */,
@@ -638,6 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA779535296B831E005A0302 /* Character.swift in Sources */,
 				DA77952D296ACBCA005A0302 /* PaginatedResponse.swift in Sources */,
 				DAFACC3A29664B4D001BA118 /* Error.swift in Sources */,
 				DA7794E929679E71005A0302 /* All.swift in Sources */,
@@ -1133,14 +1149,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bealex/Macaroni";
@@ -1149,14 +1157,17 @@
 				kind = branch;
 			};
 		};
+		DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DA7794F229679F75005A0302 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DA7794EC29679F37005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		DA77950D2967BF41005A0302 /* Macaroni */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
@@ -1171,6 +1182,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
 			productName = Macaroni;
+		};
+		DA779541296B9E8A005A0302 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
