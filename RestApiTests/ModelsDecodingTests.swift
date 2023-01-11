@@ -11,18 +11,31 @@ import Model
 
 final class ModelsDecodingTests: XCTestCase {
     
-    func testPaginatedResponseDecoding() throws {
-        let jsonData = MockedJsonData.charactersPage
-        XCTAssertNoThrow(try JSONDecoder().decode(PaginatedResponse.self, from: jsonData))
-    }
-    
+    // MARK: - Character
     func testCharacterDecoding() throws {
-        let jsonData = MockedJsonData.character
-        XCTAssertNoThrow(try JSONDecoder().decode(Model.Character.self, from: jsonData))
+        XCTAssertNoThrow(try JSONDecoder().decode(Model.Character.self, from: MockedJsonData.character))
     }
 
     func testCharactersDecoding() throws {
-        let jsonData = MockedJsonData.characters
-        XCTAssertNoThrow(try JSONDecoder().decode([Model.Character].self, from: jsonData))
+        XCTAssertNoThrow(try JSONDecoder().decode([Model.Character].self, from: MockedJsonData.characters))
     }
+    
+    func testCharacterPaginatedResponseDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode(PaginatedResponse.self, from: MockedJsonData.charactersFirstPage))
+    }
+    
+    // MARK: - Location
+    func testLocationDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode(Model.Location.self, from: MockedJsonData.location))
+    }
+    
+    func testLocationsDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode([Model.Location].self, from: MockedJsonData.locations))
+    }
+    
+    func testLocationPaginatedResponseDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode(PaginatedResponse.self, from: MockedJsonData.locationsFirstPage))
+    }
+    
+    // MARK: - Episode
 }

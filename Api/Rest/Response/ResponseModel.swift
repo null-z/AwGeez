@@ -9,6 +9,12 @@ import Foundation
 
 protocol ResponseModel: Decodable { }
 
-extension UInt: ResponseModel { }
+typealias Count = UInt
+extension Count: ResponseModel { }
 
 extension Array: ResponseModel where Element: ResponseModel { }
+
+import Model
+
+extension Model.Character: ResponseModel { }
+extension Model.Location: ResponseModel { }

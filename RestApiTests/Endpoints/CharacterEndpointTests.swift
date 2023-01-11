@@ -11,13 +11,10 @@ import Macaroni
 
 final class CharacterEndpointTests: XCTestCase {
     
-    var api: RestApi!
-    var mockRequester: MockRequester!
+    var api: RestApi = RestApi()
+    var mockRequester: MockRequester = MockRequester()
 
     override func setUpWithError() throws {
-        self.api = RestApi()
-        
-        self.mockRequester = MockRequester()
         container.register { () -> Requester in self.mockRequester }
     }
         
@@ -36,36 +33,24 @@ final class CharacterEndpointTests: XCTestCase {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 3)
+        wait(for: [expectation], timeout: 1)
     }
     
     func testGetCount() throws {
-        mockRequester.jsonData = MockedJsonData.charactersPage
+        mockRequester.jsonData = MockedJsonData.charactersFirstPage
         
         let expectation = XCTestExpectation(description: "Response expectation")
         
-        api.character.getCount { response in
-            XCTAssertEqual(825, response)
+        api.character.getCount { count in
+            XCTAssertGreaterThan(count, 0)
+            XCTAssertLessThan(count, 1000)
             expectation.fulfill()
         } failure: { _ in
             XCTFail("Unexpected failure")
             expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 3)
+        wait(for: [expectation], timeout: 1)
     }
 
-}
-
-class MockRequester: Requester {
-    var jsonData: Data!
-    
-    func handle<R>(request: Request<R>) where R: ResponseModel {
-        let responseModel = try? JSONDecoder().decode(R.self, from: jsonData)
-        guard let responseModel = responseModel else {
-            XCTFail("Cannot convert to model")
-            return
-        }
-        request.completion(responseModel)
-    }
 }

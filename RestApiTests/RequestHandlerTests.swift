@@ -11,20 +11,15 @@ import Macaroni
 
 final class RequestHandlerTests: XCTestCase {
     
-    var api: RestApi!
-    var spyRequester: SpyRequester!
+    var api: RestApi = RestApi()
+    var spyRequester: SpyRequester = SpyRequester()
 
     override func setUpWithError() throws {
-        self.spyRequester = SpyRequester()
         container.register { () -> Requester in self.spyRequester }
-        
-        self.api = RestApi()
     }
     
     func testBaseUrl() throws {
-        let request = Request(of: StubResponseModel.self, by: "") { _ in
-        } failure: { _ in
-        }
+        let request = Request(of: StubResponseModel.self, by: "") { _ in } failure: { _ in }
 
         api.handle(request: request)
         
@@ -44,6 +39,20 @@ final class RequestHandlerTests: XCTestCase {
         
         let url = try XCTUnwrap(spyRequester.lastRequestUrl)
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/")!)
+    }
+    
+    func testLocationByIds() throws {
+        api.location.get(by: [1, 2, 3, 4, 5]) { _ in } failure: { _ in }
+        
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/location/1,2,3,4,5")!)
+    }
+    
+    func testLocationCount() throws {
+        api.location.getCount { _ in } failure: { _ in }
+        
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/location/")!)
     }
 
 }

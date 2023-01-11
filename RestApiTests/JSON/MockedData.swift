@@ -11,7 +11,15 @@ final class MockedJsonData {
     
     static let character = jsonDataFromFile(withName: "character")
     static let characters = jsonDataFromFile(withName: "characters")
-    static let charactersPage = jsonDataFromFile(withName: "charactersPage")
+    static let charactersFirstPage = jsonDataFromFile(withName: "charactersFirstPage")
+    
+    static let location = jsonDataFromFile(withName: "location")
+    static let locations = jsonDataFromFile(withName: "locations")
+    static let locationsFirstPage = jsonDataFromFile(withName: "locationsFirstPage")
+
+    static let episode = jsonDataFromFile(withName: "episode")
+    static let episodes = jsonDataFromFile(withName: "episodes")
+    static let episodesFirstPage = jsonDataFromFile(withName: "episodesFirstPage")
     
     private static func jsonDataFromFile(withName name: String) -> Data {
         let bundle = Bundle(for: MockedJsonData.self)

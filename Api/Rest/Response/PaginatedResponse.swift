@@ -13,6 +13,6 @@ struct PaginatedResponse: ResponseModel {
 
 extension PaginatedResponse {
     struct Info: ResponseModel {
-        let count: UInt
+        let count: Count
     }
 }

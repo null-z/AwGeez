@@ -10,8 +10,10 @@ import Macaroni
 
 class RestApi: Api {
     
-    lazy var all: ApiAll = AllEndpoint()
-    lazy var character: CharacterEndpoint = CharacterEndpoint(requestHandler: self)
+    private(set) lazy var all: ApiAll = AllEndpoint()
+    
+    private(set) lazy var character: CharacterEndpoint = CharacterEndpoint(requestHandler: self)
+    private(set) lazy var location: LocationEndpoint = LocationEndpoint(requestHandler: self)
     
     private let basePath = "https://rickandmortyapi.com/api/"
     

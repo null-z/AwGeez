@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-extension Model.Character: ResponseModel {
+extension Model.Character: Decodable {
     
     enum DecodingKeys: String, CodingKey {
         case id
@@ -36,29 +36,14 @@ extension Model.Character: ResponseModel {
         let species = try container.decode(String.self, forKey: .species)
         let type = try container.decode(String.self, forKey: .type)
         let gender = try container.decode(Self.Gender.self, forKey: .gender)
-        
+                
         let originContainer = try container.nestedContainer(keyedBy: LocationDecodingKeys.self, forKey: .origin)
-        var originID: Model.Location.ID?
-        if let originURL = try? originContainer.decode(URL.self, forKey: .url) {
-            originID = Model.Location.ID(originURL.lastPathComponent)
-            if originID == nil {
-                throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath, debugDescription: "no ID in URL " + originURL.absoluteString))
-            }
-        }
+        let originID = try? originContainer.decodeIdFromUrl(forKey: .url)
         
         let locationContainer = try container.nestedContainer(keyedBy: LocationDecodingKeys.self, forKey: .location)
-        let locationURL = try locationContainer.decode(URL.self, forKey: .url)
-        guard let locationID = Model.Location.ID(locationURL.lastPathComponent) else {
-            throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath, debugDescription: "no ID in URL " + locationURL.absoluteString))
-        }
+        let locationID = try locationContainer.decodeIdFromUrl(forKey: .url)
         
-        let episodeURLs = try container.decode([URL].self, forKey: .episode)
-        let episodeIDs = try episodeURLs.map { url in
-            guard let result = Model.Episode.ID(url.lastPathComponent) else {
-                throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath, debugDescription: "no ID in URL " + url.absoluteString))
-            }
-            return result
-        }
+        let episodeIDs = try container.decodeIdsFormUrls(forKey: .episode)
         
         self.init(id: id, name: name, image: image, status: status, species: species, type: type, gender: gender, origin: originID, location: locationID, episodes: episodeIDs)
     }
