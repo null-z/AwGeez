@@ -8,15 +8,7 @@
 import Foundation
 import Model
 
-protocol EntityEndpoint: RequestHandler {
-
-    associatedtype Entity: Model.Entity, ResponseModel
-    
-    func get(by ids: [Entity.ID], completion: @escaping ([Entity]) -> Void, failure: @escaping Failure)
-    func getCount(completion: @escaping Completion<Count>, failure: @escaping Failure)
-}
-
-extension EntityEndpoint {
+class EntityEndpoint<Entity: Model.Entity & ResponseModel>: PathComposingEndpoint {
     
     func get(by ids: [Entity.ID], completion: @escaping ([Entity]) -> Void, failure: @escaping Failure) {
         let idsString = ids.map { id in

@@ -8,9 +8,7 @@
 import Foundation
 import Model
 
-final class EpisodeEndpoint: Endpoint, EntityEndpoint {
-    
-    typealias Entity = Model.Episode
+class EpisodeEndpoint: EntityEndpoint<Model.Episode> {
     
     override var path: String { "episode/" }
 }

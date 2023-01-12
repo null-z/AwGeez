@@ -1,5 +1,5 @@
 //
-//  RequestHandlerTests.swift
+//  PathComposingTests.swift
 //  RestApiTests
 //
 //  Created by Tony Dэ on 06.01.2023.
@@ -9,7 +9,7 @@ import XCTest
 import Macaroni
 @testable import Api
 
-final class RequestHandlerTests: XCTestCase {
+final class PathComposingTests: XCTestCase {
     
     var api: RestApi = RestApi()
     var spyRequester: SpyRequester = SpyRequester()

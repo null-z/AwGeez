@@ -8,9 +8,7 @@
 import Foundation
 import Model
 
-final class LocationEndpoint: Endpoint, EntityEndpoint {
-    
-    typealias Entity = Model.Location
+class LocationEndpoint: EntityEndpoint<Model.Location> {
     
     override var path: String { "location/" }
 }

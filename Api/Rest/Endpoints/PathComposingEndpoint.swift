@@ -1,13 +1,13 @@
 //
-//  Endpoint.swift
+//  PathComposingEndpoint.swift
 //  Api
 //
-//  Created by Tony Dэ on 11.01.2023.
+//  Created by Tony Dэ on 12.01.2023.
 //
 
 import Foundation
 
-class Endpoint: RequestHandler {
+class PathComposingEndpoint: RequestHandler {
     
     var path: String { "" }
     

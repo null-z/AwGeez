@@ -10,7 +10,7 @@ import Macaroni
 
 final class RestApi: Api {
     
-    private(set) lazy var all: ApiAll = AllEndpoint()
+    private(set) lazy var all: ApiAll = AllEndpoint(characterEndpoint: character, locationEndpoint: location, episodeEndpoint: episode)
     
     private(set) lazy var character: CharacterEndpoint = CharacterEndpoint(requestHandler: self)
     private(set) lazy var location: LocationEndpoint = LocationEndpoint(requestHandler: self)

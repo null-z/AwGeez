@@ -16,5 +16,5 @@ public protocol Api {
 }
 
 public protocol ApiAll {
-    func get(completion: @escaping Completion<([Model.Character], [Model.Location], [Model.Episode])>, failure: @escaping Failure)
+    func get(completion: @escaping Completion<(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])>, failure: @escaping Failure)
 }
