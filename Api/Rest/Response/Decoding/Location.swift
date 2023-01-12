@@ -24,14 +24,7 @@ extension Model.Location: Decodable {
         let name = try container.decode(String.self, forKey: .name)
         let type = try container.decode(String.self, forKey: .type)
         let dimension = try container.decode(String.self, forKey: .dimension)
-        
-        let residentURLs = try container.decode([URL].self, forKey: .residents)
-        let residentIDs = try residentURLs.map { url in
-            guard let result = Model.Character.ID(url.lastPathComponent) else {
-                throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath, debugDescription: "no ID in URL " + url.absoluteString))
-            }
-            return result
-        }
+        let residentIDs = try container.decodeIdsFormUrls(forKey: .residents)
         
         self.init(id: id, name: name, type: type, dimension: dimension, residents: residentIDs)
     }

@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-class CharacterEndpoint: Endpoint, EntityEndpoint {
+final class CharacterEndpoint: Endpoint, EntityEndpoint {
     
     typealias Entity = Model.Character
     

@@ -27,6 +27,7 @@ final class RequestHandlerTests: XCTestCase {
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/")!)
     }
     
+    // MARK: - Character
     func testCharactersByIds() throws {
         api.character.get(by: [1, 2, 3, 4, 5]) { _ in } failure: { _ in }
         
@@ -41,6 +42,7 @@ final class RequestHandlerTests: XCTestCase {
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/character/")!)
     }
     
+    // MARK: - Location
     func testLocationByIds() throws {
         api.location.get(by: [1, 2, 3, 4, 5]) { _ in } failure: { _ in }
         
@@ -55,6 +57,20 @@ final class RequestHandlerTests: XCTestCase {
         XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/location/")!)
     }
 
+    // MARK: - Episode
+    func testEpisodeByIds() throws {
+        api.episode.get(by: [1, 2, 3, 4, 5]) { _ in } failure: { _ in }
+        
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/episode/1,2,3,4,5")!)
+    }
+    
+    func testEpisodeCount() throws {
+        api.episode.getCount { _ in } failure: { _ in }
+        
+        let url = try XCTUnwrap(spyRequester.lastRequestUrl)
+        XCTAssertEqual(url, URL(string: "https://rickandmortyapi.com/api/episode/")!)
+    }
 }
 
 struct StubResponseModel: ResponseModel { }

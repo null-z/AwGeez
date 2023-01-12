@@ -18,3 +18,4 @@ import Model
 
 extension Model.Character: ResponseModel { }
 extension Model.Location: ResponseModel { }
+extension Model.Episode: ResponseModel { }

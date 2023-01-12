@@ -38,4 +38,15 @@ final class ModelsDecodingTests: XCTestCase {
     }
     
     // MARK: - Episode
+    func testEpisodeDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode(Model.Episode.self, from: MockedJsonData.episode))
+    }
+    
+    func testEpisodesDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode([Model.Episode].self, from: MockedJsonData.episodes))
+    }
+    
+    func testEpisodePaginatedResponseDecoding() throws {
+        XCTAssertNoThrow(try JSONDecoder().decode(PaginatedResponse.self, from: MockedJsonData.episodesFirstPage))
+    }
 }

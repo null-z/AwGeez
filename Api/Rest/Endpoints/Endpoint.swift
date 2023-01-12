@@ -11,7 +11,7 @@ class Endpoint: RequestHandler {
     
     var path: String { "" }
     
-    let requestHandler: RequestHandler
+    unowned let requestHandler: RequestHandler
     
     init(requestHandler: RequestHandler) {
         self.requestHandler = requestHandler
