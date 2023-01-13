@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class AlamofireRequester: Requester {
+final class AlamofireRequester: Requester {
     
     private let reachibilityManager = NetworkReachabilityManager()
     

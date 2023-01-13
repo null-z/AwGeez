@@ -31,3 +31,13 @@ extension KeyedDecodingContainer {
         return id
     }
 }
+
+extension String {
+    func nullifyIfEmpty() -> Self? {
+        if self.isEmpty {
+            return nil
+        } else {
+            return self
+        }
+    }
+}

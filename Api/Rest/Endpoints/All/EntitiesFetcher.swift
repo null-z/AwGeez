@@ -1,13 +1,14 @@
 //
-//  CountFetcher.swift
+//  EntitiesFetcher.swift
 //  Api
 //
-//  Created by Tony Dэ on 12.01.2023.
+//  Created by Tony Dэ on 13.01.2023.
 //
 
 import Foundation
+import Model
 
-final class CountFetcher {
+final class EntitiesFetcher {
     
     private let characterEndpoint: CharacterEndpoint
     private let locationEndpoint: LocationEndpoint
@@ -21,31 +22,36 @@ final class CountFetcher {
     
     private var dispatchGroup = DispatchGroup()
     
-    private var characters: Count?
-    private var locations: Count?
-    private var episodes: Count?
+    private var characters: [Model.Character]?
+    private var locations: [Model.Location]?
+    private var episodes: [Model.Episode]?
     
     private var error: ApiError?
 
-    func getCounts(completion: @escaping Completion<(characters: Count, locations: Count, episodes: Count)>, failure: @escaping Failure) {
+    func getAll(by counts: (characters: Count, locations: Count, episodes: Count),
+                completion: @escaping Completion<(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])>,
+                failure: @escaping Failure) {
+        
         dispatchGroup.enter()
         dispatchGroup.enter()
         dispatchGroup.enter()
         
-        characterEndpoint.getCount(completion: { count in
-            self.characters = count
+        let charactersIds = ids(forCount: counts.characters)
+        characterEndpoint.get(by: charactersIds, completion: { characters in
+            self.characters = characters
             self.dispatchGroup.leave()
         }, failure: saveErrorAndLeave(_:))
-
-        locationEndpoint.getCount(completion: { count in
-            self.locations = count
+        
+        let locationsIds = ids(forCount: counts.locations)
+        locationEndpoint.get(by: locationsIds, completion: { locations in
+            self.locations = locations
             self.dispatchGroup.leave()
         }, failure: saveErrorAndLeave(_:))
-
-        episodeEndpoint.getCount(completion: { count in
-            self.episodes = count
+        
+        let episodesIds = ids(forCount: counts.episodes)
+        episodeEndpoint.get(by: episodesIds, completion: { episodes in
+            self.episodes = episodes
             self.dispatchGroup.leave()
-
         }, failure: saveErrorAndLeave(_:))
         
         dispatchGroup.notify(queue: .main, execute: {
@@ -59,9 +65,14 @@ final class CountFetcher {
             }
         })
     }
+        
+    private func ids(forCount count: Count) -> [Model.Entity.ID] {
+        return [Model.Entity.ID](1...count)
+    }
     
     private func saveErrorAndLeave(_ error: ApiError) {
         self.error = error
         self.dispatchGroup.leave()
     }
+    
 }

@@ -11,7 +11,7 @@ protocol RequestHandler: AnyObject {
     func handle<R>(request: Request<R>)
 }
 
-class Request<Model: ResponseModel> {
+final class Request<Model: ResponseModel> {
     
     let modelType: Model.Type
     

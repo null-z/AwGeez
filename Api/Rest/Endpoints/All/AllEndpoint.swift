@@ -21,7 +21,14 @@ final class AllEndpoint: ApiAll {
     }
     
     public func get(completion: @escaping Completion<(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])>, failure: @escaping Failure) {
-        
+        self.getCounts(completion: { [weak self] counts in
+            guard let self else { return }
+            EntitiesFetcher(characterEndpoint: self.characterEndpoint,
+                            locationEndpoint: self.locationEndpoint,
+                            episodeEndpoint: self.episodeEndpoint)
+                .getAll(by: counts, completion: completion, failure: failure)
+
+        }, failure: failure)
     }
     
     func getCounts(completion: @escaping Completion<(characters: Count, locations: Count, episodes: Count)>, failure: @escaping Failure) {

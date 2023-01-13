@@ -49,6 +49,7 @@ fileprivate extension DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM d, yyyy"
         formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(identifier: "UTC")
         return formatter
     }()
 }

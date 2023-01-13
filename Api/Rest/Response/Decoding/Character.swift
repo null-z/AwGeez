@@ -34,7 +34,7 @@ extension Model.Character: Decodable {
         let image = try container.decode(URL.self, forKey: .image)
         let status = try container.decode(Self.Status.self, forKey: .status)
         let species = try container.decode(String.self, forKey: .species)
-        let type = try container.decode(String.self, forKey: .type)
+        let type = (try container.decode(String.self, forKey: .type)).nullifyIfEmpty()
         let gender = try container.decode(Self.Gender.self, forKey: .gender)
                 
         let originContainer = try container.nestedContainer(keyedBy: LocationDecodingKeys.self, forKey: .origin)
