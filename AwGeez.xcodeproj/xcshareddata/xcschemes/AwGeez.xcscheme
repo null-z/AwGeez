@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -36,6 +37,16 @@
                BlueprintIdentifier = "DACC46C6295D073900FFAE56"
                BuildableName = "AwGeezTests.xctest"
                BlueprintName = "AwGeezTests"
+               ReferencedContainer = "container:AwGeez.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DA7794FE2967BBAA005A0302"
+               BuildableName = "RestApiTests.xctest"
+               BlueprintName = "RestApiTests"
                ReferencedContainer = "container:AwGeez.xcodeproj">
             </BuildableReference>
          </TestableReference>

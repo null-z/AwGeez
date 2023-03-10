@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ce7f662709a152e840b130a158b9afef3402e146"
+      }
+    },
+    {
+      "identity" : "macaroni",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bealex/Macaroni",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e4b75e5ac4bc07c56333f052faebd3249df28b66"
+      }
+    }
+  ],
+  "version" : 2
+}

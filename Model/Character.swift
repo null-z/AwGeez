@@ -18,11 +18,11 @@ public struct Character: Entity {
     public let type: String?
     public let gender: Gender
     
-    public let origin: Location.ID
-    public let location: Location.ID
+    public let origin: Location.ID?
+    public let location: Location.ID?
     public let episode: [Episode.ID]
     
-    public init(id: ID, name: String, image: URL, status: Status, species: String, type: String?, gender: Gender, origin: Location.ID, location: Location.ID, episode: [Episode.ID]) {
+    public init(id: ID, name: String, image: URL, status: Status, species: String, type: String?, gender: Gender, origin: Location.ID?, location: Location.ID?, episodes: [Episode.ID]) {
         self.id = id
         self.name = name
         self.image = image
@@ -32,12 +32,12 @@ public struct Character: Entity {
         self.gender = gender
         self.origin = origin
         self.location = location
-        self.episode = episode
+        self.episode = episodes
     }
 }
 
 public extension Character {
-    enum Status {
+    enum Status: String {
         case alive
         case dead
         case unknown
@@ -45,7 +45,7 @@ public extension Character {
 }
 
 public extension Character {
-    enum Gender {
+    enum Gender: String {
         case female
         case male
         case genderless
