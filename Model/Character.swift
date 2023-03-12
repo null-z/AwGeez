@@ -20,7 +20,7 @@ public struct Character: Entity {
     
     public let origin: Location.ID?
     public let location: Location.ID?
-    public let episode: [Episode.ID]
+    public let episode: [Episode.ID] // TODO: rename
     
     public init(id: ID, name: String, image: URL, status: Status, species: String, type: String?, gender: Gender, origin: Location.ID?, location: Location.ID?, episodes: [Episode.ID]) {
         self.id = id

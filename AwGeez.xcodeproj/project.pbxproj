@@ -52,10 +52,12 @@
 		DA77954B296BDB4A005A0302 /* ModelsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77954A296BDB4A005A0302 /* ModelsDecodingTests.swift */; };
 		DA77954D296BDBEC005A0302 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = DA77954C296BDBEC005A0302 /* character.json */; };
 		DA93437329BBF0D8009318E8 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; };
-		DA93437A29BBF0D9009318E8 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93437929BBF0D9009318E8 /* PersistenceTests.swift */; };
 		DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; };
 		DA93437F29BBF0D9009318E8 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA93438729BBF129009318E8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93438629BBF129009318E8 /* Persistence.swift */; };
+		DA9B079229BCE66D00F5F480 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DA9B079129BCE66D00F5F480 /* Realm */; };
+		DA9B079429BCE66D00F5F480 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA9B079329BCE66D00F5F480 /* RealmSwift */; };
+		DA9B079629BD828800F5F480 /* CharacterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B079529BD828800F5F480 /* CharacterObject.swift */; };
 		DAA0E0DF296FB1160019ED52 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0DE296FB1160019ED52 /* Episode.swift */; };
 		DAA0E0E1296FC0AE0019ED52 /* EpisodeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0E0296FC0AE0019ED52 /* EpisodeEndpoint.swift */; };
 		DAA0E0E3296FC2500019ED52 /* EpisodeEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */; };
@@ -71,6 +73,14 @@
 		DAD8DEDE296EE903005CD92C /* LocationEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */; };
 		DAD8DEE1296EEFFA005CD92C /* EntityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */; };
 		DAD8DEE5296F2847005CD92C /* DecodingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */; };
+		DAE8C3D429BE22ED00776FEA /* ConversionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */; };
+		DAE8C3D629BE238A00776FEA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D529BE238A00776FEA /* Character.swift */; };
+		DAE8C3D829BE645200776FEA /* Realmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D729BE645200776FEA /* Realmable.swift */; };
+		DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */; };
+		DAE8C3DF29BE89E900776FEA /* EntityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DE29BE89E900776FEA /* EntityObject.swift */; };
+		DAF5B66029BC18D500850BBC /* RealmPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5B65F29BC18D500850BBC /* RealmPersistence.swift */; };
+		DAF5B66429BC197C00850BBC /* CharacterEntityDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5B66329BC197C00850BBC /* CharacterEntityDao.swift */; };
+		DAF5B66629BC1B6000850BBC /* RealmEntityDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5B66529BC1B6000850BBC /* RealmEntityDao.swift */; };
 		DAFACC3229664872001BA118 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
 		DAFACC3329664872001BA118 /* Api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAFACC3829664893001BA118 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3729664893001BA118 /* Api.swift */; };
@@ -220,8 +230,8 @@
 		DA77954C296BDBEC005A0302 /* character.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = character.json; sourceTree = "<group>"; };
 		DA93436B29BBF0D8009318E8 /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93437229BBF0D8009318E8 /* PersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA93437929BBF0D9009318E8 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		DA93438629BBF129009318E8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		DA9B079529BD828800F5F480 /* CharacterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterObject.swift; sourceTree = "<group>"; };
 		DAA0E0DE296FB1160019ED52 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		DAA0E0E0296FC0AE0019ED52 /* EpisodeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeEndpoint.swift; sourceTree = "<group>"; };
 		DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeEndpointTests.swift; sourceTree = "<group>"; };
@@ -240,6 +250,14 @@
 		DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpointTests.swift; sourceTree = "<group>"; };
 		DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityEndpoint.swift; sourceTree = "<group>"; };
 		DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtensions.swift; sourceTree = "<group>"; };
+		DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionExtensions.swift; sourceTree = "<group>"; };
+		DAE8C3D529BE238A00776FEA /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DAE8C3D729BE645200776FEA /* Realmable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realmable.swift; sourceTree = "<group>"; };
+		DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDaoTests.swift; sourceTree = "<group>"; };
+		DAE8C3DE29BE89E900776FEA /* EntityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityObject.swift; sourceTree = "<group>"; };
+		DAF5B65F29BC18D500850BBC /* RealmPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistence.swift; sourceTree = "<group>"; };
+		DAF5B66329BC197C00850BBC /* CharacterEntityDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntityDao.swift; sourceTree = "<group>"; };
+		DAF5B66529BC1B6000850BBC /* RealmEntityDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEntityDao.swift; sourceTree = "<group>"; };
 		DAFACC2C29664872001BA118 /* Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFACC3729664893001BA118 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		DAFACC3929664B4D001BA118 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -267,6 +285,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9B079429BCE66D00F5F480 /* RealmSwift in Frameworks */,
+				DA9B079229BCE66D00F5F480 /* Realm in Frameworks */,
 				DA48B26E29BC0BBF00B0294E /* Model.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				DA93438629BBF129009318E8 /* Persistence.swift */,
+				DAF5B66129BC18E000850BBC /* Realm */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -444,7 +465,7 @@
 		DA93437829BBF0D9009318E8 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				DA93437929BBF0D9009318E8 /* PersistenceTests.swift */,
+				DAE8C3D929BE706600776FEA /* Dao */,
 			);
 			path = PersistenceTests;
 			sourceTree = "<group>";
@@ -528,6 +549,53 @@
 				DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */,
 			);
 			path = Decoding;
+			sourceTree = "<group>";
+		};
+		DAE8C3D029BE228400776FEA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8C3DE29BE89E900776FEA /* EntityObject.swift */,
+				DA9B079529BD828800F5F480 /* CharacterObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		DAE8C3D129BE22A500776FEA /* Realmable */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8C3D729BE645200776FEA /* Realmable.swift */,
+				DAE8C3D529BE238A00776FEA /* Character.swift */,
+				DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */,
+			);
+			path = Realmable;
+			sourceTree = "<group>";
+		};
+		DAE8C3D929BE706600776FEA /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		DAF5B66129BC18E000850BBC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DAF5B65F29BC18D500850BBC /* RealmPersistence.swift */,
+				DAF5B66229BC196700850BBC /* Dao */,
+				DAE8C3D129BE22A500776FEA /* Realmable */,
+				DAE8C3D029BE228400776FEA /* Objects */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		DAF5B66229BC196700850BBC /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				DAF5B66529BC1B6000850BBC /* RealmEntityDao.swift */,
+				DAF5B66329BC197C00850BBC /* CharacterEntityDao.swift */,
+			);
+			path = Dao;
 			sourceTree = "<group>";
 		};
 		DAFACC2D29664872001BA118 /* Api */ = {
@@ -635,6 +703,10 @@
 				DA48B27129BC0BBF00B0294E /* PBXTargetDependency */,
 			);
 			name = Persistence;
+			packageProductDependencies = (
+				DA9B079129BCE66D00F5F480 /* Realm */,
+				DA9B079329BCE66D00F5F480 /* RealmSwift */,
+			);
 			productName = Persistence;
 			productReference = DA93436B29BBF0D8009318E8 /* Persistence.framework */;
 			productType = "com.apple.product-type.framework";
@@ -774,6 +846,7 @@
 			packageReferences = (
 				DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */,
 				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
@@ -908,7 +981,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE8C3D429BE22ED00776FEA /* ConversionExtensions.swift in Sources */,
+				DAF5B66029BC18D500850BBC /* RealmPersistence.swift in Sources */,
+				DAE8C3D629BE238A00776FEA /* Character.swift in Sources */,
+				DAF5B66629BC1B6000850BBC /* RealmEntityDao.swift in Sources */,
+				DA9B079629BD828800F5F480 /* CharacterObject.swift in Sources */,
+				DAF5B66429BC197C00850BBC /* CharacterEntityDao.swift in Sources */,
 				DA93438729BBF129009318E8 /* Persistence.swift in Sources */,
+				DAE8C3D829BE645200776FEA /* Realmable.swift in Sources */,
+				DAE8C3DF29BE89E900776FEA /* EntityObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,7 +997,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA93437A29BBF0D9009318E8 /* PersistenceTests.swift in Sources */,
+				DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,6 +1686,14 @@
 				kind = branch;
 			};
 		};
+		DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.37.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1627,6 +1716,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		DA9B079129BCE66D00F5F480 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		DA9B079329BCE66D00F5F480 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
