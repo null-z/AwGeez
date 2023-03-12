@@ -41,7 +41,7 @@ final class CharacterDaoTests: XCTestCase {
         XCTAssertEqual(example.gender, readedExample.gender)
         XCTAssertEqual(example.origin, readedExample.origin)
         XCTAssertEqual(example.location, readedExample.location)
-        XCTAssertEqual(example.episode, readedExample.episode)
+        XCTAssertEqual(example.episodes, readedExample.episodes)
     }
     
     func testReadByIds() throws {

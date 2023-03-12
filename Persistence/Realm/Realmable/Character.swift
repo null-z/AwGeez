@@ -24,7 +24,7 @@ extension Model.Character: Realmable {
         realmObject.gender = self.gender.rawValue
         realmObject.origin = Int(self.origin)
         realmObject.location = Int(self.location)
-        realmObject.episodes = List(self.episode)
+        realmObject.episodes = List(self.episodes)
         return realmObject
     }
 
