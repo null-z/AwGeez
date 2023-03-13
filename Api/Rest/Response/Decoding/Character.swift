@@ -43,9 +43,9 @@ extension Model.Character: Decodable {
         let locationContainer = try container.nestedContainer(keyedBy: LocationDecodingKeys.self, forKey: .location)
         let locationID = try? locationContainer.decodeIdFromUrl(forKey: .url)
         
-        let episodeIDs = try container.decodeIdsFormUrls(forKey: .episode)
+        let episodesIDs = try container.decodeIdsFormUrls(forKey: .episode)
         
-        self.init(id: id, name: name, image: image, status: status, species: species, type: type, gender: gender, origin: originID, location: locationID, episodes: episodeIDs)
+        self.init(id: id, name: name, image: image, status: status, species: species, type: type, gender: gender, origin: originID, location: locationID, episodes: episodesIDs)
     }
 }
 

@@ -50,6 +50,17 @@
                ReferencedContainer = "container:AwGeez.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DA93437129BBF0D8009318E8"
+               BuildableName = "PersistenceTests.xctest"
+               BlueprintName = "PersistenceTests"
+               ReferencedContainer = "container:AwGeez.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
