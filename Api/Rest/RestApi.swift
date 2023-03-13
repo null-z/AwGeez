@@ -6,12 +6,29 @@
 //
 
 import Foundation
+import Model
 import Macaroni
 
 final class RestApi: Api {
     
-    private(set) lazy var all: ApiAll = AllEndpoint(characterEndpoint: character, locationEndpoint: location, episodeEndpoint: episode)
+    public init() { }
     
+    public func getAll(completion: @escaping Completion<(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])>, failure: @escaping Failure) {
+        self.getCounts(completion: { [weak self] counts in
+            guard let self else { return }
+            EntitiesFetcher(characterEndpoint: self.character,
+                            locationEndpoint: self.location,
+                            episodeEndpoint: self.episode)
+                .getAll(by: counts, completion: completion, failure: failure)
+
+        }, failure: failure)
+    }
+    
+    func getCounts(completion: @escaping Completion<(characters: Count, locations: Count, episodes: Count)>, failure: @escaping Failure) {
+        CountFetcher(characterEndpoint: character, locationEndpoint: location, episodeEndpoint: episode)
+            .getCounts(completion: completion, failure: failure)
+    }
+
     private(set) lazy var character: CharacterEndpoint = CharacterEndpoint(requestHandler: self)
     private(set) lazy var location: LocationEndpoint = LocationEndpoint(requestHandler: self)
     private(set) lazy var episode: EpisodeEndpoint = EpisodeEndpoint(requestHandler: self)
@@ -21,6 +38,11 @@ final class RestApi: Api {
     @Injected(.capturingContainerOnInit(container))
     private var requester: Requester
         
+    init(character: CharacterEndpoint, location: LocationEndpoint, episode: EpisodeEndpoint) {
+        self.character = character
+        self.location = location
+        self.episode = episode
+    }
 }
 
 extension RestApi: RequestHandler {
