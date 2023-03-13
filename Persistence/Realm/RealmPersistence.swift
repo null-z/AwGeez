@@ -9,18 +9,34 @@ import Foundation
 import Model
 import RealmSwift
 
-class RealmPersistence {
-    
+class RealmPersistence: Persistence {
+        
     var isFilled: Bool {
-        false
+        let hasCharacters = character.readCount() > 0
+        let hasLocations = locaton.readCount() > 0
+        let hasEpisodes = episode.readCount() > 0
+        let hasAllEntities = hasCharacters && hasLocations && hasEpisodes
+        return hasAllEntities
     }
     
-    func saveAll(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode]) {
-        
+    func fillWith(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode]) {
+        character.write(entities: characters)
+        locaton.write(entities: locations)
+        episode.write(entities: episodes)
     }
     
-    func deleteAll() {
-        
+    func clear() {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
+            fatalError("Failed to get Realm instance")
+        }
     }
     
+    var character: any CharacterDao = CharacterEntityDao()
+    var locaton: any LocationDao = LocationEntityDao()
+    var episode: any EpisodeDao = EpisodeEntityDao()
 }

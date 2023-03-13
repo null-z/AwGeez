@@ -6,28 +6,29 @@
 //
 
 import XCTest
-import RealmSwift
 import Model
 @testable import Persistence
 
-final class CharacterDaoTests: XCTestCase {
+final class CharacterDaoTests: RealmPersistenceTestCase {
     
     let dao = CharacterEntityDao()
     
     var example: Character!
 
     override func setUpWithError() throws {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-        XCTAssertTrue(try! Realm().isEmpty)
-
+        try super.setUpWithError()
+        
         example = Model.Character.init(id: 40, name: "Farty", image: URL(string: "https://ya.ru")!, status: .alive, species: "human", type: "sapiens", gender: .male, origin: 1, location: nil, episodes: [1, 2, 10])
         
         let character1 = Model.Character(id: 1, name: "First", image: URL(string: "https://ya.ru")!, status: .alive, species: "", type: "", gender: .male, origin: nil, location: nil, episodes: [1])
         let character2 = Model.Character(id: 2, name: "Second", image: URL(string: "https://ya.ru")!, status: .alive, species: "", type: "", gender: .male, origin: nil, location: nil, episodes: [1])
                 
         dao.write(entities: [example, character1, character2])
-        
-        XCTAssertFalse(try! Realm().isEmpty)
+    }
+    
+    func testReadCount() throws {
+        let count = dao.readCount()
+        XCTAssertEqual(count, 3)
     }
     
     func testReadById() throws {
@@ -51,5 +52,4 @@ final class CharacterDaoTests: XCTestCase {
         XCTAssertEqual(characters[1].id, 2)
         XCTAssertEqual(characters[2].id, 40)
     }
-    
 }

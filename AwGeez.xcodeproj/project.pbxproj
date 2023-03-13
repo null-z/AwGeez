@@ -36,6 +36,8 @@
 		DA6421C3295D186500244DC4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C2295D186500244DC4 /* Location.swift */; };
 		DA6421C5295D186D00244DC4 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421C4295D186D00244DC4 /* Episode.swift */; };
 		DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DA6421D1295D279700244DC4 /* .swiftlint.yml */; };
+		DA77598229BED6F5008888C8 /* RealmPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */; };
+		DA77598429BEDF4B008888C8 /* RealmPersistenceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */; };
 		DA7794E929679E71005A0302 /* AllEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794E829679E71005A0302 /* AllEndpoint.swift */; };
 		DA7794EB29679F0F005A0302 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794EA29679F0F005A0302 /* Requester.swift */; };
 		DA7794F52967A47A005A0302 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7794F42967A47A005A0302 /* RequestHandler.swift */; };
@@ -228,6 +230,8 @@
 		DA6421C2295D186500244DC4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DA6421C4295D186D00244DC4 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		DA6421D1295D279700244DC4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistenceTests.swift; sourceTree = "<group>"; };
+		DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmPersistenceTestCase.swift; path = PersistenceTests/RealmPersistenceTestCase.swift; sourceTree = SOURCE_ROOT; };
 		DA7794E829679E71005A0302 /* AllEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEndpoint.swift; sourceTree = "<group>"; };
 		DA7794EA29679F0F005A0302 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		DA7794F42967A47A005A0302 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 		DA93437829BBF0D9009318E8 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */,
+				DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */,
 				DAE8C3D929BE706600776FEA /* Dao */,
 			);
 			path = PersistenceTests;
@@ -1040,8 +1046,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */,
+				DA77598429BEDF4B008888C8 /* RealmPersistenceTestCase.swift in Sources */,
 				DA2AB8B129BEB4D9006BEAA5 /* EpisodeDaoTests.swift in Sources */,
 				DA2AB8A929BEAEC8006BEAA5 /* LocationDaoTests.swift in Sources */,
+				DA77598229BED6F5008888C8 /* RealmPersistenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

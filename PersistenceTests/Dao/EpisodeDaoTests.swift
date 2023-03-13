@@ -6,19 +6,17 @@
 //
 
 import XCTest
-import RealmSwift
 import Model
 @testable import Persistence
 
-final class EpisodeDaoTests: XCTestCase {
+final class EpisodeDaoTests: RealmPersistenceTestCase {
 
     let dao = EpisodeEntityDao()
     
     var example: Episode!
 
     override func setUpWithError() throws {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-        XCTAssertTrue(try! Realm().isEmpty)
+        try super.setUpWithError()
 
         example = Model.Episode(id: 999, season: 99, number: 1, name: "Return of Mr. Poopybutthole", airDate: Date(), characters: [40, 1])
 
@@ -26,8 +24,11 @@ final class EpisodeDaoTests: XCTestCase {
         let episode2 = Model.Episode(id: 2, season: 1, number: 2, name: "Second", airDate: Date(), characters: [2])
         
         dao.write(entities: [example, episode1, episode2])
-        
-        XCTAssertFalse(try! Realm().isEmpty)
+    }
+    
+    func testReadCount() throws {
+        let count = dao.readCount()
+        XCTAssertEqual(count, 3)
     }
 
     func testReadById() throws {

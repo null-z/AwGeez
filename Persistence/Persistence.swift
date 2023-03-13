@@ -11,9 +11,8 @@ import Model
 public protocol Persistence {
     
     var isFilled: Bool { get }
-
-    func saveAll(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])
-    func deleteAll()
+    func fillWith(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])
+    func clear()
         
     var character: any CharacterDao { get }
     var locaton: any LocationDao { get }

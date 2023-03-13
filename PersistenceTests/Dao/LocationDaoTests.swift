@@ -6,19 +6,17 @@
 //
 
 import XCTest
-import RealmSwift
 import Model
 @testable import Persistence
 
-final class LocationDaoTests: XCTestCase {
+final class LocationDaoTests: RealmPersistenceTestCase {
     
     let dao = LocationEntityDao()
     
     var example: Location!
 
     override func setUpWithError() throws {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-        XCTAssertTrue(try! Realm().isEmpty)
+        try super.setUpWithError()
 
         example = Model.Location(id: 20, name: "Earth", type: "planet", dimension: "A-000", residents: [1, 2, 40])
         
@@ -26,8 +24,11 @@ final class LocationDaoTests: XCTestCase {
         let location2 = Model.Location(id: 2, name: "Second", type: "", dimension: "", residents: [1])
                 
         dao.write(entities: [example, location1, location2])
-        
-        XCTAssertFalse(try! Realm().isEmpty)
+    }
+    
+    func testReadCount() throws {
+        let count = dao.readCount()
+        XCTAssertEqual(count, 3)
     }
 
     func testReadById() throws {

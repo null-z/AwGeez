@@ -22,6 +22,16 @@ extension EntityDao where Entity: Realmable {
             fatalError("Failed to get Realm instance")
         }
     }
+        
+    func readCount() -> Int {
+        do {
+            let realm = try Realm()
+            let objects = realm.objects(Entity.RealmObject.self)
+            return objects.count
+        } catch {
+            fatalError("Failed to get Realm instance")
+        }
+    }
     
     func read(by id: Entity.ID) -> Entity {
         do {
