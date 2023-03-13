@@ -16,6 +16,16 @@
 		DA0E8A00296ED75D00232DD0 /* episodesFirstPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0E89FA296ED75D00232DD0 /* episodesFirstPage.json */; };
 		DA0E8A01296ED75D00232DD0 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0E89FB296ED75D00232DD0 /* locations.json */; };
 		DA0E8A07296EE51A00232DD0 /* MockRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E8A06296EE51A00232DD0 /* MockRequester.swift */; };
+		DA2AB8A329BEAC33006BEAA5 /* LocationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A229BEAC33006BEAA5 /* LocationObject.swift */; };
+		DA2AB8A529BEACD4006BEAA5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A429BEACD4006BEAA5 /* Location.swift */; };
+		DA2AB8A729BEAE87006BEAA5 /* LocationEntityDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A629BEAE87006BEAA5 /* LocationEntityDao.swift */; };
+		DA2AB8A929BEAEC8006BEAA5 /* LocationDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A829BEAEC8006BEAA5 /* LocationDaoTests.swift */; };
+		DA2AB8AB29BEB193006BEAA5 /* EpisodeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8AA29BEB193006BEAA5 /* EpisodeObject.swift */; };
+		DA2AB8AD29BEB2B0006BEAA5 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8AC29BEB2B0006BEAA5 /* Episode.swift */; };
+		DA2AB8AF29BEB4A5006BEAA5 /* EpisodeEntityDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8AE29BEB4A5006BEAA5 /* EpisodeEntityDao.swift */; };
+		DA2AB8B129BEB4D9006BEAA5 /* EpisodeDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B029BEB4D9006BEAA5 /* EpisodeDaoTests.swift */; };
+		DA2AB8B429BEB77C006BEAA5 /* Int+ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B329BEB77C006BEAA5 /* Int+ID.swift */; };
+		DA2AB8B629BEB7B7006BEAA5 /* List+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */; };
 		DA2F3AD329711E4C00E34568 /* EntitiesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F3AD229711E4C00E34568 /* EntitiesFetcher.swift */; };
 		DA48B26E29BC0BBF00B0294E /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA48B26F29BC0BBF00B0294E /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,7 +83,6 @@
 		DAD8DEDE296EE903005CD92C /* LocationEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */; };
 		DAD8DEE1296EEFFA005CD92C /* EntityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */; };
 		DAD8DEE5296F2847005CD92C /* DecodingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */; };
-		DAE8C3D429BE22ED00776FEA /* ConversionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */; };
 		DAE8C3D629BE238A00776FEA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D529BE238A00776FEA /* Character.swift */; };
 		DAE8C3D829BE645200776FEA /* Realmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D729BE645200776FEA /* Realmable.swift */; };
 		DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */; };
@@ -202,6 +211,16 @@
 		DA0E89FA296ED75D00232DD0 /* episodesFirstPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = episodesFirstPage.json; sourceTree = "<group>"; };
 		DA0E89FB296ED75D00232DD0 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		DA0E8A06296EE51A00232DD0 /* MockRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequester.swift; sourceTree = "<group>"; };
+		DA2AB8A229BEAC33006BEAA5 /* LocationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObject.swift; sourceTree = "<group>"; };
+		DA2AB8A429BEACD4006BEAA5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DA2AB8A629BEAE87006BEAA5 /* LocationEntityDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntityDao.swift; sourceTree = "<group>"; };
+		DA2AB8A829BEAEC8006BEAA5 /* LocationDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDaoTests.swift; sourceTree = "<group>"; };
+		DA2AB8AA29BEB193006BEAA5 /* EpisodeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeObject.swift; sourceTree = "<group>"; };
+		DA2AB8AC29BEB2B0006BEAA5 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		DA2AB8AE29BEB4A5006BEAA5 /* EpisodeEntityDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeEntityDao.swift; sourceTree = "<group>"; };
+		DA2AB8B029BEB4D9006BEAA5 /* EpisodeDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDaoTests.swift; sourceTree = "<group>"; };
+		DA2AB8B329BEB77C006BEAA5 /* Int+ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ID.swift"; sourceTree = "<group>"; };
+		DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Array.swift"; sourceTree = "<group>"; };
 		DA2F3AD229711E4C00E34568 /* EntitiesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesFetcher.swift; sourceTree = "<group>"; };
 		DA6421AF295D121B00244DC4 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6421BB295D13A500244DC4 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -250,7 +269,6 @@
 		DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpointTests.swift; sourceTree = "<group>"; };
 		DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityEndpoint.swift; sourceTree = "<group>"; };
 		DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtensions.swift; sourceTree = "<group>"; };
-		DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionExtensions.swift; sourceTree = "<group>"; };
 		DAE8C3D529BE238A00776FEA /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		DAE8C3D729BE645200776FEA /* Realmable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realmable.swift; sourceTree = "<group>"; };
 		DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDaoTests.swift; sourceTree = "<group>"; };
@@ -370,6 +388,15 @@
 				DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		DA2AB8B229BEB75D006BEAA5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA2AB8B329BEB77C006BEAA5 /* Int+ID.swift */,
+				DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DA6421B0295D121B00244DC4 /* Model */ = {
@@ -556,6 +583,8 @@
 			children = (
 				DAE8C3DE29BE89E900776FEA /* EntityObject.swift */,
 				DA9B079529BD828800F5F480 /* CharacterObject.swift */,
+				DA2AB8A229BEAC33006BEAA5 /* LocationObject.swift */,
+				DA2AB8AA29BEB193006BEAA5 /* EpisodeObject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -565,7 +594,8 @@
 			children = (
 				DAE8C3D729BE645200776FEA /* Realmable.swift */,
 				DAE8C3D529BE238A00776FEA /* Character.swift */,
-				DAE8C3D329BE22ED00776FEA /* ConversionExtensions.swift */,
+				DA2AB8A429BEACD4006BEAA5 /* Location.swift */,
+				DA2AB8AC29BEB2B0006BEAA5 /* Episode.swift */,
 			);
 			path = Realmable;
 			sourceTree = "<group>";
@@ -574,6 +604,8 @@
 			isa = PBXGroup;
 			children = (
 				DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */,
+				DA2AB8A829BEAEC8006BEAA5 /* LocationDaoTests.swift */,
+				DA2AB8B029BEB4D9006BEAA5 /* EpisodeDaoTests.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -585,6 +617,7 @@
 				DAF5B66229BC196700850BBC /* Dao */,
 				DAE8C3D129BE22A500776FEA /* Realmable */,
 				DAE8C3D029BE228400776FEA /* Objects */,
+				DA2AB8B229BEB75D006BEAA5 /* Extensions */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -594,6 +627,8 @@
 			children = (
 				DAF5B66529BC1B6000850BBC /* RealmEntityDao.swift */,
 				DAF5B66329BC197C00850BBC /* CharacterEntityDao.swift */,
+				DA2AB8A629BEAE87006BEAA5 /* LocationEntityDao.swift */,
+				DA2AB8AE29BEB4A5006BEAA5 /* EpisodeEntityDao.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -981,15 +1016,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE8C3D429BE22ED00776FEA /* ConversionExtensions.swift in Sources */,
+				DA2AB8A729BEAE87006BEAA5 /* LocationEntityDao.swift in Sources */,
+				DA2AB8A529BEACD4006BEAA5 /* Location.swift in Sources */,
+				DA2AB8AB29BEB193006BEAA5 /* EpisodeObject.swift in Sources */,
 				DAF5B66029BC18D500850BBC /* RealmPersistence.swift in Sources */,
 				DAE8C3D629BE238A00776FEA /* Character.swift in Sources */,
+				DA2AB8A329BEAC33006BEAA5 /* LocationObject.swift in Sources */,
 				DAF5B66629BC1B6000850BBC /* RealmEntityDao.swift in Sources */,
 				DA9B079629BD828800F5F480 /* CharacterObject.swift in Sources */,
+				DA2AB8AD29BEB2B0006BEAA5 /* Episode.swift in Sources */,
+				DA2AB8AF29BEB4A5006BEAA5 /* EpisodeEntityDao.swift in Sources */,
+				DA2AB8B629BEB7B7006BEAA5 /* List+Array.swift in Sources */,
 				DAF5B66429BC197C00850BBC /* CharacterEntityDao.swift in Sources */,
 				DA93438729BBF129009318E8 /* Persistence.swift in Sources */,
 				DAE8C3D829BE645200776FEA /* Realmable.swift in Sources */,
 				DAE8C3DF29BE89E900776FEA /* EntityObject.swift in Sources */,
+				DA2AB8B429BEB77C006BEAA5 /* Int+ID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1040,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */,
+				DA2AB8B129BEB4D9006BEAA5 /* EpisodeDaoTests.swift in Sources */,
+				DA2AB8A929BEAEC8006BEAA5 /* LocationDaoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
