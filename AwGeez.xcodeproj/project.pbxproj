@@ -229,7 +229,7 @@
 		DA6421C4295D186D00244DC4 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		DA6421D1295D279700244DC4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistenceTests.swift; sourceTree = "<group>"; };
-		DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmPersistenceTestCase.swift; path = PersistenceTests/RealmPersistenceTestCase.swift; sourceTree = SOURCE_ROOT; };
+		DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmPersistenceTestCase.swift; path = Persistence/PersistenceTests/RealmPersistenceTestCase.swift; sourceTree = SOURCE_ROOT; };
 		DA7794EA29679F0F005A0302 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		DA7794F42967A47A005A0302 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		DA7794F62967B093005A0302 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -398,6 +398,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DA58EAED29BF9BA400EB32DB /*   */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = " ";
+			sourceTree = "<group>";
+		};
 		DA6421B0295D121B00244DC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +490,7 @@
 			children = (
 				DA93438629BBF129009318E8 /* Persistence.swift */,
 				DAF5B66129BC18E000850BBC /* Realm */,
+				DA93437829BBF0D9009318E8 /* PersistenceTests */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -494,8 +502,9 @@
 				DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */,
 				DAE8C3D929BE706600776FEA /* Dao */,
 			);
-			path = PersistenceTests;
-			sourceTree = "<group>";
+			name = PersistenceTests;
+			path = Persistence/PersistenceTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		DAA0E0E8296FFA230019ED52 /* Fetchers */ = {
 			isa = PBXGroup;
@@ -513,10 +522,8 @@
 				DACC46B3295D073700FFAE56 /* AwGeez */,
 				DA6421B0295D121B00244DC4 /* Model */,
 				DAFACC2D29664872001BA118 /* Api */,
-				DACC46CA295D073900FFAE56 /* AwGeezTests */,
-				DA7795002967BBAA005A0302 /* RestApiTests */,
 				DA93436C29BBF0D8009318E8 /* Persistence */,
-				DA93437829BBF0D9009318E8 /* PersistenceTests */,
+				DA58EAED29BF9BA400EB32DB /*   */,
 				DACC46B2295D073700FFAE56 /* Products */,
 				DA7794EF29679F6B005A0302 /* Frameworks */,
 			);
@@ -542,6 +549,7 @@
 				DA7795112967C006005A0302 /* Dependecy injection */,
 				DACC46E6295D0DB700FFAE56 /* Main */,
 				DACC46B8295D073700FFAE56 /* ViewController.swift */,
+				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 			);
 			path = AwGeez;
 			sourceTree = "<group>";
@@ -551,8 +559,9 @@
 			children = (
 				DACC46CB295D073900FFAE56 /* AwGeezTests.swift */,
 			);
-			path = AwGeezTests;
-			sourceTree = "<group>";
+			name = AwGeezTests;
+			path = AwGeez/AwGeezTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		DACC46E6295D0DB700FFAE56 /* Main */ = {
 			isa = PBXGroup;
@@ -638,6 +647,7 @@
 				DAFACC3729664893001BA118 /* Api.swift */,
 				DAFACC3929664B4D001BA118 /* Error.swift */,
 				DAFACC4029679DD9001BA118 /* Rest */,
+				DA7795002967BBAA005A0302 /* RestApiTests */,
 			);
 			path = Api;
 			sourceTree = "<group>";
