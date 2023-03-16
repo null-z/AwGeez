@@ -27,6 +27,7 @@
 		DA2AB8B429BEB77C006BEAA5 /* Int+ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B329BEB77C006BEAA5 /* Int+ID.swift */; };
 		DA2AB8B629BEB7B7006BEAA5 /* List+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */; };
 		DA2F3AD329711E4C00E34568 /* EntitiesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F3AD229711E4C00E34568 /* EntitiesFetcher.swift */; };
+		DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */; };
 		DA48B26E29BC0BBF00B0294E /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA48B26F29BC0BBF00B0294E /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
@@ -83,6 +84,7 @@
 		DAD8DEDE296EE903005CD92C /* LocationEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */; };
 		DAD8DEE1296EEFFA005CD92C /* EntityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */; };
 		DAD8DEE5296F2847005CD92C /* DecodingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */; };
+		DAE4453D29C3106B00DAB2D1 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4453C29C3106B00DAB2D1 /* ProcessInfo.swift */; };
 		DAE8C3D629BE238A00776FEA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D529BE238A00776FEA /* Character.swift */; };
 		DAE8C3D829BE645200776FEA /* Realmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3D729BE645200776FEA /* Realmable.swift */; };
 		DAE8C3DD29BE709C00776FEA /* CharacterDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */; };
@@ -269,6 +271,7 @@
 		DAD8DEDD296EE903005CD92C /* LocationEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpointTests.swift; sourceTree = "<group>"; };
 		DAD8DEE0296EEFFA005CD92C /* EntityEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityEndpoint.swift; sourceTree = "<group>"; };
 		DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtensions.swift; sourceTree = "<group>"; };
+		DAE4453C29C3106B00DAB2D1 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		DAE8C3D529BE238A00776FEA /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		DAE8C3D729BE645200776FEA /* Realmable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realmable.swift; sourceTree = "<group>"; };
 		DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDaoTests.swift; sourceTree = "<group>"; };
@@ -321,6 +324,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */,
 				DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */,
 				DAFACC3229664872001BA118 /* Api.framework in Frameworks */,
 				DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */,
@@ -566,8 +570,7 @@
 		DACC46E6295D0DB700FFAE56 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DACC46B4295D073700FFAE56 /* AppDelegate.swift */,
-				DACC46B6295D073700FFAE56 /* SceneDelegate.swift */,
+				DAE4453A29C3102700DAB2D1 /* Start */,
 				DACC46BD295D073900FFAE56 /* Assets.xcassets */,
 				DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */,
 				DACC46C2295D073900FFAE56 /* Info.plist */,
@@ -584,6 +587,16 @@
 				DAD8DEE4296F2847005CD92C /* DecodingExtensions.swift */,
 			);
 			path = Decoding;
+			sourceTree = "<group>";
+		};
+		DAE4453A29C3102700DAB2D1 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				DACC46B4295D073700FFAE56 /* AppDelegate.swift */,
+				DACC46B6295D073700FFAE56 /* SceneDelegate.swift */,
+				DAE4453C29C3106B00DAB2D1 /* ProcessInfo.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		DAE8C3D029BE228400776FEA /* Objects */ = {
@@ -788,6 +801,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DA30B75229C2DA7C00F06EC9 /* PBXTargetDependency */,
 				DA6421B4295D121B00244DC4 /* PBXTargetDependency */,
 				DAFACC3129664872001BA118 /* PBXTargetDependency */,
 				DA93437D29BBF0D9009318E8 /* PBXTargetDependency */,
@@ -795,6 +809,7 @@
 			name = AwGeez;
 			packageProductDependencies = (
 				DA77950D2967BF41005A0302 /* Macaroni */,
+				DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */,
 			);
 			productName = AwGeez;
 			productReference = DACC46B1295D073700FFAE56 /* AwGeez.app */;
@@ -870,6 +885,7 @@
 					};
 					DACC46C6295D073900FFAE56 = {
 						CreatedOnToolsVersion = 14.1;
+						TestTargetID = DACC46B0295D073700FFAE56;
 					};
 					DAFACC2B29664872001BA118 = {
 						CreatedOnToolsVersion = 14.1;
@@ -890,6 +906,7 @@
 				DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */,
 				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
@@ -1059,6 +1076,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */,
+				DAE4453D29C3106B00DAB2D1 /* ProcessInfo.swift in Sources */,
 				DA7795132967C050005A0302 /* Container.swift in Sources */,
 				DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
@@ -1103,6 +1121,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DA30B75229C2DA7C00F06EC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DA30B75129C2DA7C00F06EC9 /* RswiftGenerateInternalResources */;
+		};
 		DA48B27129BC0BBF00B0294E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA6421AE295D121B00244DC4 /* Model */;
@@ -1543,6 +1565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q2ZXF3TT52;
@@ -1554,6 +1577,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwGeez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AwGeez";
 			};
 			name = Debug;
 		};
@@ -1561,6 +1585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q2ZXF3TT52;
@@ -1572,6 +1597,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwGeez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AwGeez";
 			};
 			name = Release;
 		};
@@ -1718,6 +1744,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bealex/Macaroni";
@@ -1745,6 +1779,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		DA30B75129C2DA7C00F06EC9 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
 		DA77950D2967BF41005A0302 /* Macaroni */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
