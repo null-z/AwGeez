@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA06036829C80C64001C995A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06036729C80C64001C995A /* SplashScreenViewController.swift */; };
+		DA06036C29C8113F001C995A /* HoledMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06036B29C8113F001C995A /* HoledMaskLayer.swift */; };
+		DA06037029C81373001C995A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA06036F29C81373001C995A /* SnapKit */; };
+		DA06037829C890C9001C995A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06037729C890C9001C995A /* View.swift */; };
+		DA06037A29C89123001C995A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06037929C89123001C995A /* LoadingView.swift */; };
 		DA0E89F3296E697C00232DD0 /* LocationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E89F2296E697C00232DD0 /* LocationEndpoint.swift */; };
 		DA0E89F5296E6A0800232DD0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E89F4296E6A0800232DD0 /* Location.swift */; };
 		DA0E89FC296ED75D00232DD0 /* locationsFirstPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0E89F6296ED75C00232DD0 /* locationsFirstPage.json */; };
@@ -204,6 +209,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA06036729C80C64001C995A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		DA06036B29C8113F001C995A /* HoledMaskLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoledMaskLayer.swift; sourceTree = "<group>"; };
+		DA06037729C890C9001C995A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA06037929C89123001C995A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DA0E89F2296E697C00232DD0 /* LocationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndpoint.swift; sourceTree = "<group>"; };
 		DA0E89F4296E6A0800232DD0 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DA0E89F6296ED75C00232DD0 /* locationsFirstPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locationsFirstPage.json; sourceTree = "<group>"; };
@@ -327,6 +336,7 @@
 				DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */,
 				DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */,
 				DAFACC3229664872001BA118 /* Api.framework in Frameworks */,
+				DA06037029C81373001C995A /* SnapKit in Frameworks */,
 				DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */,
 				DA77950E2967BF41005A0302 /* Macaroni in Frameworks */,
 			);
@@ -352,6 +362,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA06036929C810DC001C995A /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA06036729C80C64001C995A /* SplashScreenViewController.swift */,
+				DA06037929C89123001C995A /* LoadingView.swift */,
+				DA06036B29C8113F001C995A /* HoledMaskLayer.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		DA06037529C890B6001C995A /* Basic types */ = {
+			isa = PBXGroup;
+			children = (
+				DACC46B8295D073700FFAE56 /* ViewController.swift */,
+				DA06037729C890C9001C995A /* View.swift */,
+			);
+			path = "Basic types";
+			sourceTree = "<group>";
+		};
 		DA0E8A02296ED76D00232DD0 /* character */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,9 +579,10 @@
 		DACC46B3295D073700FFAE56 /* AwGeez */ = {
 			isa = PBXGroup;
 			children = (
+				DA06037529C890B6001C995A /* Basic types */,
 				DA7795112967C006005A0302 /* Dependecy injection */,
 				DACC46E6295D0DB700FFAE56 /* Main */,
-				DACC46B8295D073700FFAE56 /* ViewController.swift */,
+				DA06036929C810DC001C995A /* SplashScreen */,
 				DACC46CA295D073900FFAE56 /* AwGeezTests */,
 			);
 			path = AwGeez;
@@ -810,6 +840,7 @@
 			packageProductDependencies = (
 				DA77950D2967BF41005A0302 /* Macaroni */,
 				DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */,
+				DA06036F29C81373001C995A /* SnapKit */,
 			);
 			productName = AwGeez;
 			productReference = DACC46B1295D073700FFAE56 /* AwGeez.app */;
@@ -907,6 +938,7 @@
 				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA9B079029BCE66C00F5F480 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */,
+				DA06036E29C81373001C995A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
@@ -1075,11 +1107,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA06037829C890C9001C995A /* View.swift in Sources */,
+				DA06036C29C8113F001C995A /* HoledMaskLayer.swift in Sources */,
 				DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */,
 				DAE4453D29C3106B00DAB2D1 /* ProcessInfo.swift in Sources */,
+				DA06036829C80C64001C995A /* SplashScreenViewController.swift in Sources */,
 				DA7795132967C050005A0302 /* Container.swift in Sources */,
 				DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
+				DA06037A29C89123001C995A /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1509,8 +1545,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1542,8 +1580,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1744,6 +1784,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA06036E29C81373001C995A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
@@ -1779,6 +1827,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA06036F29C81373001C995A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA06036E29C81373001C995A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */;

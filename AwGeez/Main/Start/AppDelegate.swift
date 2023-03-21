@@ -8,14 +8,13 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // prevents following app launch
         if ProcessInfo.processInfo.isTestRun {
             return false
         }
-        Thread.sleep(forTimeInterval: 10.0) // TODO: delete
         return true
     }
 

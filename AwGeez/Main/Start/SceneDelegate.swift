@@ -7,15 +7,30 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+    var mainWindow: UIWindow?
+    var splashWindow: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = ViewController()
-        self.window?.makeKeyAndVisible()
+        
+        self.mainWindow = UIWindow(windowScene: windowScene)
+
+        splashWindow = UIWindow(windowScene: windowScene)
+        splashWindow?.windowLevel = .statusBar + 1
+        splashWindow?.backgroundColor = R.color.background()
+        
+        splashWindow?.rootViewController = SplashScreenViewController(with: {
+            self.mainWindow?.rootViewController = ViewController()
+            self.mainWindow?.windowLevel = .normal
+            self.mainWindow?.isHidden = false
+        }, animationBlock: {
+            self.mainWindow?.makeKey()
+            self.splashWindow = nil
+        })
+        
+        splashWindow?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
