@@ -19,6 +19,7 @@
 		DA0E8A00296ED75D00232DD0 /* episodesFirstPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0E89FA296ED75D00232DD0 /* episodesFirstPage.json */; };
 		DA0E8A01296ED75D00232DD0 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0E89FB296ED75D00232DD0 /* locations.json */; };
 		DA0E8A07296EE51A00232DD0 /* MockRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E8A06296EE51A00232DD0 /* MockRequester.swift */; };
+		DA22D4B329D9660A00CFB405 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = DA22D4B229D9660900CFB405 /* Gemfile */; };
 		DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */; };
 		DA48B26E29BC0BBF00B0294E /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA48B26F29BC0BBF00B0294E /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -94,6 +95,8 @@
 		DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; };
 		DA93437F29BBF0D9009318E8 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA0E0E3296FC2500019ED52 /* EpisodeEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */; };
+		DAB6DC1629D9709000731B8F /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = DAB6DC1429D9709000731B8F /* Appfile */; };
+		DAB6DC1729D9709000731B8F /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = DAB6DC1529D9709000731B8F /* Fastfile */; };
 		DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B4295D073700FFAE56 /* AppDelegate.swift */; };
 		DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B6295D073700FFAE56 /* SceneDelegate.swift */; };
 		DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC46B8295D073700FFAE56 /* ViewController.swift */; };
@@ -242,6 +245,7 @@
 		DA0E89FA296ED75D00232DD0 /* episodesFirstPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = episodesFirstPage.json; sourceTree = "<group>"; };
 		DA0E89FB296ED75D00232DD0 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		DA0E8A06296EE51A00232DD0 /* MockRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequester.swift; sourceTree = "<group>"; };
+		DA22D4B229D9660900CFB405 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Gemfile; sourceTree = "<group>"; };
 		DA2AB8A229BEAC33006BEAA5 /* LocationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObject.swift; sourceTree = "<group>"; };
 		DA2AB8A429BEACD4006BEAA5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DA2AB8A629BEAE87006BEAA5 /* LocationEntityDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntityDao.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 		DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeEndpointTests.swift; sourceTree = "<group>"; };
 		DAA0E0E6296FF72F0019ED52 /* PathComposingEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathComposingEndpoint.swift; sourceTree = "<group>"; };
 		DAA0E0E9296FFA460019ED52 /* CountFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountFetcher.swift; sourceTree = "<group>"; };
+		DAB6DC1429D9709000731B8F /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Appfile; sourceTree = "<group>"; };
+		DAB6DC1529D9709000731B8F /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Fastfile; sourceTree = "<group>"; };
 		DACC46B1295D073700FFAE56 /* AwGeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwGeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC46B4295D073700FFAE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACC46B6295D073700FFAE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -628,6 +634,15 @@
 			path = Fetchers;
 			sourceTree = "<group>";
 		};
+		DAB6DC1329D9709000731B8F /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				DAB6DC1429D9709000731B8F /* Appfile */,
+				DAB6DC1529D9709000731B8F /* Fastfile */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
 		DACC46A8295D073700FFAE56 = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +652,8 @@
 				DA70564D29D1BD6300B86166 /* Tests */,
 				DA58EAED29BF9BA400EB32DB /*   */,
 				DA6421D1295D279700244DC4 /* .swiftlint.yml */,
+				DA22D4B229D9660900CFB405 /* Gemfile */,
+				DAB6DC1329D9709000731B8F /* fastlane */,
 				DACC46B2295D073700FFAE56 /* Products */,
 				DA7794EF29679F6B005A0302 /* Frameworks */,
 			);
@@ -1128,6 +1145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB6DC1729D9709000731B8F /* Fastfile in Resources */,
+				DA22D4B329D9660A00CFB405 /* Gemfile in Resources */,
+				DAB6DC1629D9709000731B8F /* Appfile in Resources */,
 				DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */,
 				DACC46C1295D073900FFAE56 /* LaunchScreen.storyboard in Resources */,
 				DACC46BE295D073900FFAE56 /* Assets.xcassets in Resources */,
