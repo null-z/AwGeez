@@ -10,7 +10,7 @@ import Api
 import Model
 import Macaroni
 
-final class RestApi: Api {
+final public class RestApi: Api {
     
     public init() { }
     

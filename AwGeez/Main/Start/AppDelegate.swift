@@ -13,8 +13,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // prevents following app launch
         if ProcessInfo.processInfo.isTestRun {
+            print("Test run: application didFinishLaunchingWithOptions is returned")
             return false
         }
+        registerDependecies()
         return true
     }
 

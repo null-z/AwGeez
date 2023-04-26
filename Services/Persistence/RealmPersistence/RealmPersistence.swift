@@ -10,9 +10,11 @@ import Model
 import Persistence
 import RealmSwift
 
-class RealmPersistence: Persistence {
+final public class RealmPersistence: Persistence {
+    
+    public init() { }
         
-    var isFilled: Bool {
+    public var isFilled: Bool {
         let hasCharacters = character.readCount() > 0
         let hasLocations = locaton.readCount() > 0
         let hasEpisodes = episode.readCount() > 0
@@ -20,13 +22,13 @@ class RealmPersistence: Persistence {
         return hasAllEntities
     }
     
-    func fillWith(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode]) {
+    public func fillWith(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode]) {
         character.write(entities: characters)
         locaton.write(entities: locations)
         episode.write(entities: episodes)
     }
     
-    func clear() {
+    public func clear() {
         do {
             let realm = try Realm()
             try realm.write {
@@ -37,7 +39,7 @@ class RealmPersistence: Persistence {
         }
     }
     
-    var character: any CharacterDao = CharacterEntityDao()
-    var locaton: any LocationDao = LocationEntityDao()
-    var episode: any EpisodeDao = EpisodeEntityDao()
+    public var character: any CharacterDao = CharacterEntityDao()
+    public var locaton: any LocationDao = LocationEntityDao()
+    public var episode: any EpisodeDao = EpisodeEntityDao()
 }

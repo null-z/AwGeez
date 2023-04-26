@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA06036829C80C64001C995A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06036729C80C64001C995A /* SplashScreenViewController.swift */; };
+		DA06036829C80C64001C995A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06036729C80C64001C995A /* SplashScreenView.swift */; };
 		DA06036C29C8113F001C995A /* HoledMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06036B29C8113F001C995A /* HoledMaskLayer.swift */; };
 		DA06037029C81373001C995A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA06036F29C81373001C995A /* SnapKit */; };
 		DA06037829C890C9001C995A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06037729C890C9001C995A /* View.swift */; };
@@ -23,6 +23,22 @@
 		DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */; };
 		DA48B26E29BC0BBF00B0294E /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA48B26F29BC0BBF00B0294E /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA4E961629F5A50E009E55EC /* SplashScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E961529F5A50E009E55EC /* SplashScreenInteractor.swift */; };
+		DA4E961929F5A545009E55EC /* SplashScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E961829F5A545009E55EC /* SplashScreenPresenter.swift */; };
+		DA4E961D29F5A739009E55EC /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E961C29F5A739009E55EC /* Defaults.swift */; };
+		DA4E962029F5AA0C009E55EC /* SplashScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E961F29F5AA0C009E55EC /* SplashScreenContract.swift */; };
+		DA4E962329F5B9FC009E55EC /* SplashScreenInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E962229F5B9FC009E55EC /* SplashScreenInteractorTests.swift */; };
+		DA4E962E29F5C437009E55EC /* RestApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7055CD29D1A9EC00B86166 /* RestApi.framework */; };
+		DA4E962F29F5C437009E55EC /* RestApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA7055CD29D1A9EC00B86166 /* RestApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA4E963329F5C4B8009E55EC /* RealmPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA70561229D1ADE400B86166 /* RealmPersistence.framework */; };
+		DA4E963429F5C4B8009E55EC /* RealmPersistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA70561229D1ADE400B86166 /* RealmPersistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA4E963A29F5C579009E55EC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E963929F5C579009E55EC /* UserDefaults.swift */; };
+		DA4E963E29F5C749009E55EC /* DefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E963D29F5C749009E55EC /* DefaultsTests.swift */; };
+		DA4E964229F5D377009E55EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DA4E964129F5D377009E55EC /* Swinject */; };
+		DA4E964529F6C9AE009E55EC /* SplashScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E964429F6C9AE009E55EC /* SplashScreenAssembly.swift */; };
+		DA4E964A29F6CD72009E55EC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E964929F6CD72009E55EC /* Router.swift */; };
+		DA4E964C29F94B1E009E55EC /* SplashScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E964B29F94B1E009E55EC /* SplashScreenPresenterTests.swift */; };
+		DA4E965929F97A9F009E55EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4E965B29F97A9F009E55EC /* Localizable.strings */; };
 		DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA6421B6295D121B00244DC4 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA6421BD295D13AB00244DC4 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6421BB295D13A500244DC4 /* Character.swift */; };
@@ -77,7 +93,6 @@
 		DA70564829D1B02F00B86166 /* CharacterDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */; };
 		DA70564929D1B02F00B86166 /* LocationDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A829BEAEC8006BEAA5 /* LocationDaoTests.swift */; };
 		DA70564A29D1B02F00B86166 /* EpisodeDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B029BEB4D9006BEAA5 /* EpisodeDaoTests.swift */; };
-		DA70566329D1FA9600B86166 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA70566229D1FA9600B86166 /* RealmSwift */; };
 		DA7795022967BBAA005A0302 /* RestApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795012967BBAA005A0302 /* RestApiTests.swift */; };
 		DA7795032967BBAA005A0302 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
 		DA77950B2967BC9C005A0302 /* PathComposingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77950A2967BC9C005A0302 /* PathComposingTests.swift */; };
@@ -92,6 +107,8 @@
 		DA779533296B819E005A0302 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = DA779532296B819E005A0302 /* characters.json */; };
 		DA77954B296BDB4A005A0302 /* ModelsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77954A296BDB4A005A0302 /* ModelsDecodingTests.swift */; };
 		DA77954D296BDBEC005A0302 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = DA77954C296BDBEC005A0302 /* character.json */; };
+		DA8CD35029F9900D0068FE8E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD34F29F9900D0068FE8E /* Realm */; };
+		DA8CD35229F9900D0068FE8E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD35129F9900D0068FE8E /* RealmSwift */; };
 		DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; };
 		DA93437F29BBF0D9009318E8 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA0E0E3296FC2500019ED52 /* EpisodeEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */; };
@@ -116,6 +133,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = DA6421AE295D121B00244DC4;
 			remoteInfo = Model;
+		};
+		DA4E963029F5C437009E55EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA7055CC29D1A9EC00B86166;
+			remoteInfo = RestApi;
+		};
+		DA4E963529F5C4B8009E55EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACC46A9295D073700FFAE56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA70561129D1ADE400B86166;
+			remoteInfo = RealmPersistence;
 		};
 		DA6421B3295D121B00244DC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -200,7 +231,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DA4E963429F5C4B8009E55EC /* RealmPersistence.framework in Embed Frameworks */,
 				DA6421B6295D121B00244DC4 /* Model.framework in Embed Frameworks */,
+				DA4E962F29F5C437009E55EC /* RestApi.framework in Embed Frameworks */,
 				DAFACC3329664872001BA118 /* Api.framework in Embed Frameworks */,
 				DA93437F29BBF0D9009318E8 /* Persistence.framework in Embed Frameworks */,
 			);
@@ -232,7 +265,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA06036729C80C64001C995A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		DA06036729C80C64001C995A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		DA06036B29C8113F001C995A /* HoledMaskLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoledMaskLayer.swift; sourceTree = "<group>"; };
 		DA06037729C890C9001C995A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA06037929C89123001C995A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -257,6 +290,17 @@
 		DA2AB8B329BEB77C006BEAA5 /* Int+ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ID.swift"; sourceTree = "<group>"; };
 		DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Array.swift"; sourceTree = "<group>"; };
 		DA2F3AD229711E4C00E34568 /* EntitiesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesFetcher.swift; sourceTree = "<group>"; };
+		DA4E961529F5A50E009E55EC /* SplashScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInteractor.swift; sourceTree = "<group>"; };
+		DA4E961829F5A545009E55EC /* SplashScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenPresenter.swift; sourceTree = "<group>"; };
+		DA4E961C29F5A739009E55EC /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		DA4E961F29F5AA0C009E55EC /* SplashScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenContract.swift; sourceTree = "<group>"; };
+		DA4E962229F5B9FC009E55EC /* SplashScreenInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenInteractorTests.swift; sourceTree = "<group>"; };
+		DA4E963929F5C579009E55EC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		DA4E963D29F5C749009E55EC /* DefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsTests.swift; sourceTree = "<group>"; };
+		DA4E964429F6C9AE009E55EC /* SplashScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenAssembly.swift; sourceTree = "<group>"; };
+		DA4E964929F6CD72009E55EC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DA4E964B29F94B1E009E55EC /* SplashScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenPresenterTests.swift; sourceTree = "<group>"; };
+		DA4E965A29F97A9F009E55EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA6421AF295D121B00244DC4 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6421BB295D13A500244DC4 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		DA6421C0295D17DD00244DC4 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
@@ -344,7 +388,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA70566329D1FA9600B86166 /* RealmSwift in Frameworks */,
 				DA70561E29D1AE5000B86166 /* Persistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +421,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4E962E29F5C437009E55EC /* RestApi.framework in Frameworks */,
 				DA30B75029C2DA7300F06EC9 /* RswiftLibrary in Frameworks */,
 				DA6421B5295D121B00244DC4 /* Model.framework in Frameworks */,
 				DAFACC3229664872001BA118 /* Api.framework in Frameworks */,
+				DA8CD35029F9900D0068FE8E /* Realm in Frameworks */,
+				DA4E963329F5C4B8009E55EC /* RealmPersistence.framework in Frameworks */,
+				DA4E964229F5D377009E55EC /* Swinject in Frameworks */,
 				DA06037029C81373001C995A /* SnapKit in Frameworks */,
+				DA8CD35229F9900D0068FE8E /* RealmSwift in Frameworks */,
 				DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */,
 				DA77950E2967BF41005A0302 /* Macaroni in Frameworks */,
 			);
@@ -408,9 +456,12 @@
 		DA06036929C810DC001C995A /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DA06036729C80C64001C995A /* SplashScreenViewController.swift */,
-				DA06037929C89123001C995A /* LoadingView.swift */,
-				DA06036B29C8113F001C995A /* HoledMaskLayer.swift */,
+				DA4E964429F6C9AE009E55EC /* SplashScreenAssembly.swift */,
+				DA4E961F29F5AA0C009E55EC /* SplashScreenContract.swift */,
+				DA06036729C80C64001C995A /* SplashScreenView.swift */,
+				DA4E961529F5A50E009E55EC /* SplashScreenInteractor.swift */,
+				DA4E961829F5A545009E55EC /* SplashScreenPresenter.swift */,
+				DA4E966029F983B4009E55EC /* Subviews */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -472,6 +523,50 @@
 				DA2AB8B529BEB7B7006BEAA5 /* List+Array.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA4E961A29F5A618009E55EC /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				DA4E961C29F5A739009E55EC /* Defaults.swift */,
+				DA4E963829F5C569009E55EC /* UserDefaults */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		DA4E963829F5C569009E55EC /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				DA4E963929F5C579009E55EC /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		DA4E964729F6CD5B009E55EC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DA4E964929F6CD72009E55EC /* Router.swift */,
+				DA06036929C810DC001C995A /* SplashScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DA4E965D29F982FD009E55EC /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA4E962229F5B9FC009E55EC /* SplashScreenInteractorTests.swift */,
+				DA4E964B29F94B1E009E55EC /* SplashScreenPresenterTests.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		DA4E966029F983B4009E55EC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DA06037929C89123001C995A /* LoadingView.swift */,
+				DA06036B29C8113F001C995A /* HoledMaskLayer.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		DA58EAED29BF9BA400EB32DB /*   */ = {
@@ -541,6 +636,7 @@
 		DA70565029D1BDCB00B86166 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DA4E961A29F5A618009E55EC /* Defaults */,
 				DAFACC2D29664872001BA118 /* Api */,
 				DA93436C29BBF0D8009318E8 /* Persistence */,
 			);
@@ -681,7 +777,7 @@
 				DA06037529C890B6001C995A /* Basic types */,
 				DA7795112967C006005A0302 /* Dependecy injection */,
 				DACC46E6295D0DB700FFAE56 /* Main */,
-				DA06036929C810DC001C995A /* SplashScreen */,
+				DA4E964729F6CD5B009E55EC /* Screens */,
 			);
 			path = AwGeez;
 			sourceTree = "<group>";
@@ -690,6 +786,8 @@
 			isa = PBXGroup;
 			children = (
 				DACC46CB295D073900FFAE56 /* AwGeezTests.swift */,
+				DA4E963D29F5C749009E55EC /* DefaultsTests.swift */,
+				DA4E965D29F982FD009E55EC /* SplashScreen */,
 			);
 			name = AwGeezTests;
 			path = Tests/AwGeezTests;
@@ -701,6 +799,7 @@
 				DAE4453A29C3102700DAB2D1 /* Start */,
 				DACC46BD295D073900FFAE56 /* Assets.xcassets */,
 				DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */,
+				DA4E965B29F97A9F009E55EC /* Localizable.strings */,
 				DACC46C2295D073900FFAE56 /* Info.plist */,
 			);
 			path = Main;
@@ -879,7 +978,6 @@
 			);
 			name = RealmPersistence;
 			packageProductDependencies = (
-				DA70566229D1FA9600B86166 /* RealmSwift */,
 			);
 			productName = RealmPersistence;
 			productReference = DA70561229D1ADE400B86166 /* RealmPersistence.framework */;
@@ -963,12 +1061,17 @@
 				DA6421B4295D121B00244DC4 /* PBXTargetDependency */,
 				DAFACC3129664872001BA118 /* PBXTargetDependency */,
 				DA93437D29BBF0D9009318E8 /* PBXTargetDependency */,
+				DA4E963129F5C437009E55EC /* PBXTargetDependency */,
+				DA4E963629F5C4B8009E55EC /* PBXTargetDependency */,
 			);
 			name = AwGeez;
 			packageProductDependencies = (
 				DA77950D2967BF41005A0302 /* Macaroni */,
 				DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */,
 				DA06036F29C81373001C995A /* SnapKit */,
+				DA4E964129F5D377009E55EC /* Swinject */,
+				DA8CD34F29F9900D0068FE8E /* Realm */,
+				DA8CD35129F9900D0068FE8E /* RealmSwift */,
 			);
 			productName = AwGeez;
 			productReference = DACC46B1295D073700FFAE56 /* AwGeez.app */;
@@ -1070,7 +1173,8 @@
 				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */,
 				DA06036E29C81373001C995A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				DA70565F29D1FA9600B86166 /* XCRemoteSwiftPackageReference "RealmBinary" */,
+				DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */,
+				DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */,
 			);
 			productRefGroup = DACC46B2295D073700FFAE56 /* Products */;
 			projectDirPath = "";
@@ -1148,6 +1252,7 @@
 				DAB6DC1729D9709000731B8F /* Fastfile in Resources */,
 				DA22D4B329D9660A00CFB405 /* Gemfile in Resources */,
 				DAB6DC1629D9709000731B8F /* Appfile in Resources */,
+				DA4E965929F97A9F009E55EC /* Localizable.strings in Resources */,
 				DA6421D2295D279700244DC4 /* .swiftlint.yml in Resources */,
 				DACC46C1295D073900FFAE56 /* LaunchScreen.storyboard in Resources */,
 				DACC46BE295D073900FFAE56 /* Assets.xcassets in Resources */,
@@ -1290,14 +1395,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4E964A29F6CD72009E55EC /* Router.swift in Sources */,
+				DA4E962029F5AA0C009E55EC /* SplashScreenContract.swift in Sources */,
 				DA06037829C890C9001C995A /* View.swift in Sources */,
+				DA4E961929F5A545009E55EC /* SplashScreenPresenter.swift in Sources */,
+				DA4E961629F5A50E009E55EC /* SplashScreenInteractor.swift in Sources */,
 				DA06036C29C8113F001C995A /* HoledMaskLayer.swift in Sources */,
 				DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */,
 				DAE4453D29C3106B00DAB2D1 /* ProcessInfo.swift in Sources */,
-				DA06036829C80C64001C995A /* SplashScreenViewController.swift in Sources */,
+				DA06036829C80C64001C995A /* SplashScreenView.swift in Sources */,
 				DA7795132967C050005A0302 /* Container.swift in Sources */,
 				DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */,
+				DA4E961D29F5A739009E55EC /* Defaults.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
+				DA4E964529F6C9AE009E55EC /* SplashScreenAssembly.swift in Sources */,
+				DA4E963A29F5C579009E55EC /* UserDefaults.swift in Sources */,
 				DA06037A29C89123001C995A /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1307,6 +1419,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACC46CC295D073900FFAE56 /* AwGeezTests.swift in Sources */,
+				DA4E962329F5B9FC009E55EC /* SplashScreenInteractorTests.swift in Sources */,
+				DA4E964C29F94B1E009E55EC /* SplashScreenPresenterTests.swift in Sources */,
+				DA4E963E29F5C749009E55EC /* DefaultsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1330,6 +1445,16 @@
 			isa = PBXTargetDependency;
 			target = DA6421AE295D121B00244DC4 /* Model */;
 			targetProxy = DA48B27029BC0BBF00B0294E /* PBXContainerItemProxy */;
+		};
+		DA4E963129F5C437009E55EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA7055CC29D1A9EC00B86166 /* RestApi */;
+			targetProxy = DA4E963029F5C437009E55EC /* PBXContainerItemProxy */;
+		};
+		DA4E963629F5C4B8009E55EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA70561129D1ADE400B86166 /* RealmPersistence */;
+			targetProxy = DA4E963529F5C4B8009E55EC /* PBXContainerItemProxy */;
 		};
 		DA6421B4295D121B00244DC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1379,6 +1504,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DA4E965B29F97A9F009E55EC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA4E965A29F97A9F009E55EC /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DACC46BF295D073900FFAE56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1715,6 +1848,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1775,6 +1909,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2112,12 +2247,12 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		DA70565F29D1FA9600B86166 /* XCRemoteSwiftPackageReference "RealmBinary" */ = {
+		DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RomanEsin/RealmBinary";
+			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.37.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */ = {
@@ -2133,6 +2268,14 @@
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				branch = master;
+				kind = branch;
+			};
+		};
+		DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RomanEsin/RealmBinary";
+			requirement = {
+				branch = main;
 				kind = branch;
 			};
 		};
@@ -2153,6 +2296,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = "plugin:RswiftGenerateInternalResources";
 		};
+		DA4E964129F5D377009E55EC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		DA7055DC29D1AA1700B86166 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -2163,11 +2311,6 @@
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
 			productName = Macaroni;
 		};
-		DA70566229D1FA9600B86166 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DA70565F29D1FA9600B86166 /* XCRemoteSwiftPackageReference "RealmBinary" */;
-			productName = RealmSwift;
-		};
 		DA77950D2967BF41005A0302 /* Macaroni */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
@@ -2177,6 +2320,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
 			productName = Macaroni;
+		};
+		DA8CD34F29F9900D0068FE8E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */;
+			productName = Realm;
+		};
+		DA8CD35129F9900D0068FE8E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

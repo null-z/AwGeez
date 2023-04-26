@@ -59,16 +59,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA93437129BBF0D8009318E8"
-               BuildableName = "PersistenceTests.xctest"
-               BlueprintName = "PersistenceTests"
-               ReferencedContainer = "container:AwGeez.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA70563A29D1AFEF00B86166"
                BuildableName = "RealmPersistenceTests.xctest"
                BlueprintName = "RealmPersistenceTests"

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  AwGeez
+
+  Created by Tony Dэ on 26.04.2023.
+  
+*/
+
+"badConnection_message" = "Aw geez,
+we have connection problem!";
+
+"badResponse_message" = "Oops,
+something goes wrong here!";

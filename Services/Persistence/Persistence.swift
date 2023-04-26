@@ -8,12 +8,15 @@
 import Foundation
 import Model
 
-public protocol Persistence {
-    
+public typealias Persistence = OverallPersistence & EntitiesPersistence
+
+public protocol OverallPersistence {
     var isFilled: Bool { get }
     func fillWith(characters: [Model.Character], locations: [Model.Location], episodes: [Model.Episode])
     func clear()
-        
+}
+
+public protocol EntitiesPersistence {
     var character: any CharacterDao { get }
     var locaton: any LocationDao { get }
     var episode: any EpisodeDao { get }

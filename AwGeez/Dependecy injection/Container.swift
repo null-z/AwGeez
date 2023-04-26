@@ -6,25 +6,21 @@
 //
 
 import Foundation
-import Macaroni
+import Swinject
 
-// swiftlint:disable all
+import Api
+import RestApi
 
-//let sharedContainer: Container = Container()
-//
-//func registerDependecies() {
-//    Macaroni.logger = LoggerStub()
-//    Container.lookupPolicy = .singleton(sharedContainer)
-//    sharedContainer.register { () ->  in  }
-//}
-//
-//class LoggerStub: MacaroniLogger {
-//    func log(_ message: String, level: MacaroniLoggingLevel, file: StaticString, function: String, line: UInt) {
-//    }
-//
-//    func die(_ message: String, file: StaticString, function: String, line: UInt) -> Never {
-//        abort()
-//    }
-//}
+import Persistence
+import RealmPersistence
 
-// swiftlint:enable all
+var container: Container = Container()
+
+func registerDependecies() {
+    container.register(Api.self) { _ in RestApi() }
+    
+    let realmPersistence = RealmPersistence()
+    container.register(OverallPersistence.self) { _ in realmPersistence }
+    
+    container.register(Defaults.self) { _ in UserDefaults.standard }
+}
