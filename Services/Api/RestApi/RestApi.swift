@@ -8,7 +8,7 @@
 import Foundation
 import Api
 import Model
-import Macaroni
+import Swinject
 
 final public class RestApi: Api {
     
@@ -36,8 +36,7 @@ final public class RestApi: Api {
     
     private let basePath = "https://rickandmortyapi.com/api/"
     
-    @Injected(.capturingContainerOnInit(container))
-    private var requester: Requester
+    private var requester: Requester = container.resolve(Requester.self)!
         
     init(character: CharacterEndpoint, location: LocationEndpoint, episode: EpisodeEndpoint) {
         self.character = character

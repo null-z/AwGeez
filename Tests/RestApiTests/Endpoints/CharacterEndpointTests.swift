@@ -6,16 +6,17 @@
 //
 
 import XCTest
-import Macaroni
+import Swinject
 @testable import RestApi
 
 final class CharacterEndpointTests: XCTestCase {
     
-    var api: RestApi = RestApi()
+    var api: RestApi!
     var mockRequester: MockRequester = MockRequester()
 
     override func setUpWithError() throws {
-        container.register { () -> Requester in self.mockRequester }
+        container.register(Requester.self) { _ in self.mockRequester }
+        api = RestApi()
     }
         
     func testGetByIds() throws {

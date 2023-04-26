@@ -49,7 +49,6 @@
 		DA7055D529D1AA0D00B86166 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
 		DA7055D629D1AA0D00B86166 /* Api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA7055DD29D1AA1700B86166 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA7055DC29D1AA1700B86166 /* Alamofire */; };
-		DA7055DF29D1AA1A00B86166 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA7055DE29D1AA1A00B86166 /* Macaroni */; };
 		DA7055F229D1AAB800B86166 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3729664893001BA118 /* Api.swift */; };
 		DA7055F329D1AAB800B86166 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC3929664B4D001BA118 /* Error.swift */; };
 		DA7055F429D1AAC500B86166 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACC4129679E01001BA118 /* RestApi.swift */; };
@@ -96,9 +95,7 @@
 		DA7795022967BBAA005A0302 /* RestApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795012967BBAA005A0302 /* RestApiTests.swift */; };
 		DA7795032967BBAA005A0302 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
 		DA77950B2967BC9C005A0302 /* PathComposingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77950A2967BC9C005A0302 /* PathComposingTests.swift */; };
-		DA77950E2967BF41005A0302 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA77950D2967BF41005A0302 /* Macaroni */; };
 		DA7795132967C050005A0302 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795122967C050005A0302 /* Container.swift */; };
-		DA7795172967CC1C005A0302 /* Macaroni in Frameworks */ = {isa = PBXBuildFile; productRef = DA7795162967CC1C005A0302 /* Macaroni */; };
 		DA7795182967CC57005A0302 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; };
 		DA7795192967CC57005A0302 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA6421AF295D121B00244DC4 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA7795212967E8D3005A0302 /* CharacterEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795202967E8D3005A0302 /* CharacterEndpointTests.swift */; };
@@ -109,6 +106,9 @@
 		DA77954D296BDBEC005A0302 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = DA77954C296BDBEC005A0302 /* character.json */; };
 		DA8CD35029F9900D0068FE8E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD34F29F9900D0068FE8E /* Realm */; };
 		DA8CD35229F9900D0068FE8E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD35129F9900D0068FE8E /* RealmSwift */; };
+		DA8CD35429F99E260068FE8E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD35329F99E260068FE8E /* Swinject */; };
+		DA8CD35729F99EC80068FE8E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD35629F99EC80068FE8E /* Swinject */; };
+		DA8CD35B29F99FBE0068FE8E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DA8CD35A29F99FBE0068FE8E /* Swinject */; };
 		DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; };
 		DA93437F29BBF0D9009318E8 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA93436B29BBF0D8009318E8 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA0E0E3296FC2500019ED52 /* EpisodeEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0E0E2296FC2500019ED52 /* EpisodeEndpointTests.swift */; };
@@ -379,8 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7055D529D1AA0D00B86166 /* Api.framework in Frameworks */,
-				DA7055DF29D1AA1A00B86166 /* Macaroni in Frameworks */,
 				DA7055DD29D1AA1700B86166 /* Alamofire in Frameworks */,
+				DA8CD35429F99E260068FE8E /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +404,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7795172967CC1C005A0302 /* Macaroni in Frameworks */,
 				DA7795032967BBAA005A0302 /* Api.framework in Frameworks */,
+				DA8CD35729F99EC80068FE8E /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +431,6 @@
 				DA06037029C81373001C995A /* SnapKit in Frameworks */,
 				DA8CD35229F9900D0068FE8E /* RealmSwift in Frameworks */,
 				DA93437E29BBF0D9009318E8 /* Persistence.framework in Frameworks */,
-				DA77950E2967BF41005A0302 /* Macaroni in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +438,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8CD35B29F99FBE0068FE8E /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,7 +956,7 @@
 			name = RestApi;
 			packageProductDependencies = (
 				DA7055DC29D1AA1700B86166 /* Alamofire */,
-				DA7055DE29D1AA1A00B86166 /* Macaroni */,
+				DA8CD35329F99E260068FE8E /* Swinject */,
 			);
 			productName = RestApi;
 			productReference = DA7055CD29D1A9EC00B86166 /* RestApi.framework */;
@@ -1016,7 +1016,7 @@
 			);
 			name = RestApiTests;
 			packageProductDependencies = (
-				DA7795162967CC1C005A0302 /* Macaroni */,
+				DA8CD35629F99EC80068FE8E /* Swinject */,
 			);
 			productName = RestApiTests;
 			productReference = DA7794FF2967BBAA005A0302 /* RestApiTests.xctest */;
@@ -1066,7 +1066,6 @@
 			);
 			name = AwGeez;
 			packageProductDependencies = (
-				DA77950D2967BF41005A0302 /* Macaroni */,
 				DA30B74F29C2DA7300F06EC9 /* RswiftLibrary */,
 				DA06036F29C81373001C995A /* SnapKit */,
 				DA4E964129F5D377009E55EC /* Swinject */,
@@ -1091,6 +1090,9 @@
 				DACC46C9295D073900FFAE56 /* PBXTargetDependency */,
 			);
 			name = AwGeezTests;
+			packageProductDependencies = (
+				DA8CD35A29F99FBE0068FE8E /* Swinject */,
+			);
 			productName = AwGeezTests;
 			productReference = DACC46C7295D073900FFAE56 /* AwGeezTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1169,7 +1171,6 @@
 			);
 			mainGroup = DACC46A8295D073700FFAE56;
 			packageReferences = (
-				DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */,
 				DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA30B74E29C2DA7300F06EC9 /* XCRemoteSwiftPackageReference "R.swift" */,
 				DA06036E29C81373001C995A /* XCRemoteSwiftPackageReference "SnapKit" */,
@@ -2255,14 +2256,6 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bealex/Macaroni";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -2306,21 +2299,6 @@
 			package = DA779540296B9E8A005A0302 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		DA7055DE29D1AA1A00B86166 /* Macaroni */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
-			productName = Macaroni;
-		};
-		DA77950D2967BF41005A0302 /* Macaroni */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
-			productName = Macaroni;
-		};
-		DA7795162967CC1C005A0302 /* Macaroni */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DA77950C2967BF41005A0302 /* XCRemoteSwiftPackageReference "Macaroni" */;
-			productName = Macaroni;
-		};
 		DA8CD34F29F9900D0068FE8E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */;
@@ -2330,6 +2308,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA8CD34E29F9900D0068FE8E /* XCRemoteSwiftPackageReference "RealmBinary" */;
 			productName = RealmSwift;
+		};
+		DA8CD35329F99E260068FE8E /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		DA8CD35629F99EC80068FE8E /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		DA8CD35A29F99FBE0068FE8E /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

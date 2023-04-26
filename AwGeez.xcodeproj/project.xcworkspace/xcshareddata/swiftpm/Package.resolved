@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "macaroni",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/bealex/Macaroni",
-      "state" : {
-        "branch" : "main",
-        "revision" : "e4b75e5ac4bc07c56333f052faebd3249df28b66"
-      }
-    },
-    {
       "identity" : "r.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mac-cain13/R.swift.git",

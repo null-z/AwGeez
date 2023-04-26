@@ -24,10 +24,10 @@ final class SplashScreenInteractor {
 extension SplashScreenInteractor: SplashScreenInteractorInput {
     func updateDataIfNeeded() {
         
-        let bool = Bool.random()
-        let error: ApiError = bool ? .badConnection : .badResponse
-        self.presenter?.dataUpdateError(error)
-        return
+//        let bool = Bool.random()
+//        let error: ApiError = bool ? .badConnection : .badResponse
+//        self.presenter?.dataUpdateError(error)
+//        return
         
         guard needsToUpdate() == true else {
             presenter?.dataDidUpdated()

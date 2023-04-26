@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import Macaroni
 import Api
 @testable import RestApi
 

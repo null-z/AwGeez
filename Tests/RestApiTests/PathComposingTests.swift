@@ -6,16 +6,17 @@
 //
 
 import XCTest
-import Macaroni
+import Swinject
 @testable import RestApi
 
 final class PathComposingTests: XCTestCase {
     
-    var api: RestApi = RestApi()
+    var api: RestApi!
     var spyRequester: SpyRequester = SpyRequester()
 
     override func setUpWithError() throws {
-        container.register { () -> Requester in self.spyRequester }
+        container.register(Requester.self) { _ in self.spyRequester }
+        api = RestApi()
     }
     
     func testBaseUrl() throws {
