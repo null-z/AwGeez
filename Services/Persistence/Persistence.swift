@@ -28,6 +28,7 @@ public protocol EpisodeDao: EntityDao where Entity == Model.Episode { }
 
 public protocol EntityDao: AnyObject {
     associatedtype Entity: Model.Entity
+    func readCount() -> Int
     func read(by id: Entity.ID) -> Entity
     func read(by ids: [Entity.ID]) -> [Entity]
 }

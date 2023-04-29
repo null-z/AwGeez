@@ -6,8 +6,12 @@
   
 */
 
+// errors
 "badConnection_message" = "Aw geez,
 we have connection problem!";
 
 "badResponse_message" = "Oops,
 something goes wrong here!";
+
+"characters_list_title" = "Characters";
+"first_seen_label" = "First seen in:";

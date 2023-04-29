@@ -9,8 +9,8 @@ import Foundation
 import enum Api.ApiError
 
 protocol SplashScreenRouter: AnyObject {
-    func showRoot()
-    func removeSplashScreen()
+    func willDisappear()
+    func didDisappear()
 }
 
 protocol SplashScreenInteractorInput: AnyObject {

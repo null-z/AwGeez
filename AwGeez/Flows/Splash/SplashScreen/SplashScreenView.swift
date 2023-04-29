@@ -163,6 +163,14 @@ extension SplashScreenView: SplashScreenViewInput {
         wideAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         wideAnimation.fillMode = .forwards
         wideAnimation.isRemovedOnCompletion = false
+        wideAnimation.delegate = self
         maskLayer.add(wideAnimation, forKey: "wide")
+    }
+}
+
+// MARK: CAAnimationDelegate
+extension SplashScreenView: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        presenter.finishAnimationDidEnd()
     }
 }

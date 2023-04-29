@@ -17,10 +17,10 @@ final class SplashScreenPresenter {
     init(interactor: SplashScreenInteractorInput) {
         self.interactor = interactor
     }
-    
 }
 
 extension SplashScreenPresenter: SplashScreenViewOutput {
+    
     func viewDidLoad() {
         view?.startLoadingAnimation()
         interactor.updateDataIfNeeded()
@@ -33,13 +33,14 @@ extension SplashScreenPresenter: SplashScreenViewOutput {
     }
     
     func finishAnimationDidEnd() {
-        router?.removeSplashScreen()
+        router?.didDisappear()
     }
 }
 
-extension SplashScreenPresenter: SplashScreenInteractorOutput {    
+extension SplashScreenPresenter: SplashScreenInteractorOutput {
+    
     func dataDidUpdated() {
-        router?.showRoot()
+        router?.willDisappear()
         view?.startFinishAnimation()
     }
     
