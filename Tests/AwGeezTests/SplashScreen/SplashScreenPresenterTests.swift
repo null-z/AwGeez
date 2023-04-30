@@ -29,10 +29,10 @@ final class SplashScreenPresenterTests: XCTestCase {
         XCTAssertTrue(view.isLoadingAnimationStarted)
         
         XCTAssertTrue(view.isFinishAnimationStarted)
-        XCTAssertTrue(router.isRootShown)
+        XCTAssertTrue(router.isWillDisappear)
         
         presenter.finishAnimationDidEnd()
-        XCTAssertTrue(router.isSplashScreenRemoved)
+        XCTAssertTrue(router.isDidDisappear)
     }
     
     func testUpdateErrorThanReloadSuccess() throws {
@@ -49,10 +49,10 @@ final class SplashScreenPresenterTests: XCTestCase {
         XCTAssertTrue(view.errorMessage.isEmpty)
         
         XCTAssertTrue(view.isFinishAnimationStarted)
-        XCTAssertTrue(router.isRootShown)
+        XCTAssertTrue(router.isWillDisappear)
         
         presenter.finishAnimationDidEnd()
-        XCTAssertTrue(router.isSplashScreenRemoved)
+        XCTAssertTrue(router.isDidDisappear)
     }
 }
 
@@ -101,14 +101,14 @@ final private class MockInteractor: SplashScreenInteractorInput {
 }
 
 final private class MockRouter: SplashScreenRouter {
-    var isRootShown = false
-    var isSplashScreenRemoved = false
-    
-    func showRoot() {
-        isRootShown = true
+    var isWillDisappear = false
+    var isDidDisappear = false
+
+    func willDisappear() {
+        isWillDisappear = true
     }
     
-    func removeSplashScreen() {
-        isSplashScreenRemoved = true
+    func didDisappear() {
+        isDidDisappear = true
     }
 }

@@ -1,0 +1,69 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+desc "Send report to telegram"
+lane :send_telegram do
+    message = generate_telegram_message()
+    file = "fastlane/test_output/report.html"
+    
+    UI.message "message generated for telegram: \n#{message}"
+
+    telegram(
+             token: ENV["TELEGRAM_BOT_TOKEN"],
+             chat_id: ENV["TELEGRAM_CHAT_ID"],
+             text: message,
+             file: file,
+             mime_type: "text/html",
+             parse_mode: "HTML"
+             )
+end
+
+def generate_telegram_message()
+    title = "<b>" + ENV["BITRISE_APP_TITLE"].to_s + "</b>"
+    build_status = "build " + ENV["BITRISE_BUILD_NUMBER"].to_s + " " + generate_build_status + "!"
+    tests_status = ENV["UNIT_TESTS_MESSAGE"]
+    branch = "branch #{ENV['BITRISE_GIT_BRANCH']}"
+    commit = "commit #{ENV['BITRISE_GIT_MESSAGE']}"
+    
+    message = title
+    message += "\n" + build_status
+    message += "\n" + tests_status
+    message += "\n" + branch
+    message += "\n" + commit
+    
+    message
+end
+
+def generate_test_message(number_of_tests, number_of_failures)
+    if number_of_failures > 0
+        message = "🛑 #{number_of_failures} of #{number_of_tests} tests failed"
+    else
+        message = "✅ #{number_of_tests} of #{number_of_tests} tests success"
+    end
+    message
+end
+
+def generate_test_message_error(error_info)
+    "💥 unit tests failed with error: #{error_info}"
+end
+
+def generate_build_status()
+    if ENV["BUILD_STATUS"] == "0"
+        status = "<b>successful</b>"
+    else
+        status = "<b>failed</b>"
+    end
+    status
+end

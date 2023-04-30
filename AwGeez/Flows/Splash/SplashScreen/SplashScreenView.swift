@@ -162,7 +162,7 @@ extension SplashScreenView: SplashScreenViewInput {
         wideAnimation.duration = 1
         wideAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         wideAnimation.fillMode = .forwards
-        wideAnimation.isRemovedOnCompletion = false
+        wideAnimation.isRemovedOnCompletion = true
         wideAnimation.delegate = self
         maskLayer.add(wideAnimation, forKey: "wide")
     }

@@ -31,12 +31,24 @@ final class SplashScreenInteractorTests: XCTestCase {
     
     func testSkipUpdate() throws {
         mockDefaults.lastUpdateDate = Date()
+        mockPersistence.isFilled = true
         
         interactor.updateDataIfNeeded()
         
         XCTAssertTrue(presenter.success)
         XCTAssertFalse(presenter.error)
         XCTAssertFalse(mockPersistence.dataWrited)
+    }
+    
+    func testUpdateEmptyPersistence() throws {
+        mockDefaults.lastUpdateDate = Date()
+        mockPersistence.isFilled = false
+        
+        interactor.updateDataIfNeeded()
+        
+        XCTAssertTrue(presenter.success)
+        XCTAssertFalse(presenter.error)
+        XCTAssertTrue(mockPersistence.dataWrited)
     }
 
     func testSuccessUpdate() throws {

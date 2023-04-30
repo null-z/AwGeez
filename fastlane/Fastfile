@@ -13,11 +13,56 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+import("TelegramFastfile")
+
 default_platform(:ios)
 
-desc "Unit tests"
+before_all do |lane|
+    UI.message "before_all lane #{lane}"
+    isCI = ENV["CI"]
+    if isCI != "true"
+        UI.message "it is local CLI"
+        Dotenv.load ".env.local"
+    end
+    ENV["BUILD_STATUS"] = "0"
+end
+
+desc "Run unit tests and send report to telegram"
 lane :tests do
-    scan(
-         xcargs: "-skipPackagePluginValidation" # prevent fail on Validate plug-in “RswiftGenerateInternalResources” in package “r.swift”
-         )
+    run_unit_tests()
+    send_telegram()
+    fail_if_needed()
+end
+
+private_lane :run_unit_tests do
+    begin
+        xcargs = "-skipPackagePluginValidation"# prevent fail on Validate plug-in "RswiftGenerateInternalResources" in package "r.swift"
+        #output = fake_scan()
+        output = scan(
+                      fail_build: false,
+                      xcodebuild_formatter: "xcpretty",
+                      xcargs: xcargs
+                      )
+        ENV["UNIT_TESTS_MESSAGE"] = generate_test_message(output[:number_of_tests], output[:number_of_failures])
+        if output[:number_of_failures] > 0
+            ENV["BUILD_STATUS"] = "1"
+        end
+    rescue => e
+        ENV["UNIT_TESTS_MESSAGE"] = generate_test_message_error(e.message)
+        ENV["BUILD_STATUS"] = "1"
+    end
+end
+
+# Lane for dubug
+private_lane :fake_scan do
+    number_of_tests = 33
+    number_of_failures = 1
+    #raise StandardError.new "This is an exception"
+    { number_of_tests: number_of_tests, number_of_failures: number_of_failures }
+end
+
+def fail_if_needed()
+    if ENV["BUILD_STATUS"] == "1"
+        UI.build_failure! "Unit tests lane failed"
+    end
 end

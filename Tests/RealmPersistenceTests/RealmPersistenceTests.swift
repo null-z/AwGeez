@@ -8,7 +8,6 @@
 import XCTest
 import Model
 import Persistence
-import RealmSwift
 @testable import RealmPersistence
 
 final class RealmPersistenceTests: RealmPersistenceTestCase {

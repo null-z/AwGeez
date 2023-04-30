@@ -43,3 +43,9 @@ final public class RealmPersistence: Persistence {
     public var locaton: any LocationDao = LocationEntityDao()
     public var episode: any EpisodeDao = EpisodeEntityDao()
 }
+
+extension RealmPersistence {
+    static func configureInMemory(name: String) {
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = name
+    }
+}

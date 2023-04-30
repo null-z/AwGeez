@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,swift
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift
 
+### Custom ###
+## Unit tests UserDefaults file
+DefaultsTests.swift.plist
+
 ### Swift ###
 # Xcode
 #

@@ -6,11 +6,10 @@
 //
 
 import XCTest
-import RealmSwift
-
+@testable import RealmPersistence
 class RealmPersistenceTestCase: XCTestCase {
 
     override func setUpWithError() throws {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+        RealmPersistence.configureInMemory(name: self.name)
     }
 }

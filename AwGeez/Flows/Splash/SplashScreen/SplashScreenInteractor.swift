@@ -24,11 +24,6 @@ final class SplashScreenInteractor {
 extension SplashScreenInteractor: SplashScreenInteractorInput {
     func updateDataIfNeeded() {
         
-//        let bool = Bool.random()
-//        let error: ApiError = bool ? .badConnection : .badResponse
-//        self.presenter?.dataUpdateError(error)
-//        return
-        
         guard needsToUpdate() == true else {
             presenter?.dataDidUpdated()
             return
@@ -50,10 +45,11 @@ extension SplashScreenInteractor: SplashScreenInteractorInput {
     }
     
     private func needsToUpdate() -> Bool {
-        return daysToUpdateExpired() && !persistence.isFilled
+        let isPersistenceEmpty = !persistence.isFilled
+        return isDaysToUpdateExpired() || isPersistenceEmpty
     }
     
-    private func daysToUpdateExpired() -> Bool {
+    private func isDaysToUpdateExpired() -> Bool {
         guard let lastUpdateDate = defaults.lastUpdateDate else {
             return true
         }

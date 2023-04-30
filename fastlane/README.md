@@ -13,13 +13,21 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
+### send_telegram
+
+```sh
+[bundle exec] fastlane send_telegram
+```
+
+Send report to telegram
+
 ### tests
 
 ```sh
 [bundle exec] fastlane tests
 ```
 
-Unit tests
+Run unit tests and send report to telegram
 
 ----
 
