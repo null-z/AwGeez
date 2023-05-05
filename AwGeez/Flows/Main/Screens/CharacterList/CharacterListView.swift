@@ -20,13 +20,8 @@ class CharacterListView: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNeedsStatusBarAppearanceUpdate()
         tableView.prefetchDataSource = self
         makeUI()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return false
     }
 }
 

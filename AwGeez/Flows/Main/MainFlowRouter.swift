@@ -10,7 +10,7 @@ import UIKit
 final class MainFlowRouter {
     
     let window: UIWindow
-    private var navigationController: UINavigationController!
+    private var navigationController: MainFlowNavigationController!
 
     init(window: UIWindow) {
         self.window = window
@@ -18,9 +18,13 @@ final class MainFlowRouter {
     
     func showRoot() {
         let characterListView = CharacterListAssembly().build(self)
-        navigationController = UINavigationController(rootViewController: characterListView)
+        navigationController = MainFlowNavigationController(rootViewController: characterListView)
         navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
+    }
+    
+    func showStatusBar() {
+        navigationController.showStatusBar()
     }
 }
 

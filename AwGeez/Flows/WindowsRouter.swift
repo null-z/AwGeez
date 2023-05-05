@@ -49,6 +49,7 @@ extension WindowsRouter: FlowRouterDelegate {
     
     func flowDidFinish() {
         mainFlowRouter.window.makeKey()
+        mainFlowRouter.showStatusBar()
         splashFlowRouter = nil
     }
 }
