@@ -49,6 +49,11 @@ extension CharacterListPresenter: CharacterListViewOutput {
     private func id(for index: Int) -> UInt {
         UInt(exactly: index + 1)!
     }
+    
+    func didSelectItem(for index: Int) {
+        let id = id(for: index)
+        router?.showCharacterDetails(for: id)
+    }
 }
 
 extension CharacterListPresenter: CharacterListInteractorOutput {

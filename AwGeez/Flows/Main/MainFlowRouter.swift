@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Model
 
 final class MainFlowRouter {
     
@@ -19,7 +20,6 @@ final class MainFlowRouter {
     func showRoot() {
         let characterListView = CharacterListAssembly().build(self)
         navigationController = MainFlowNavigationController(rootViewController: characterListView)
-        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
     }
     
@@ -29,5 +29,16 @@ final class MainFlowRouter {
 }
 
 extension MainFlowRouter: CharacterListRouter {
+    func showCharacterDetails(for characterId: Character.ID) {
+        let characterDetailsView = CharacterDetailsAssembly().build(self, characterId: characterId)
+        navigationController.pushViewController(characterDetailsView, animated: true)
+    }
+}
+
+extension MainFlowRouter: CharacterDetailsRouter {
+    func showLocationDetails(for locationID: Model.Location.ID) {
+    }
     
+    func showEpisodeDetails(for episodeID: Model.Episode.ID) {
+    }
 }

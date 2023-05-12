@@ -14,4 +14,11 @@ we have connection problem!";
 something goes wrong here!";
 
 "characters_list_title" = "Characters";
-"first_seen_label" = "First seen in:";
+"first_seen_label" = "First seen in";
+
+"status" = "Status";
+"species" = "Species";
+"gender" = "Gender";
+"origin_location" = "Origin location";
+"last_known_location" = "Last known location";
+"starred_in_episodes" = "Starred in episodes";

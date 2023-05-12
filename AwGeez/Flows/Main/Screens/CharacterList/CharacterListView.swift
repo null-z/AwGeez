@@ -45,6 +45,10 @@ extension CharacterListView {
         cell.setup(with: viewModel)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectItem(for: indexPath.row)
+    }
 }
 
 extension CharacterListView: UITableViewDataSourcePrefetching {
@@ -58,6 +62,7 @@ extension CharacterListView: UITableViewDataSourcePrefetching {
 // MARK: Make UI
 extension CharacterListView {
     private func makeUI() {
+        navigationItem.largeTitleDisplayMode = .always
         title = presenter.title()
         view.backgroundColor = R.color.background()
         tableView.separatorStyle = .none

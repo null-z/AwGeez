@@ -10,6 +10,7 @@ import Foundation
 import Model
 
 protocol CharacterListRouter: AnyObject {
+    func showCharacterDetails(for characterId: Character.ID)
 }
 
 protocol CharacterListInteractorInput: AnyObject {
@@ -29,12 +30,13 @@ protocol CharacterListViewOutput: AnyObject {
     func numberOfItems() -> Int
     func imageUrls(for indexes: [Int]) -> [URL]
     func viewModel(for index: Int) -> CharacterItemViewModel
+    func didSelectItem(for index: Int)
 }
 
 struct CharacterItemViewModel {
     let imageUrl: URL
     let title: String
-    let status: Model.Character.Status
+    let status: Character.Status
     let detailSubtitle: String
     let detailText: String
 }

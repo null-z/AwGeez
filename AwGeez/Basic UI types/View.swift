@@ -13,6 +13,10 @@ class View: UIView {
         super.init(frame: .zero)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     @available(*, unavailable, message: "Nib are unsupported")
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

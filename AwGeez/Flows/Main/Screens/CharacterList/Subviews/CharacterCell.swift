@@ -21,12 +21,8 @@ class CharacterCell: TableViewCell {
     private let defaultBackgroundColor = R.color.cellBackground()
     private let selectedBackgroundColor = UIColor.lightGray
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(pictureView)
-        contentView.addSubview(descriptionView)
-        descriptionView.addSubview(titleLabel)
-        descriptionView.addSubview(detailLabel)
+    override func cellDidLoad() {
+        super.cellDidLoad()
         makeUI()
     }
     
@@ -58,6 +54,11 @@ class CharacterCell: TableViewCell {
 // MARK: Make UI
 extension CharacterCell {
     private func makeUI() {
+        contentView.addSubview(pictureView)
+        contentView.addSubview(descriptionView)
+        descriptionView.addSubview(titleLabel)
+        descriptionView.addSubview(detailLabel)
+        
         makeContentView()
         makeLabels()
         setupLayout()
@@ -79,30 +80,22 @@ extension CharacterCell {
     
     private func setupLayout() {
         descriptionView.snp.makeConstraints { make in
-            let offset = 8
-            make.left.equalTo(pictureView.snp.right).offset(offset)
-            make.top.equalTo(contentView.snp.top).offset(offset)
-            make.right.equalTo(contentView.snp.right).offset(-offset)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-offset)
+            make.top.right.bottom.equalToSuperview().inset(descriptionView.layoutMargins)
+            make.left.equalTo(pictureView.snp.right).offset(descriptionView.layoutMargins.left)
         }
         
         pictureView.snp.makeConstraints { make in
-            make.left.equalTo(contentView.snp.left)
-            make.top.equalTo(contentView.snp.top)
-            make.bottom.equalTo(contentView.snp.bottom)
+            make.top.left.bottom.equalToSuperview()
             make.width.equalTo(pictureView.snp.height)
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.left.equalTo(descriptionView.snp.left)
-            make.top.equalTo(descriptionView.snp.top)
-            make.right.equalTo(descriptionView.snp.right)
+            make.top.left.right.equalToSuperview()
         }
         
         detailLabel.snp.makeConstraints { make in
-            make.left.equalTo(descriptionView.snp.left)
             make.top.equalTo(titleLabel.snp.bottom)
-            make.right.equalTo(descriptionView.snp.right)
+            make.left.right.equalToSuperview()
             make.bottom.lessThanOrEqualTo(descriptionView.snp.bottom)
         }
     }
@@ -120,12 +113,16 @@ extension CharacterCell {
     private func setupTitle(_ viewModel: CharacterItemViewModel) {
         let result = NSMutableAttributedString()
         
-        let statusAttributes = [NSAttributedString.Key.foregroundColor: viewModel.status.color(),
-                                NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .subheadline),
+        let statusString = NSMutableAttributedString(attributedString: viewModel.status.coloredSymbol())
+        statusString.append(NSAttributedString(string: " "))
+        
+        let statusAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .subheadline),
                                 NSAttributedString.Key.baselineOffset: NSNumber(value: 2)]
-        let statusString = NSAttributedString(string: "● ", attributes: statusAttributes)
+        
+        statusString.addAttributes(statusAttributes, range: statusString.mutableString.range(of: statusString.string))
+        
         result.append(statusString)
-
+        
         let titleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
                                NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title3)]
         let titleString = NSAttributedString(string: viewModel.title, attributes: titleAttributes)
@@ -139,7 +136,7 @@ extension CharacterCell {
         
         let subtitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray,
                                   NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)]
-        let subtitleString = NSAttributedString(string: viewModel.detailSubtitle + " ", attributes: subtitleAttributes)
+        let subtitleString = NSAttributedString(string: viewModel.detailSubtitle + ": ", attributes: subtitleAttributes)
         detailtString.append(subtitleString)
         
         let descriptionAttribute = [NSAttributedString.Key.foregroundColor: UIColor.darkGray,
@@ -149,17 +146,5 @@ extension CharacterCell {
         detailtString.append(descriptionString)
         
         detailLabel.attributedText = detailtString
-    }
-}
-
-import Model
-
-extension Model.Character.Status {
-    func color() -> UIColor {
-        switch self {
-        case .alive: return R.color.status.alive()!
-        case .dead: return R.color.status.dead()!
-        case .unknown: return R.color.status.unknown()!
-        }
     }
 }
