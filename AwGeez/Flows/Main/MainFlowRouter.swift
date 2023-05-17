@@ -28,7 +28,8 @@ final class MainFlowRouter {
     }
 }
 
-extension MainFlowRouter: CharacterListRouter {
+extension MainFlowRouter: CharacterListRouter,
+                          LocationDetailsRouter {
     func showCharacterDetails(for characterId: Character.ID) {
         let characterDetailsView = CharacterDetailsAssembly().build(self, characterId: characterId)
         navigationController.pushViewController(characterDetailsView, animated: true)
@@ -36,9 +37,11 @@ extension MainFlowRouter: CharacterListRouter {
 }
 
 extension MainFlowRouter: CharacterDetailsRouter {
-    func showLocationDetails(for locationID: Model.Location.ID) {
+    func showLocationDetails(for locationId: Model.Location.ID) {
+        let locationDetailsView = LocationDetailsAssembly().build(self, locationId: locationId)
+        navigationController.pushViewController(locationDetailsView, animated: true)
     }
     
-    func showEpisodeDetails(for episodeID: Model.Episode.ID) {
+    func showEpisodeDetails(for episodeId: Model.Episode.ID) {
     }
 }

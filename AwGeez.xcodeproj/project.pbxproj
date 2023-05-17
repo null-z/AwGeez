@@ -138,6 +138,14 @@
 		DAB618F22A11F61700135D81 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618F12A11F61700135D81 /* EpisodeCell.swift */; };
 		DAB618F52A125FFA00135D81 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618F42A125FF900135D81 /* NavigationBar.swift */; };
 		DAB618F92A12716100135D81 /* EpisodeShortNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618F82A12716100135D81 /* EpisodeShortNumbers.swift */; };
+		DAB619012A135E3700135D81 /* LocationDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618FC2A135E3700135D81 /* LocationDetailsContract.swift */; };
+		DAB619022A135E3700135D81 /* LocationDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618FD2A135E3700135D81 /* LocationDetailsPresenter.swift */; };
+		DAB619032A135E3700135D81 /* LocationDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618FE2A135E3700135D81 /* LocationDetailsAssembly.swift */; };
+		DAB619042A135E3700135D81 /* LocationDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB618FF2A135E3700135D81 /* LocationDetailsInteractor.swift */; };
+		DAB619052A135E3700135D81 /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB619002A135E3700135D81 /* LocationDetailsView.swift */; };
+		DAB619092A13896200135D81 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB619082A13896200135D81 /* Appearance.swift */; };
+		DAB6190E2A13A07C00135D81 /* CharacterSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6190D2A13A07C00135D81 /* CharacterSmallCell.swift */; };
+		DAB619112A13FFD200135D81 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB619102A13FFD100135D81 /* GradientView.swift */; };
 		DAB6DC1629D9709000731B8F /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = DAB6DC1429D9709000731B8F /* Appfile */; };
 		DAB6DC1729D9709000731B8F /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = DAB6DC1529D9709000731B8F /* Fastfile */; };
 		DABBC8422A04C1CC006F2EAB /* MainFlowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC8412A04C1CC006F2EAB /* MainFlowNavigationController.swift */; };
@@ -406,6 +414,14 @@
 		DAB618F12A11F61700135D81 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 		DAB618F42A125FF900135D81 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		DAB618F82A12716100135D81 /* EpisodeShortNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeShortNumbers.swift; sourceTree = "<group>"; };
+		DAB618FC2A135E3700135D81 /* LocationDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsContract.swift; sourceTree = "<group>"; };
+		DAB618FD2A135E3700135D81 /* LocationDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsPresenter.swift; sourceTree = "<group>"; };
+		DAB618FE2A135E3700135D81 /* LocationDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsAssembly.swift; sourceTree = "<group>"; };
+		DAB618FF2A135E3700135D81 /* LocationDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsInteractor.swift; sourceTree = "<group>"; };
+		DAB619002A135E3700135D81 /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
+		DAB619082A13896200135D81 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		DAB6190D2A13A07C00135D81 /* CharacterSmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSmallCell.swift; sourceTree = "<group>"; };
+		DAB619102A13FFD100135D81 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DAB6DC1429D9709000731B8F /* Appfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Appfile; sourceTree = "<group>"; };
 		DAB6DC1529D9709000731B8F /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Fastfile; sourceTree = "<group>"; };
 		DABBC8412A04C1CC006F2EAB /* MainFlowNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowNavigationController.swift; sourceTree = "<group>"; };
@@ -630,6 +646,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DA3FDAD12A15668300980CAC /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				DAB618E12A0ECC8A00135D81 /* TitledTextCell.swift */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
 		DA4E961A29F5A618009E55EC /* Defaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +676,7 @@
 			children = (
 				DA8CD35D29F9A10F0068FE8E /* CharacterList */,
 				DAB618A62A0BEEA800135D81 /* CharacterDetails */,
+				DAB618FB2A135DFB00135D81 /* LocationDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -825,6 +850,7 @@
 		DA8CD3B229FA8A970068FE8E /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				DAB619102A13FFD100135D81 /* GradientView.swift */,
 				DA8CD3B429FA8AE00068FE8E /* CharacterCell.swift */,
 			);
 			path = Subviews;
@@ -882,7 +908,6 @@
 			isa = PBXGroup;
 			children = (
 				DAB618CE2A0D0DB700135D81 /* StretchyTableHeaderView.swift */,
-				DAB618E12A0ECC8A00135D81 /* TitledTextCell.swift */,
 				DAB618F12A11F61700135D81 /* EpisodeCell.swift */,
 			);
 			path = Subviews;
@@ -896,6 +921,27 @@
 				DAB618F82A12716100135D81 /* EpisodeShortNumbers.swift */,
 			);
 			path = "Enitity UI extensions";
+			sourceTree = "<group>";
+		};
+		DAB618FB2A135DFB00135D81 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DAB618FE2A135E3700135D81 /* LocationDetailsAssembly.swift */,
+				DAB618FC2A135E3700135D81 /* LocationDetailsContract.swift */,
+				DAB619002A135E3700135D81 /* LocationDetailsView.swift */,
+				DAB618FF2A135E3700135D81 /* LocationDetailsInteractor.swift */,
+				DAB618FD2A135E3700135D81 /* LocationDetailsPresenter.swift */,
+				DAB6190B2A138C7100135D81 /* Subviews */,
+			);
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		DAB6190B2A138C7100135D81 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DAB6190D2A13A07C00135D81 /* CharacterSmallCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		DAB6DC1329D9709000731B8F /* fastlane */ = {
@@ -946,6 +992,7 @@
 			children = (
 				DACC46E6295D0DB700FFAE56 /* Main */,
 				DA2D3C2029FD81BE002E6D21 /* Flows */,
+				DA3FDAD12A15668300980CAC /* SharedViews */,
 				DA06037529C890B6001C995A /* Basic UI types */,
 				DAB618E42A11951F00135D81 /* Enitity UI extensions */,
 			);
@@ -993,6 +1040,7 @@
 				DAE4453C29C3106B00DAB2D1 /* ProcessInfo.swift */,
 				DA8CD3AF29FA844D0068FE8E /* StartupConfigurator.swift */,
 				DA7795122967C050005A0302 /* Container.swift */,
+				DAB619082A13896200135D81 /* Appearance.swift */,
 				DA8CD3BC29FA92470068FE8E /* ImageCache.swift */,
 			);
 			path = "Startup configs";
@@ -1590,6 +1638,7 @@
 				DAB618F92A12716100135D81 /* EpisodeShortNumbers.swift in Sources */,
 				DAB618E22A0ECC8A00135D81 /* TitledTextCell.swift in Sources */,
 				DAB618E62A11955400135D81 /* CharacterStatusSymbol.swift in Sources */,
+				DAB619022A135E3700135D81 /* LocationDetailsPresenter.swift in Sources */,
 				DAB618F52A125FFA00135D81 /* NavigationBar.swift in Sources */,
 				DA8CD37929F9AC140068FE8E /* CharacterListContract.swift in Sources */,
 				DA4E962029F5AA0C009E55EC /* SplashScreenContract.swift in Sources */,
@@ -1599,9 +1648,13 @@
 				DA4E961629F5A50E009E55EC /* SplashScreenInteractor.swift in Sources */,
 				DA8CD37D29F9AC140068FE8E /* CharacterListView.swift in Sources */,
 				DA8CD3BD29FA92470068FE8E /* ImageCache.swift in Sources */,
+				DAB619112A13FFD200135D81 /* GradientView.swift in Sources */,
 				DA06036C29C8113F001C995A /* HoledMaskLayer.swift in Sources */,
 				DACC46B9295D073700FFAE56 /* ViewController.swift in Sources */,
+				DAB6190E2A13A07C00135D81 /* CharacterSmallCell.swift in Sources */,
+				DAB619042A135E3700135D81 /* LocationDetailsInteractor.swift in Sources */,
 				DAE4453D29C3106B00DAB2D1 /* ProcessInfo.swift in Sources */,
+				DAB619032A135E3700135D81 /* LocationDetailsAssembly.swift in Sources */,
 				DA06036829C80C64001C995A /* SplashScreenView.swift in Sources */,
 				DAB618EB2A11A7F400135D81 /* CharacterGenderSign.swift in Sources */,
 				DA7795132967C050005A0302 /* Container.swift in Sources */,
@@ -1609,13 +1662,16 @@
 				DA4E961D29F5A739009E55EC /* Defaults.swift in Sources */,
 				DAB618AF2A0BEED500135D81 /* CharacterDetailsInteractor.swift in Sources */,
 				DA8CD38029F9B67E0068FE8E /* TableViewController.swift in Sources */,
+				DAB619052A135E3700135D81 /* LocationDetailsView.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
 				DA2D3C2329FD81E8002E6D21 /* WindowsRouter.swift in Sources */,
 				DA4E964529F6C9AE009E55EC /* SplashScreenAssembly.swift in Sources */,
 				DA8CD3B029FA844D0068FE8E /* StartupConfigurator.swift in Sources */,
 				DA2D3C2829FD839B002E6D21 /* SplashFlowRouter.swift in Sources */,
+				DAB619012A135E3700135D81 /* LocationDetailsContract.swift in Sources */,
 				DAB618CF2A0D0DB700135D81 /* StretchyTableHeaderView.swift in Sources */,
 				DA8CD3B829FA8BA50068FE8E /* UITableView.swift in Sources */,
+				DAB619092A13896200135D81 /* Appearance.swift in Sources */,
 				DAB618AE2A0BEED500135D81 /* CharacterDetailsAssembly.swift in Sources */,
 				DA4E963A29F5C579009E55EC /* UserDefaults.swift in Sources */,
 				DAB618AC2A0BEED500135D81 /* CharacterDetailsContract.swift in Sources */,
@@ -2520,8 +2576,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
-				kind = exactVersion;
-				version = 10.38.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.39.0;
 			};
 		};
 		DA4E964029F5D377009E55EC /* XCRemoteSwiftPackageReference "Swinject" */ = {

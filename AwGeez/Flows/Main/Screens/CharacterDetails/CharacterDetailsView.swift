@@ -36,13 +36,12 @@ class CharacterDetailsView: TableViewController {
     
     override func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
-        tableView.contentInset.top = -1 * tableView.safeAreaInsets.top
-        tableHeaderView.frame.size.height = view.frame.size.width
+        updateTableHeader()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        resetNavigationBar()
+        showNavigationBar()
     }
 }
 
@@ -63,23 +62,36 @@ extension CharacterDetailsView {
             showNavigationBar()
         }
     }
-    
-    private func resetNavigationBar() {
+        
+    private func showNavigationBar() {
         guard let navigationBar else { return }
+        navigationBar.titleTextAttributes = navigationBar.standardAppearance.titleTextAttributes
         navigationBar.backIndicatorImage = navigationBar.standardAppearance.backIndicatorImage
         navigationBar.backIndicatorTransitionMaskImage = navigationBar.standardAppearance.backIndicatorTransitionMaskImage
         navigationBar.resetColor()
     }
     
-    private func showNavigationBar() {
-        navigationItem.title = presenter.viewModel.name
-        resetNavigationBar()
-    }
-    
     private func hideNavigationBar() {
-        navigationItem.title = nil
+        navigationBar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
         navigationBar?.backIndicatorImage = R.image.backButton()
         navigationBar?.backIndicatorTransitionMaskImage = R.image.backButton()
+    }
+}
+
+// MARK: TableHeader
+
+extension CharacterDetailsView {
+    private func updateTableHeader() {
+        tableView.contentInset.top = -1 * tableView.safeAreaInsets.top
+        tableHeaderView.frame.size.height = view.frame.size.width
+    }
+}
+
+// MARK: ScrollView
+extension CharacterDetailsView {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        tableHeaderView.scrollViewDidScroll(scrollView)
+        updateNavigationBar()
     }
 }
 
@@ -162,20 +174,11 @@ extension CharacterDetailsView {
     }
 }
 
-// MARK: ScrollView
-extension CharacterDetailsView {
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        tableHeaderView.scrollViewDidScroll(scrollView)
-        updateNavigationBar()
-    }
-}
-
 // MARK: Make UI
 extension CharacterDetailsView {
     private func makeUI() {
         navigationItem.largeTitleDisplayMode = .never
         title = presenter.viewModel.name
-        view.backgroundColor = R.color.background()
         tableView.separatorStyle = .none
         tableView.tableHeaderView = tableHeaderView
         tableHeaderView.setImageUrl(presenter.viewModel.imageUrl)

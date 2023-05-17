@@ -10,8 +10,8 @@ import Foundation
 import Model
 
 protocol CharacterDetailsRouter: AnyObject {
-    func showLocationDetails(for locationID: Location.ID)
-    func showEpisodeDetails(for episodeID: Episode.ID)
+    func showLocationDetails(for locationId: Location.ID)
+    func showEpisodeDetails(for episodeId: Episode.ID)
 }
 
 protocol CharacterDetailsInteractorInput: AnyObject {

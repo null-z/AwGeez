@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
-        "version" : "5.6.4"
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mac-cain13/R.swift.git",
       "state" : {
-        "revision" : "589493fe3907251b62f7684c8451330ee08f4426",
-        "version" : "7.3.0"
+        "revision" : "0e4ec17f329136b712d0a96128597b8ff2f31bdc",
+        "version" : "7.3.2"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
       "state" : {
-        "revision" : "e56380f05793998dfea0d87a34b68fdba475961c",
-        "version" : "13.9.0"
+        "revision" : "72226e2fd84f3a3a8ab3cffc2890c7951f1351d5",
+        "version" : "13.10.1"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
-        "revision" : "71bddc82c4fe3dd6488739ff8b7e99f69183a614",
-        "version" : "10.38.0"
+        "revision" : "08ee98e7f52a5fb11b10b7430e6f84adbb7433a4",
+        "version" : "10.39.1"
       }
     },
     {

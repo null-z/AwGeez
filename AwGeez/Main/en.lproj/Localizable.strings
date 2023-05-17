@@ -22,3 +22,7 @@ something goes wrong here!";
 "origin_location" = "Origin location";
 "last_known_location" = "Last known location";
 "starred_in_episodes" = "Starred in episodes";
+
+"type" = "Type";
+"dimension" = "Dimension";
+"residents" = "Residents";

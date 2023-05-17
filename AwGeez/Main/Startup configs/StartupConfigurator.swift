@@ -18,5 +18,6 @@ final class StartupConfigurator {
         
         setupImageCache()
         resetCacheIfNeeded()
+        setupAppearances()
     }
 }

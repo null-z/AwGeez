@@ -18,7 +18,7 @@ class CharacterCell: TableViewCell {
     private let titleLabel = UILabel()
     private let detailLabel = UILabel()
     
-    private let defaultBackgroundColor = R.color.cellBackground()
+    private let defaultBackgroundColor = UIColor.white
     private let selectedBackgroundColor = UIColor.lightGray
     
     override func cellDidLoad() {
@@ -54,6 +54,7 @@ class CharacterCell: TableViewCell {
 // MARK: Make UI
 extension CharacterCell {
     private func makeUI() {
+        backgroundColor = .clear
         contentView.addSubview(pictureView)
         contentView.addSubview(descriptionView)
         descriptionView.addSubview(titleLabel)

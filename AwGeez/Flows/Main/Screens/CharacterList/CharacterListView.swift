@@ -64,9 +64,15 @@ extension CharacterListView {
     private func makeUI() {
         navigationItem.largeTitleDisplayMode = .always
         title = presenter.title()
-        view.backgroundColor = R.color.background()
         tableView.separatorStyle = .none
+        addGradient()
         setupLayout()
+    }
+    
+    private func addGradient() {
+        let gradientView = GradientView()
+        gradientView.colors = [UIColor.white, UIColor.lightGray]
+        tableView.backgroundView = gradientView
     }
     
     private func setupLayout() {

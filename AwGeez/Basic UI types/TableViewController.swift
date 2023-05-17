@@ -10,7 +10,7 @@ import UIKit
 class TableViewController: UITableViewController {
     
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .grouped)
     }
     
     @available(*, unavailable, message: "Nib are unsupported")
