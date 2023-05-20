@@ -27,6 +27,7 @@ protocol LocationDetailsViewInput: AnyObject {
 protocol LocationDetailsViewOutput: AnyObject {
     var viewModel: LocationDetailsViewModel { get }
     func didSelectItem(at indexPath: IndexPath)
+    func imageUrls(for indexPaths: [IndexPath]) -> [URL]
 }
 
 struct LocationDetailsViewModel {

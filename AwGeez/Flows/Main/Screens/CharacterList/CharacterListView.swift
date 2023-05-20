@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class CharacterListView: TableViewController {
     
@@ -51,11 +50,12 @@ extension CharacterListView {
     }
 }
 
+// MARK: Prefetch
 extension CharacterListView: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         let indexes = indexPaths.map { $0.row }
         let urls = presenter.imageUrls(for: indexes)
-        ImagePrefetcher(urls: urls).start()
+        ImageLoader.prefetchImages(for: urls)
     }
 }
 

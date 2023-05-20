@@ -59,6 +59,18 @@ extension LocationDetailsPresenter: LocationDetailsViewOutput {
         default: return
         }
     }
+    
+    func imageUrls(for indexPaths: [IndexPath]) -> [URL] {
+        indexPaths.compactMap { indexPath in
+            let section = viewModel.sections[indexPath.section]
+            switch section {
+            case .residents(headerTitle: _, residents: let residents):
+                let character = residents[indexPath.row]
+                return character.image
+            default: return nil
+            }
+        }
+    }
 }
 
 extension LocationDetailsPresenter: LocationDetailsInteractorOutput {

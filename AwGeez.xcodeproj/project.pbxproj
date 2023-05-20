@@ -96,6 +96,8 @@
 		DA70564829D1B02F00B86166 /* CharacterDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C3DC29BE709C00776FEA /* CharacterDaoTests.swift */; };
 		DA70564929D1B02F00B86166 /* LocationDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8A829BEAEC8006BEAA5 /* LocationDaoTests.swift */; };
 		DA70564A29D1B02F00B86166 /* EpisodeDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AB8B029BEB4D9006BEAA5 /* EpisodeDaoTests.swift */; };
+		DA778F732A191C4000ECD95E /* InsetsOffsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA778F722A191C4000ECD95E /* InsetsOffsets.swift */; };
+		DA778F762A191CAE00ECD95E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA778F752A191CAE00ECD95E /* ImageLoader.swift */; };
 		DA7795022967BBAA005A0302 /* RestApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7795012967BBAA005A0302 /* RestApiTests.swift */; };
 		DA7795032967BBAA005A0302 /* Api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFACC2C29664872001BA118 /* Api.framework */; };
 		DA77950B2967BC9C005A0302 /* PathComposingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77950A2967BC9C005A0302 /* PathComposingTests.swift */; };
@@ -365,6 +367,8 @@
 		DA70563B29D1AFEF00B86166 /* RealmPersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmPersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA77598129BED6F5008888C8 /* RealmPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistenceTests.swift; sourceTree = "<group>"; };
 		DA77598329BEDF4B008888C8 /* RealmPersistenceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistenceTestCase.swift; sourceTree = "<group>"; };
+		DA778F722A191C4000ECD95E /* InsetsOffsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsOffsets.swift; sourceTree = "<group>"; };
+		DA778F752A191CAE00ECD95E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		DA7794EA29679F0F005A0302 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		DA7794F42967A47A005A0302 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		DA7794F62967B093005A0302 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -773,6 +777,31 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DA778F702A191BF600ECD95E /* Framework extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA778F742A191C9F00ECD95E /* Kingfisher */,
+				DA778F712A191C2B00ECD95E /* SnapKit */,
+			);
+			path = "Framework extensions";
+			sourceTree = "<group>";
+		};
+		DA778F712A191C2B00ECD95E /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				DA778F722A191C4000ECD95E /* InsetsOffsets.swift */,
+			);
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		DA778F742A191C9F00ECD95E /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				DA778F752A191CAE00ECD95E /* ImageLoader.swift */,
+			);
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
 		DA7794EF29679F6B005A0302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1024,7 @@
 				DA3FDAD12A15668300980CAC /* SharedViews */,
 				DA06037529C890B6001C995A /* Basic UI types */,
 				DAB618E42A11951F00135D81 /* Enitity UI extensions */,
+				DA778F702A191BF600ECD95E /* Framework extensions */,
 			);
 			path = AwGeez;
 			sourceTree = "<group>";
@@ -1660,9 +1690,11 @@
 				DA7795132967C050005A0302 /* Container.swift in Sources */,
 				DACC46B5295D073700FFAE56 /* AppDelegate.swift in Sources */,
 				DA4E961D29F5A739009E55EC /* Defaults.swift in Sources */,
+				DA778F732A191C4000ECD95E /* InsetsOffsets.swift in Sources */,
 				DAB618AF2A0BEED500135D81 /* CharacterDetailsInteractor.swift in Sources */,
 				DA8CD38029F9B67E0068FE8E /* TableViewController.swift in Sources */,
 				DAB619052A135E3700135D81 /* LocationDetailsView.swift in Sources */,
+				DA778F762A191CAE00ECD95E /* ImageLoader.swift in Sources */,
 				DACC46B7295D073700FFAE56 /* SceneDelegate.swift in Sources */,
 				DA2D3C2329FD81E8002E6D21 /* WindowsRouter.swift in Sources */,
 				DA4E964529F6C9AE009E55EC /* SplashScreenAssembly.swift in Sources */,

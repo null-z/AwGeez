@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Kingfisher
 
 class StretchyTableHeaderView: View {
     
@@ -23,7 +22,8 @@ class StretchyTableHeaderView: View {
     }
     
     func setImageUrl(_ imageUrl: URL) {
-        imageView.kf.setImage(with: imageUrl, placeholder: R.image.placeholder())
+        
+        imageView.kf.setImage(with: imageUrl)
     }
     
     func setTitle(_ title: String) {

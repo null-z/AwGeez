@@ -71,6 +71,14 @@ extension LocationDetailsView {
     }
 }
 
+// MARK: Prefetch
+extension LocationDetailsView: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        let urls = presenter.imageUrls(for: indexPaths)
+        ImageLoader.prefetchImages(for: urls)
+    }
+}
+
 // MARK: Make UI
 extension LocationDetailsView {
     private func makeUI() {

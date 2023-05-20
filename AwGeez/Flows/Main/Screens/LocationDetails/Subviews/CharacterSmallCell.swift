@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Kingfisher
 import Model
 
 class CharacterSmallCell: TableViewCell {
@@ -58,38 +57,7 @@ extension CharacterSmallCell {
 // MARK: Setting up
 extension CharacterSmallCell {
     func setup(with viewModel: Character) {
-        pictureView.kf.setImage(with: viewModel.image,
-                                placeholder: R.image.placeholder())
+        pictureView.setImage(with: viewModel.image)
         nameLabel.text = viewModel.name
-    }
-}
-
-extension ConstraintMakerEditable {
-    
-// MARK: Inset
-    @discardableResult
-    func halfInset() -> ConstraintMakerEditable {
-        inset(4)
-    }
-    
-    @discardableResult
-    func smallInset() -> ConstraintMakerEditable {
-        inset(8)
-    }
-    
-    @discardableResult
-    func mediumInset() -> ConstraintMakerEditable {
-        inset(16)
-    }
-    
-// MARK: Offset
-    @discardableResult
-    func smallOffset() -> ConstraintMakerEditable {
-        offset(8)
-    }
-    
-    @discardableResult
-    func mediumOffset() -> ConstraintMakerEditable {
-        offset(16)
     }
 }

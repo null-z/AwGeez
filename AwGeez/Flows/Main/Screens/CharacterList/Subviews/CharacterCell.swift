@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class CharacterCell: TableViewCell {
     
@@ -105,8 +104,7 @@ extension CharacterCell {
 // MARK: Setting up
 extension CharacterCell {
     func setup(with viewModel: CharacterItemViewModel) {
-        pictureView.kf.setImage(with: viewModel.imageUrl,
-                                placeholder: R.image.placeholder())
+        pictureView.setImage(with: viewModel.imageUrl)
         setupTitle(viewModel)
         setupDetails(viewModel)
     }
