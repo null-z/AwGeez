@@ -22,8 +22,7 @@ class StretchyTableHeaderView: View {
     }
     
     func setImageUrl(_ imageUrl: URL) {
-        
-        imageView.kf.setImage(with: imageUrl)
+        imageView.setImage(with: imageUrl)
     }
     
     func setTitle(_ title: String) {

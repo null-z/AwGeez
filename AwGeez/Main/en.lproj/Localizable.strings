@@ -26,3 +26,7 @@ something goes wrong here!";
 "type" = "Type";
 "dimension" = "Dimension";
 "residents" = "Residents";
+
+"season" = "Season";
+"episode" = "Episode";
+"air_date" = "Air date";

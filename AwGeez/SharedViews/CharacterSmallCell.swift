@@ -26,7 +26,7 @@ extension CharacterSmallCell {
         contentView.addSubview(pictureView)
         contentView.addSubview(nameLabel)
         
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .clear
         
         pictureView.layer.cornerRadius = 5
         pictureView.clipsToBounds = true
