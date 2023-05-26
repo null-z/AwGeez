@@ -19,6 +19,7 @@ class LocationDetailsView: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.prefetchDataSource = self
         makeUI()
     }
 }

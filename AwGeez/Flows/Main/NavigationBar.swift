@@ -52,6 +52,7 @@ extension NavigationBar {
         guard let barColor,
               barColor.cgColor.alpha != 0 else {
             setBackgroundImage(UIImage(), for: .default)
+            shadowImage = UIImage()
             return
         }
         
