@@ -21,29 +21,28 @@ class CharacterListCollectionView: CollectionViewController {
         collectionView.prefetchDataSource = self
         makeUI()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        updateCollectionViewLayout(with: collectionView.bounds.size)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        updateCollectionViewLayout(with: size)
-    }
-    
-    private func updateCollectionViewLayout(with size: CGSize) {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0.0
-        layout.minimumLineSpacing = 0.0
-        layout.sectionInset = .zero
+}
 
-        let width = size.width
+// MARK: CollectionView FlowLayout
+extension CharacterListCollectionView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
         let numberOfRowsInLine = (width / 100).rounded(.down)
         let side = (width / numberOfRowsInLine)
 
-        layout.itemSize = CGSize(width: side, height: side)
-        collectionView.collectionViewLayout = layout
+        return CGSize(width: side, height: side)
     }
 }
 

@@ -27,7 +27,8 @@ class ImageCell: CollectionViewCell {
     
     func setImage(with imageUrlFetch: @escaping ImageUrlFetch) {
         imageView.image = R.image.placeholder()
-        imageUrlFetchOperation = UrlFetchOperation(imageUrlFetch) { url in
+        imageUrlFetchOperation = UrlFetchOperation(imageUrlFetch) { [weak self] url in
+            guard let self else { return }
             self.imageView.setImage(with: url)
         }
         imageUrlFetchOperation?.start()

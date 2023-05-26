@@ -34,8 +34,8 @@ class CharacterDetailsView: TableViewController {
         updateNavigationBar()
     }
     
-    override func viewSafeAreaInsetsDidChange() {
-        super.viewSafeAreaInsetsDidChange()
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         updateTableHeader()
     }
     

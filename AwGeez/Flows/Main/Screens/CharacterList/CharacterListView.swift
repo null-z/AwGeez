@@ -149,11 +149,10 @@ protocol ScrollSyncable {
 
 extension CharacterListTableView: ScrollSyncable {
     var currentIndexPath: IndexPath? {
-        if let indexPaths = tableView.indexPathsForVisibleRows,
-           let topRowIndexPath = indexPaths.min() {
-            return topRowIndexPath
-        }
-        return nil
+        let additionalOffset: CGFloat = 20
+        let y = tableView.contentOffset.y + tableView.safeAreaInsets.top + additionalOffset // swiftlint:disable:this identifier_name
+        let point = CGPoint(x: 0, y: y)
+        return tableView.indexPathForRow(at: point)
     }
 
     func scroll(to indexPath: IndexPath) {
@@ -163,10 +162,10 @@ extension CharacterListTableView: ScrollSyncable {
 
 extension CharacterListCollectionView: ScrollSyncable {
     var currentIndexPath: IndexPath? {
-        if let topItemIndexPath = collectionView.indexPathsForVisibleItems.min() {
-            return topItemIndexPath
-        }
-        return nil
+        let additionalOffset: CGFloat = 20
+        let y = collectionView.contentOffset.y + collectionView.safeAreaInsets.top + additionalOffset // swiftlint:disable:this identifier_name
+        let point = CGPoint(x: 0, y: y)
+        return collectionView.indexPathForItem(at: point)
     }
 
     func scroll(to indexPath: IndexPath) {
