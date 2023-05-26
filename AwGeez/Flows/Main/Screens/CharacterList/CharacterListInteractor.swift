@@ -25,11 +25,11 @@ extension CharacterListInteractor: CharacterListInteractorInput {
         characterDao.readCount()
     }
     
-    func character(for id: Entity.ID) -> Model.Character {
+    func character(for id: Character.ID) -> Character {
         characterDao.read(by: id)
     }
     
-    func episode(for id: Model.Episode.ID) -> Model.Episode {
+    func episode(for id: Episode.ID) -> Episode {
         episodeDao.read(by: id)
     }
 }

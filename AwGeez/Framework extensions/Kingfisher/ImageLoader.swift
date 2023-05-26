@@ -10,7 +10,7 @@ import Kingfisher
 
 extension UIImageView {
     /// Sets image from url with default placeholder
-    func setImage(with url: URL, placeholder: UIImage? = R.image.placeholder()) {
+    func setImage(with url: URL?, placeholder: UIImage? = R.image.placeholder()) {
         self.kf.setImage(with: url,
                          placeholder: placeholder)
     }

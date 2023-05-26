@@ -2,15 +2,19 @@
 //  CharacterListView.swift
 //  AwGeez
 //
-//  Created by Tony Dэ on 26.04.2023.
-//  
+//  Created by Tony Dэ on 25.05.2023.
 //
 
 import UIKit
 
-class CharacterListView: TableViewController {
+class CharacterListView: ViewController {
     
     private let presenter: CharacterListViewOutput
+    
+    private var style = Style.table
+    private let switchStyleButton = UIBarButtonItem()
+    private lazy var tableViewController = CharacterListTableView(presenter: self)
+    private lazy var collectionViewController = CharacterListCollectionView(presenter: self)
     
     init(presenter: CharacterListViewOutput) {
         self.presenter = presenter
@@ -19,43 +23,7 @@ class CharacterListView: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.prefetchDataSource = self
         makeUI()
-    }
-}
-
-extension CharacterListView {
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        CharacterCell.height
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.numberOfItems()
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(with: CharacterCell.self)
-        let viewModel = presenter.viewModel(for: indexPath.row)
-        cell.setup(with: viewModel)
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelectItem(for: indexPath.row)
-    }
-}
-
-// MARK: Prefetch
-extension CharacterListView: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        let indexes = indexPaths.map { $0.row }
-        let urls = presenter.imageUrls(for: indexes)
-        ImageLoader.prefetchImages(for: urls)
     }
 }
 
@@ -64,21 +32,144 @@ extension CharacterListView {
     private func makeUI() {
         navigationItem.largeTitleDisplayMode = .always
         title = presenter.title()
-        tableView.separatorStyle = .none
         addGradient()
+        makeSwitchViewStyleButton()
+        updateViewForCurrentStyle()
+        
         setupLayout()
     }
     
     private func addGradient() {
         let gradientView = GradientView()
         gradientView.colors = [UIColor.white, UIColor.lightGray]
-        tableView.backgroundView = gradientView
+        view = gradientView
+    }
+    
+    private func makeSwitchViewStyleButton() {
+        switchStyleButton.style = .plain
+        switchStyleButton.tintColor = R.color.portal()
+        switchStyleButton.target = self
+        switchStyleButton.action = #selector(switchStyleButtonAction(_ :))
+        navigationItem.setRightBarButton(switchStyleButton, animated: true)
     }
     
     private func setupLayout() {
     }
 }
 
+// MARK: Switch view style
+private extension CharacterListView {
+    
+    enum Style {
+        case table
+        case collection
+        
+        var image: UIImage {
+            let image: UIImage?
+            switch self {
+            case .table: image = UIImage(systemName: "rectangle.grid.1x2.fill")
+            case .collection: image = UIImage(systemName: "square.grid.3x2.fill")
+            }
+            return image ?? R.image.portal()!
+        }
+    }
+    
+    @objc
+    private func switchStyleButtonAction(_ sender: UIBarButtonItem) {
+        switchStyle()
+        updateViewForCurrentStyle()
+    }
+    
+    private func switchStyle() {
+        switch style {
+        case .table: style = .collection
+        case .collection: style = .table
+        }
+    }
+    
+    private func updateViewForCurrentStyle() {
+        switch style {
+        case .table:
+            switchStyleButton.image = Style.collection.image
+            replace(viewController: collectionViewController, with: tableViewController, animated: true)
+            tableViewController.syncScrollPosition(with: collectionViewController)
+        case .collection:
+            switchStyleButton.image = Style.table.image
+            replace(viewController: tableViewController, with: collectionViewController, animated: true)
+            collectionViewController.syncScrollPosition(with: tableViewController)
+        }
+    }
+}
+
+// MARK: ViewInput
+extension CharacterListView: CharacterListViewOutput {
+    
+    func title() -> String {
+        presenter.title()
+    }
+    
+    func numberOfItems() -> Int {
+        presenter.numberOfItems()
+    }
+    
+    func imageUrl(for index: Int) -> URL {
+        presenter.imageUrl(for: index)
+    }
+    
+    func imageUrls(for indexes: [Int]) -> [URL] {
+        presenter.imageUrls(for: indexes)
+    }
+    
+    func viewModel(for index: Int) -> CharacterItemViewModel {
+        presenter.viewModel(for: index)
+    }
+    
+    func didSelectItem(for index: Int) {
+        presenter.didSelectItem(for: index)
+    }
+}
+
 // MARK: ViewInput
 extension CharacterListView: CharacterListViewInput {
+}
+
+// MARK: ScrollSyncable
+extension ScrollSyncable {
+    func syncScrollPosition(with otherView: ScrollSyncable) {
+        if let targertIndexPath = otherView.currentIndexPath {
+            scroll(to: targertIndexPath)
+        }
+    }
+}
+
+protocol ScrollSyncable {
+    var currentIndexPath: IndexPath? { get }
+    func scroll(to indexPath: IndexPath)
+}
+
+extension CharacterListTableView: ScrollSyncable {
+    var currentIndexPath: IndexPath? {
+        if let indexPaths = tableView.indexPathsForVisibleRows,
+           let topRowIndexPath = indexPaths.min() {
+            return topRowIndexPath
+        }
+        return nil
+    }
+
+    func scroll(to indexPath: IndexPath) {
+        tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+    }
+}
+
+extension CharacterListCollectionView: ScrollSyncable {
+    var currentIndexPath: IndexPath? {
+        if let topItemIndexPath = collectionView.indexPathsForVisibleItems.min() {
+            return topItemIndexPath
+        }
+        return nil
+    }
+
+    func scroll(to indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .top, animated: false)
+    }
 }

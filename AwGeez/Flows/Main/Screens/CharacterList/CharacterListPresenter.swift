@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Model
 
 final class CharacterListPresenter {
     
@@ -26,6 +27,10 @@ extension CharacterListPresenter: CharacterListViewOutput {
     
     func numberOfItems() -> Int {
         interactor.numberOfCharacters()
+    }
+    
+    func imageUrl(for index: Int) -> URL {
+        interactor.character(for: id(for: index)).image
     }
     
     func imageUrls(for indexes: [Int]) -> [URL] {

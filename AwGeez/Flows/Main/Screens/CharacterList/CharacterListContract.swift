@@ -28,6 +28,7 @@ protocol CharacterListViewInput: AnyObject {
 protocol CharacterListViewOutput: AnyObject {
     func title() -> String
     func numberOfItems() -> Int
+    func imageUrl(for index: Int) -> URL
     func imageUrls(for indexes: [Int]) -> [URL]
     func viewModel(for index: Int) -> CharacterItemViewModel
     func didSelectItem(for index: Int)

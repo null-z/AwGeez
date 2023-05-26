@@ -79,7 +79,6 @@ extension CharacterDetailsView {
 }
 
 // MARK: TableHeader
-
 extension CharacterDetailsView {
     private func updateTableHeader() {
         tableView.contentInset.top = -1 * tableView.safeAreaInsets.top
