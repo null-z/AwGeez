@@ -29,9 +29,16 @@ end
 
 desc "Run unit tests and send report to telegram"
 lane :tests do
+    carthage_update()
     run_unit_tests()
     send_telegram()
     fail_if_needed()
+end
+
+private_lane :carthage_update do
+    carthage(
+             use_xcframeworks: true
+    )
 end
 
 private_lane :run_unit_tests do

@@ -1,13 +1,19 @@
-# Created by https://www.toptal.com/developers/gitignore/api/xcode,swift
-# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift
+# Created by https://www.toptal.com/developers/gitignore/api/xcode,swift,carthage
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift,carthage
 
 ### Custom ###
 ## Unit tests UserDefaults file
 DefaultsTests.swift.plist
 
+### Carthage ###
+# Carthage
+#
+Carthage/Checkouts
+
+Carthage/Build
+
 ### Swift ###
 # Xcode
-#
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
@@ -102,4 +108,4 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/xcode,swift
+# End of https://www.toptal.com/developers/gitignore/api/xcode,swift,carthage
