@@ -27,3 +27,11 @@ The focus was on the Clean architecture(VIPER) scheme of which is below.
 <p>
     <img src="https://github.com/null-z/AwGeez/blob/readme/ReadmeSources/architecture.png">
 </p>
+
+## Setup
+
+Before build project load [Carthage](https://github.com/Carthage/Carthage) dependencies
+
+```
+carthage bootstrap --use-xcframeworks
+```
