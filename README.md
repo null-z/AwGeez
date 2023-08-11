@@ -30,8 +30,15 @@ The focus was on the Clean architecture(VIPER) scheme of which is below.
 
 ## Setup
 
-Before build project load [Carthage](https://github.com/Carthage/Carthage) dependencies
+#### Build/run project
+Install carthage and load dependencies with make script:
 
 ```
-carthage bootstrap --use-xcframeworks
+make setup
+```
+#### Development
+Install all development tools and dependencies with make script:
+
+```
+make deploy
 ```
