@@ -18,7 +18,7 @@ ifeq (, $(shell which brew))
 setup: install-homebrew
 endif
 	@brew install carthage 
-	@carthage bootstrap --use-xcframeworks
+	@carthage bootstrap --use-xcframeworks --platform iOS
 
 deploy: # Deploy full toolchain for working with project.
 ifeq (, $(shell which brew))
@@ -39,7 +39,7 @@ endif
 	@# https://github.com/Carthage/Carthage#installing-carthage
 	@brew install carthage 
 
-	@carthage bootstrap --use-xcframeworks
+	@carthage bootstrap --use-xcframeworks --platform iOS
 
 	@rbenv install --skip-existing
 
@@ -57,6 +57,6 @@ update: # Update toolchain and dependencies.
 	@brew update
 	@brew upgrade
 	@brew cleanup
-	@carthage update --use-xcframeworks
+	@carthage update --use-xcframeworks --platform iOS
 	@bundle update --bundler
 	@bundle update

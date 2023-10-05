@@ -37,7 +37,8 @@ end
 
 private_lane :carthage_update do
     carthage(
-             use_xcframeworks: true
+             use_xcframeworks: true,
+             platform: "iOS"
     )
 end
 
