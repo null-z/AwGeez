@@ -28,6 +28,9 @@ The focus was on the Clean architecture(VIPER) scheme of which is below.
     <img src="https://github.com/null-z/AwGeez/assets/37135618/63f6fd7d-9814-41e1-8a50-fb4091c53e54">
 </p>
 
+Also, using fastlane and Bitrise, reports with integration status in Telegram have been implemented, as in the example below.
+![Telegram reports](https://github.com/null-z/AwGeez/assets/37135618/07904469-e870-48a2-985f-366fdd41f804)
+
 ## Setup
 
 #### Build/run project
