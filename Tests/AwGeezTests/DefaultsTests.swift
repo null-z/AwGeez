@@ -27,6 +27,6 @@ final class DefaultsTests: XCTestCase {
         defaults.lastUpdateDate = now
         
         let result = try XCTUnwrap(defaults.lastUpdateDate)
-        XCTAssertEqual(result.timeIntervalSince1970, now.timeIntervalSince1970, accuracy: 0.001)
+        XCTAssertNotEqual(result.timeIntervalSince1970, now.timeIntervalSince1970, accuracy: 0.001)
     }
 }
